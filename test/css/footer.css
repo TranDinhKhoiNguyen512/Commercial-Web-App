@@ -1,0 +1,28 @@
+.footer{
+    font-size: 50px;
+    color:red;
+    text-align: center;
+    padding: 20px 0 70px 0px;
+}
+.list-snw{
+    display: inline;
+    font-size: 40px;
+}
+
+.list-snw #facebook:hover{
+    color: #4267B2;
+    
+}
+.list-snw #instagram:hover{
+    color: #FD1D1D;
+    
+}
+
+.list-snw #twitch:hover{
+    color: #6441a5;
+    
+}
+.list-snw #linkedin:hover{
+    color: #0072b1;
+    
+}
