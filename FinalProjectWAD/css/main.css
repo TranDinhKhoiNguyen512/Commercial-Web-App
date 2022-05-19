@@ -20,13 +20,15 @@ header {
   header .header__content .navbar-brand .logo--name {
     width: 150px; }
 
+footer {
+  background-color: dark; }
+
 .footer__top {
   color: red;
   display: flex;
-  margin: 0 0 0 30px;
-  background-color: black; }
+  margin: 0 0 0 30px; }
   .footer__top .list__snw {
-    color: black;
+    color: red;
     margin: 0 auto;
     justify-content: center;
     text-align: center; }
