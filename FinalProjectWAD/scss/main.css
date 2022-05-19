@@ -1,0 +1,83 @@
+header {
+  margin: 70px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: #FFF;
+}
+
+header {
+  background-color: black !important;
+}
+
+header .header__content .navbar-brand img {
+  display: inline-block;
+}
+
+header .header__content .navbar-brand .logo--icon {
+  width: 50px;
+}
+
+header .header__content .navbar-brand .logo--name {
+  width: 150px;
+}
+
+header .header__content .navbar-nav {
+  margin-left: auto !important;
+}
+
+header .header__content .navbar-nav .nav-item a {
+  color: #FFF;
+  font-size: 20px;
+}
+
+footer {
+  background-color: black;
+}
+
+.footer__top {
+  color: red;
+  display: flex;
+  margin: 0 0 0 30px;
+}
+
+.footer__top .list__snw {
+  color: red;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer__top .list__snw i {
+  font-size: 50px;
+  color: white;
+}
+
+.footer__top .list__snw #facebook:hover {
+  color: #4267b2;
+}
+
+.footer__top .list__snw #instagram:hover {
+  color: #fd1d1d;
+}
+
+.footer__top .list__snw #twitch:hover {
+  color: #6441a5;
+}
+
+.footer__top .list__snw #linkedin:hover {
+  color: #0072b1;
+}
+
+.footer__top .list__snw #github:hover {
+  color: #171515;
+}
+/*# sourceMappingURL=main.css.map */

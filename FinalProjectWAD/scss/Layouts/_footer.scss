@@ -1,33 +1,32 @@
-footer{
-    background-color:black;
+footer {
+    background-color: black;
 }
-.footer__top{
+.footer__top {
     color: red;
     display: flex;
     margin: 0 0 0 30px;
-    .list__snw{
+    .list__snw {
         color: $color-red-0;
-        margin: 0 auto ;
+        margin: 0 auto;
         justify-content: center;
         text-align: center;
-        i{
+        i {
             font-size: 50px;
             color: white;
         }
-        #facebook:hover{
-            color: #4267B2;
+        #facebook:hover {
+            color: #4267b2;
         }
-        #instagram:hover{
-            color: #FD1D1D;
-            
+        #instagram:hover {
+            color: #fd1d1d;
         }
-        #twitch:hover{
+        #twitch:hover {
             color: #6441a5;
         }
-        #linkedin:hover{
+        #linkedin:hover {
             color: #0072b1;
         }
-        #github:hover{
+        #github:hover {
             color: #171515;
         }
     }
