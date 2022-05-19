@@ -7,7 +7,9 @@ body {
 
 header .header__content .navbar-brand img {
   display: inline-block; }
-header .header__content .navbar-brand .logo-icon {
+header .header__content .navbar-brand .logo--icon {
   width: 50px; }
+header .header__content .navbar-brand .logo--name {
+  width: 150px; }
 
 /*# sourceMappingURL=main.css.map */
