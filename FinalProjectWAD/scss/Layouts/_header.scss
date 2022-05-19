@@ -1,16 +1,25 @@
-header{
+header {
     @extend %section;
-    background-color: $color-white-1 !important;
-    .header__content{
-        .navbar-brand{
-            img{
+    background-color: $color-black-0 !important;
+    .header__content {
+        .navbar-brand {
+            img {
                 display: inline-block;
             }
-            .logo--icon{
+            .logo--icon {
                 width: 50px;
             }
-            .logo--name{
+            .logo--name {
                 width: 150px;
+            }
+        }
+        .navbar-nav {
+            margin-left: auto !important;
+            .nav-item {
+                a {
+                    color: $color-white-0;
+                    font-size: $fs-1;
+                }
             }
         }
     }

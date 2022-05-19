@@ -1,49 +1,87 @@
 header {
-  margin: 70px 0; }
+  margin: 70px 0;
+}
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Flex', sans-serif;
   font-size: 15px;
   color: black;
-  background-color: #FFF; }
+  background-color: #FFF;
+}
 
 header {
-  background-color: #f5f5f5 !important; }
-  header .header__content .navbar-brand img {
-    display: inline-block; }
-  header .header__content .navbar-brand .logo--icon {
-    width: 50px; }
-  header .header__content .navbar-brand .logo--name {
-    width: 150px; }
+  background-color: black !important;
+}
+
+header .header__content .navbar-brand img {
+  display: inline-block;
+}
+
+header .header__content .navbar-brand .logo--icon {
+  width: 50px;
+}
+
+header .header__content .navbar-brand .logo--name {
+  width: 150px;
+}
+
+header .header__content .navbar-nav {
+  margin-left: auto !important;
+}
+
+header .header__content .navbar-nav .nav-item a {
+  color: #FFF;
+  font-size: 20px;
+}
 
 footer {
-  background-color: dark; }
+  background-color: dark;
+}
 
 .footer__top {
   color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin: 0 0 0 30px; }
-  .footer__top .list__snw {
-    color: red;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center; }
-    .footer__top .list__snw i {
-      font-size: 50px;
-      color: white; }
-    .footer__top .list__snw #facebook:hover {
-      color: #4267B2; }
-    .footer__top .list__snw #instagram:hover {
-      color: #FD1D1D; }
-    .footer__top .list__snw #twitch:hover {
-      color: #6441a5; }
-    .footer__top .list__snw #linkedin:hover {
-      color: #0072b1; }
-    .footer__top .list__snw #github:hover {
-      color: #171515; }
+  margin: 0 0 0 30px;
+}
 
+.footer__top .list__snw {
+  color: red;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.footer__top .list__snw i {
+  font-size: 50px;
+  color: white;
+}
+
+.footer__top .list__snw #facebook:hover {
+  color: #4267B2;
+}
+
+.footer__top .list__snw #instagram:hover {
+  color: #FD1D1D;
+}
+
+.footer__top .list__snw #twitch:hover {
+  color: #6441a5;
+}
+
+.footer__top .list__snw #linkedin:hover {
+  color: #0072b1;
+}
+
+.footer__top .list__snw #github:hover {
+  color: #171515;
+}
 /*# sourceMappingURL=main.css.map */
