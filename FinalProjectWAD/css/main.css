@@ -40,7 +40,7 @@ header .header__content .navbar-nav .nav-item a {
 }
 
 footer {
-  background-color: $color-black-0;
+  background-color: black;
 }
 
 .footer__top {
