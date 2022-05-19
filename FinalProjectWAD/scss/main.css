@@ -6,8 +6,6 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 header .header__content .navbar-brand img {
-  display: inline-block; }
-header .header__content .navbar-brand .logo-icon {
-  width: 50px; }
+  display: block; }
 
 /*# sourceMappingURL=main.css.map */
