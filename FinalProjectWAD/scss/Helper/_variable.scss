@@ -3,6 +3,7 @@ $color-white-0:#FFF;
 $color-white-1:#f5f5f5;
 $color-black-0:black;
 $color-black-1:#24262a;
+$color-black-3:rgba(0,0,0,0.5);
 $color-yellow-0:yellow;
 $color-red-0:red;
 $color-blue-0:blue;
@@ -21,10 +22,23 @@ $fw-2:700;
 // Margin
 $mg-0:10px;
 $mg-1:20px;
+$mg-2:30px;
+$mg-3:40px;
+$mg-4:50px;
+$mg-5:60px;
+
+
+// Letter spacing
+$ls-0:0px;
 
 // Padding
 $pd-0:10px;
 $pd-1:20px;
+$pd-2:30px;
+$pd-3:40px;
+$pd-4:50px;
+$pd-5:60px;
+
 
 // BreakPoints
 $breakpoints:(

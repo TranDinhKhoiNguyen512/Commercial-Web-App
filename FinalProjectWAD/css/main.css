@@ -1,5 +1,5 @@
 header {
-  margin: 70px 0;
+  margin-bottom: 0px;
 }
 
 * {
@@ -15,7 +15,14 @@ body {
 }
 
 header {
-  background-color: black !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+header .header__content .navbar-brand {
+  margin-left: 60px;
 }
 
 header .header__content .navbar-brand img {
@@ -34,12 +41,43 @@ header .header__content .navbar-nav {
   margin-left: auto !important;
 }
 
-header .header__content .navbar-nav .nav-item a {
+header .header__content .navbar-nav .nav-item {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .header__content .navbar-nav .nav-item .nav-link {
   color: #FFF;
   font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 20px;
+}
+
+header .header__content .navbar-nav .nav-item:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#00ffe5), to(transparent));
+  background: linear-gradient(to top, #00ffe5, transparent);
+  border-radius: 10px;
+  opacity: 1;
+}
+
+header .header__content button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .header__content .button--mint {
+  margin-right: 10px;
+  border: 2px solid #00ffe5;
+}
+
+header .header__content .button--dark {
+  border: 2px solid #00ffe5;
+  margin-right: 10px;
 }
 
 footer {
+  margin-top: 1000px;
   background-color: black;
 }
 
@@ -66,11 +104,11 @@ footer {
 }
 
 .footer__top .list__snw #facebook:hover {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 .footer__top .list__snw #instagram:hover {
-  color: #FD1D1D;
+  color: #fd1d1d;
 }
 
 .footer__top .list__snw #twitch:hover {
@@ -83,5 +121,48 @@ footer {
 
 .footer__top .list__snw #github:hover {
   color: #171515;
+}
+
+.banner {
+  position: relative;
+  height: 1000px;
+}
+
+.banner .banner__content video {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.button--mint {
+  background-color: #00ffe5;
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 7px 30px;
+}
+
+.button--mint:hover {
+  background-color: #FFF;
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 7px 30px;
+}
+
+.button--dark {
+  background-color: black;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 7px 30px;
+}
+
+.button--dark:hover {
+  background-color: #00ffe5;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 7px 30px;
 }
 /*# sourceMappingURL=main.css.map */
