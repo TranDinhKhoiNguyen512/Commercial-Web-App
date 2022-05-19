@@ -10,4 +10,28 @@ header .header__content .navbar-brand img {
 header .header__content .navbar-brand .logo-icon {
   width: 50px; }
 
+.footer__top {
+  color: red;
+  display: flex;
+  margin: 0 0 0 30px;
+  background-color: black; }
+  .footer__top .list__snw {
+    color: black;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center; }
+    .footer__top .list__snw i {
+      font-size: 50px;
+      color: white; }
+    .footer__top .list__snw #facebook:hover {
+      color: #4267B2; }
+    .footer__top .list__snw #instagram:hover {
+      color: #FD1D1D; }
+    .footer__top .list__snw #twitch:hover {
+      color: #6441a5; }
+    .footer__top .list__snw #linkedin:hover {
+      color: #0072b1; }
+    .footer__top .list__snw #github:hover {
+      color: #171515; }
+
 /*# sourceMappingURL=main.css.map */

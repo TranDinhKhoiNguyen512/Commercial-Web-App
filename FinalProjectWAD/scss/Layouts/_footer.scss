@@ -1,31 +1,32 @@
-// COLOR
-$color-white-0:#FFF;
-$color-dark-0:black;
-$color-yellow-0:yellow;
-$color-red-0:red;
-$color-blue-0:blue;
-
-// Font-size
-$fs-0:15px;
-$fs-1:20px;
-
-// Font-weight
-$fw-0:normal;
-$fw-1:600;
-$fw-2:700;
-// Margin
-$mg-0:10px;
-$mg-1:20px;
-
-// Padding
-$pd-0:10px;
-$pd-1:20px;
-
-// BreakPoints
-$breakpoints:(
-    'super' : 1400px,
-    'extra-large':1200px,
-    'large':992px,
-    'medium':768px,
-    'small':576px,
-);
+.footer__top{
+    color: red;
+    display: flex;
+    margin: 0 0 0 30px;
+    background-color: black;
+    .list__snw{
+        color: black;
+        margin: 0 auto ;
+        justify-content: center;
+        text-align: center;
+        i{
+            font-size: 50px;
+            color: white;
+        }
+        #facebook:hover{
+            color: #4267B2;
+        }
+        #instagram:hover{
+            color: #FD1D1D;
+            
+        }
+        #twitch:hover{
+            color: #6441a5;
+        }
+        #linkedin:hover{
+            color: #0072b1;
+        }
+        #github:hover{
+            color: #171515;
+        }
+    }
+}

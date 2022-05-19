@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,CAAC;EACG,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;;AAGb,IAAI;EACA,WAAW,EAAE,uBAAuB;;ACH5B,yCAAG;EACC,OAAO,EAAE,KAAK",
-"sources": ["Base/_reset.scss","Layouts/_header.scss"],
-"names": [],
-"file": "main.css"
-}
