@@ -1,16 +1,24 @@
+header {
+  margin: 70px 0; }
+
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: #FFF; }
 
-header .header__content .navbar-brand img {
-  display: inline-block; }
-header .header__content .navbar-brand .logo--icon {
-  width: 50px; }
-header .header__content .navbar-brand .logo--name {
-  width: 150px; }
+header {
+  background-color: #f5f5f5 !important; }
+  header .header__content .navbar-brand img {
+    display: inline-block; }
+  header .header__content .navbar-brand .logo--icon {
+    width: 50px; }
+  header .header__content .navbar-brand .logo--name {
+    width: 150px; }
 
 .footer__top {
   color: red;

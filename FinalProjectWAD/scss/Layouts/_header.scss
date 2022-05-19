@@ -1,4 +1,6 @@
 header{
+    @extend %section;
+    background-color: $color-white-1 !important;
     .header__content{
         .navbar-brand{
             img{
