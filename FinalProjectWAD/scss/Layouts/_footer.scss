@@ -1,34 +1,41 @@
-footer {
-    margin-top: 1000px;
-    background-color: black;
-}
-.footer__top {
-    color: red;
-    display: flex;
-    margin: 0 0 0 30px;
-    .list__snw {
-        color: $color-red-0;
-        margin: 0 auto;
-        justify-content: center;
-        text-align: center;
-        i {
-            font-size: 50px;
-            color: white;
+footer{
+    // margin-top: 1000px;
+    background-color: $color-black-1;
+    padding-top: 100px;
+    .container{
+        width:100%;
+        display: flex;
+        font-size: $fs-1;
+        .content{
+            color: $color-white-0;
+            text-align: center; 
+            white-space: nowrap;
         }
-        #facebook:hover {
-            color: #4267b2;
-        }
-        #instagram:hover {
-            color: #fd1d1d;
-        }
-        #twitch:hover {
-            color: #6441a5;
-        }
-        #linkedin:hover {
-            color: #0072b1;
-        }
-        #github:hover {
-            color: #171515;
+        .icon{
+            font-size: $fs-1 +10;
+            width: 100%;
+            margin: 0 auto;
+            .list__snw{
+                text-align: center;
+                #facebook:hover {
+                    color: #4267b2;
+                }
+                #instagram:hover {
+                    color: #fd1d1d;
+                }
+                #twitch:hover {
+                    color: #6441a5;
+                }
+                #linkedin:hover {
+                    color: #0072b1;
+                }
+                #github:hover {
+                    color: #AD62AA;
+                }
+                #youtube:hover{
+                    color: #FF0000;
+                }
+            }
         }
     }
 }

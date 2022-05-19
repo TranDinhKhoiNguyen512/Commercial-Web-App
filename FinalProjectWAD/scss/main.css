@@ -77,56 +77,50 @@ header .header__content .button--dark {
 }
 
 footer {
-  background-color: #24262a;
-  padding-top: 100px;
+  margin-top: 1000px;
+  background-color: red;
 }
 
-footer .container {
-  width: 100%;
+.footer__top {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 20px;
+  margin: 0 0 0 30px;
 }
 
-footer .container .content {
-  color: #FFF;
-  text-align: center;
-  white-space: nowrap;
-}
-
-footer .container .icon {
-  font-size: 30px;
-  width: 100%;
+.footer__top .list__snw {
+  color: red;
   margin: 0 auto;
-}
-
-footer .container .icon .list__snw {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
-footer .container .icon .list__snw #facebook:hover {
+.footer__top .list__snw i {
+  font-size: 50px;
+  color: #FFF;
+}
+
+.footer__top .list__snw #facebook:hover {
   color: #4267b2;
 }
 
-footer .container .icon .list__snw #instagram:hover {
+.footer__top .list__snw #instagram:hover {
   color: #fd1d1d;
 }
 
-footer .container .icon .list__snw #twitch:hover {
+.footer__top .list__snw #twitch:hover {
   color: #6441a5;
 }
 
-footer .container .icon .list__snw #linkedin:hover {
+.footer__top .list__snw #linkedin:hover {
   color: #0072b1;
 }
 
-footer .container .icon .list__snw #github:hover {
-  color: #AD62AA;
-}
-
-footer .container .icon .list__snw #youtube:hover {
-  color: #FF0000;
+.footer__top .list__snw #github:hover {
+  color: #171515;
 }
 
 .banner {
