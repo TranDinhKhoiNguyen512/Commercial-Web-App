@@ -1,4 +1,4 @@
-header {
+header, footer {
   margin-bottom: 0px;
 }
 
@@ -79,54 +79,128 @@ header .header__content .button--dark {
 footer {
   background-color: #24262a;
   padding-top: 100px;
+  width: 100%;
+  padding-bottom: 100px;
 }
 
-footer .container {
+footer .top__footer .container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
+  color: #FFF;
 }
 
-footer .container .content {
-  color: #FFF;
+footer .top__footer .container .content {
   text-align: center;
+  margin: auto;
   white-space: nowrap;
 }
 
-footer .container .icon {
-  font-size: 30px;
+footer .top__footer .container .icon {
+  font-size: 50px;
   width: 100%;
   margin: 0 auto;
 }
 
-footer .container .icon .list__snw {
+footer .top__footer .container .icon .list__snw {
   text-align: center;
 }
 
-footer .container .icon .list__snw #facebook:hover {
+footer .top__footer .container .icon .list__snw i {
+  color: #FFF;
+}
+
+footer .top__footer .container .icon .list__snw #facebook:hover {
   color: #4267b2;
 }
 
-footer .container .icon .list__snw #instagram:hover {
+footer .top__footer .container .icon .list__snw #instagram:hover {
   color: #fd1d1d;
 }
 
-footer .container .icon .list__snw #twitch:hover {
+footer .top__footer .container .icon .list__snw #twitch:hover {
   color: #6441a5;
 }
 
-footer .container .icon .list__snw #linkedin:hover {
+footer .top__footer .container .icon .list__snw #linkedin:hover {
   color: #0072b1;
 }
 
-footer .container .icon .list__snw #github:hover {
+footer .top__footer .container .icon .list__snw #github:hover {
   color: #AD62AA;
 }
 
-footer .container .icon .list__snw #youtube:hover {
+footer .top__footer .container .icon .list__snw #youtube:hover {
   color: #FF0000;
+}
+
+footer .top__footer .container .icon .list__snw #discord:hover {
+  color: #5865F2;
+}
+
+footer .bot__footer {
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+}
+
+footer .bot__footer .container {
+  width: 100%;
+  font-size: 20px;
+}
+
+footer .bot__footer .container .logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .bot__footer .container .logo .logo--name {
+  width: 150px;
+}
+
+footer .bot__footer .container .first__content {
+  margin: 0;
+  white-space: nowrap;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .bot__footer .container .first__content .web__link {
+  font-size: 20px;
+  display: block;
+}
+
+footer .bot__footer .container .first__content .web__link a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer .bot__footer .container .contact .each__member {
+  font-size: 20px;
+  display: block;
+}
+
+footer .bot__footer .container .contact .each__member a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+footer .bot__footer .container .logo__e {
+  text-align: right;
+}
+
+footer .bot__footer .container .logo__e img {
+  width: 150px;
 }
 
 .banner {
