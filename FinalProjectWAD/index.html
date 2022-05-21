@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PokeShop</title>
 
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/CrazyMeowl/NetCentric-PokeProject/main/poke.ico">
+  <title>PokeShop</title>
+  
   <!-- OWL CAROUSEL -->
   <link rel="stylesheet" href="./css/owl.carousel.min.css" />
   <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
@@ -72,8 +74,11 @@
   <!-- BANNER -->
   <section class="banner">
     <div class="banner__content">
-      <!--<video class="looping-video" id="true" autoplay playsinline loop type="video/mp4" src="./img/vid.mp4"></video> BANNER -->
-      <img src="./img/vid.gif">
+      <video class="looping-video" id="vid" autoplay playsinline loop type="video/mp4" src="./img/vid.mp4"></video>
+      <script>
+        document.getElementById('vid').play();
+      </script>
+      <!-- <img src="./img/vid.gif"> -->
       <div class="banner__items"></div>
     </div>
   </section>
