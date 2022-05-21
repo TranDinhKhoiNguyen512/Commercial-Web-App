@@ -109,7 +109,7 @@ footer .top__footer .container .icon .list__snw {
 }
 
 footer .top__footer .container .icon .list__snw i {
-  color: #FFF;
+  color: gray;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -183,37 +183,14 @@ footer .bot__footer .container .first__content .web__link {
 }
 
 footer .bot__footer .container .first__content .web__link a {
-  text-decoration: none;
-  color: #FFF;
-}
-
-footer .bot__footer .container .contact .each__member {
-  font-size: 20px;
-  display: block;
-}
-
-footer .bot__footer .container .contact .each__member a {
-  text-decoration: none;
-  color: #FFF;
-}
-
-footer .bot__footer .container .logo__e {
-  text-align: right;
-}
-
-footer .bot__footer .container .logo__e img {
-  width: 150px;
-}
-
-footer a {
   overflow: hidden;
   position: relative;
   display: inline-block;
   text-decoration: none;
 }
 
-footer a::before,
-footer a::after {
+footer .bot__footer .container .first__content .web__link a::before,
+footer .bot__footer .container .first__content .web__link a::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -221,7 +198,7 @@ footer a::after {
   color: #FFF;
 }
 
-footer a::before {
+footer .bot__footer .container .first__content .web__link a::before {
   background-color: #00ffe5;
   height: 2px;
   bottom: 0;
@@ -235,16 +212,89 @@ footer a::before {
   transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform 1s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-footer a:hover::before {
+footer .bot__footer .container .first__content .web__link a:hover {
+  color: #FFF;
+}
+
+footer .bot__footer .container .first__content .web__link a:hover::before {
   -webkit-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-footer a:hover::after {
+footer .bot__footer .container .first__content .web__link a:hover::after {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+
+footer .bot__footer .container .first__content .web__link a {
+  text-decoration: none;
+  color: gray;
+}
+
+footer .bot__footer .container .contact .each__member {
+  font-size: 20px;
+  display: block;
+}
+
+footer .bot__footer .container .contact .each__member a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+footer .bot__footer .container .contact .each__member a::before,
+footer .bot__footer .container .contact .each__member a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  color: #FFF;
+}
+
+footer .bot__footer .container .contact .each__member a::before {
+  background-color: #00ffe5;
+  height: 2px;
+  bottom: 0;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: -webkit-transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+footer .bot__footer .container .contact .each__member a:hover {
+  color: #FFF;
+}
+
+footer .bot__footer .container .contact .each__member a:hover::before {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+footer .bot__footer .container .contact .each__member a:hover::after {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+footer .bot__footer .container .contact .each__member a {
+  text-decoration: none;
+  color: gray;
+}
+
+footer .bot__footer .container .logo__e {
+  text-align: right;
+}
+
+footer .bot__footer .container .logo__e img {
+  width: 150px;
 }
 
 .banner {

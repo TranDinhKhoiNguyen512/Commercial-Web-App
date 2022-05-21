@@ -1,7 +1,52 @@
-@mixin styleButton($bg-color,$color,$fs,$fw,$pd-y,$pd-x){
-        background-color:$bg-color ;
-        color:$color;
+@mixin styleButton($bg-color, $color, $fs, $fw, $pd-y, $pd-x) {
+        background-color: $bg-color ;
+        color: $color;
         font-size: $fs;
-        font-weight:$fw ;
-        padding:$pd-y $pd-x;
+        font-weight: $fw ;
+        padding: $pd-y $pd-x;
+}
+
+// Hover a tag of Footer
+@mixin hoverA($bg-color, $color) {
+
+        a {
+                overflow: hidden;
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+                
+        }
+
+        a::before,
+        a::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                color: $color;
+        }
+
+        a::before {
+                background-color: $bg-color;
+                height: 2px;
+                bottom: 0;
+                transform-origin: 100% 50%;
+                transform: scaleX(0);
+                
+                transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+        a:hover{
+                color: $color;
+        }
+
+        a:hover::before {
+                transform-origin: 0% 50%;
+                transform: scaleX(1);
+                
+        }
+
+        a:hover::after {
+                transform: translate3d(0, 0, 0);
+                
+        }
 }
