@@ -56,7 +56,7 @@ cardRoutes.get('/card/getByID/:id', (req, res) => {
   
   //cards.length
   for (var i = 0; i < cards.length; i++) {
-  	if(cards[i]['id'] == id){
+  	if(cards[i].id == id){
   		var result = cards[i]
   		//console.log(cards[i])
   		
