@@ -1,0 +1,13 @@
+.pop__up{
+    button {
+        transition: 0.5s;
+    }
+    .button--mint {
+        margin-right: $mg-0;
+        border: 2px solid $color-mint-0;
+    }
+    .button--dark {
+        border: 2px solid $color-mint-0;
+        margin-right: $mg-0;
+    }
+}
