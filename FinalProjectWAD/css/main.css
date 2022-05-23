@@ -407,6 +407,21 @@ footer .bot__footer .container .logo__e img {
   color: #00ffe5;
 }
 
+.pop__up button {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.pop__up .button--mint {
+  margin-right: 10px;
+  border: 2px solid #00ffe5;
+}
+
+.pop__up .button--dark {
+  border: 2px solid #00ffe5;
+  margin-right: 10px;
+}
+
 .button--mint {
   background-color: #00ffe5;
   color: black;
