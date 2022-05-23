@@ -13,5 +13,9 @@ app.use('/', routes)
 
 //start server
 app.listen(3000, ()=>{
-    console.log("listeniing at port:3000")
+    console.log("listening at port:3000")
+    console.log("'C': http://localhost:3000/account/addaccount")
+    console.log("'R': http://localhost:3000/account")
+    console.log("'U': http://localhost:3000/account/{id}")
+    console.log("'D': http://localhost:3000/account/delete/{id}")
 }) 

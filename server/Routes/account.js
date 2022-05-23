@@ -28,11 +28,11 @@ accountRoutes.get('/account', (req, res) => {
     });
   });
 
-
-  accountRoutes.post('/account/addaccount', (req, res) => {
+// creating new data
+accountRoutes.post('/account/addaccount', (req, res) => {
    
     var existAccounts = getAccountData()
-    const newAccountId = Math.floor(100000 + Math.random() * 900000)
+    //const newAccountId = Math.floor(100000 + Math.random() * 900000)
    
     existAccounts[newAccountId] = req.body
      
@@ -72,4 +72,5 @@ accountRoutes.delete('/account/delete/:id', (req, res) => {
     res.send(`accounts with id ${userId} has been deleted`)
   }, true);
 })
+
 module.exports = accountRoutes
