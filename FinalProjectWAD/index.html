@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/CrazyMeowl/NetCentric-PokeProject/main/poke.ico">
+  <link rel="icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/CrazyMeowl/NetCentric-PokeProject/main/poke.ico">
   <title>PokeShop</title>
-  
+
   <!-- OWL CAROUSEL -->
   <link rel="stylesheet" href="./css/owl.carousel.min.css" />
   <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
@@ -32,7 +33,7 @@
 <body>
   <!-- HEADER -->
   <header>
-    <div class="header__content">
+    <div class="header__content" id="home">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#1">
@@ -85,12 +86,11 @@
   <!-- FOOTER -->
 
   <footer>
-    <section class="top__footer">
+    <section class="top__footer" id="footer">
       <div class="container">
         <div class="content">
           <p>Visit Other Social Channels</p>
         </div>
-
         <div class="icon">
           <div class="list__snw">
             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f" id="facebook"></i></a>
@@ -109,32 +109,26 @@
     <section class="bot__footer">
       <div class="container">
         <div class="row">
-
           <div class="col logo">
             <img class="logo--name" src="./img/logo.png" alt="poke" />
           </div>
-
           <div class="col first__content">
             <div class="title">
               <h2>The Offcial Websites</h2>
             </div>
-
             <div class="web__link">
               <a href="https://www.pokemon.com/us/">The Offical Pokémon Website</a><br>
               <a href="https://pokedex.org/">Pokedex</a>
             </div>
           </div>
-
           <div class="col contact">
             <div class="tilte">
               <h2>Contact</h2>
             </div>
-
             <div class="each__member">
               <a href="https://github.com/TranDinhKhoiNguyen512">Trần Đình Khôi Nguyên</a><br>
               <a href="https://github.com/CrazyMeowl">Trần Cao Bảo Phúc</a><br>
               <a href="https://github.com/growsel">Võ Vương Nhật Tân</a>
-
             </div>
           </div>
           <div class="col logo__e">
@@ -142,11 +136,24 @@
           </div>
         </div>
       </div>
-
     </section>
 
 
   </footer>
+
+  <section class="scrollbar">
+    <!-- Change href and name of scroll bar -->
+    <div class="sideNavigation " data-ccid="7LHqUEWTN7qA8MA2HUCgwt">
+      <a class="btn btn-primary sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#Something"
+        data-cy="same-window">
+        <span data-source="translations" data-innertext="Something">Something</span>
+      </a>
+      <a class="btn btn-primary sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#footer"
+        data-cy="same-window">
+        <span data-source="translations" data-innertext="Footer">Footer</span>
+      </a>
+    </div>
+  </section>
 
   <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
