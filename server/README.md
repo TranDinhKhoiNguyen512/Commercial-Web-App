@@ -13,9 +13,9 @@ http://localhost:3000/card/getall
 ```
 ###### Card GetDetail
 ```
-http://localhost:3000/card/getByID/{cardID}
+http://localhost:3000/card/get/{cardID}
 ```
-###### You can get any value of the card with 2 param or 1 param
+###### You can get any value of the card with maximum upto 4 param (not counting cardID)
 ```
 http://localhost:3000/card/get/{cardID}/set/id
 ```

@@ -56,7 +56,7 @@ cardRoutes.get('/card/getAll', (req, res) => {
 })
 
 // Read - get cards by id
-cardRoutes.get('/card/getByID/:id', (req, res) => {
+cardRoutes.get('/card/get/:id', (req, res) => {
 	const cards = getcardData()
 	var id = req.params['id']
 
@@ -71,6 +71,45 @@ cardRoutes.get('/card/getByID/:id', (req, res) => {
 	res.send(result)
 })
 //get card attributes
+
+cardRoutes.get('/card/get/:id/:param1/:param2/:param3/:param4', (req, res) => {
+
+	const cards = getcardData()
+	var param1 = req.params['param1']
+	var param2 = req.params['param2']
+	var param3 = req.params['param3']
+	var param4 = req.params['param4']
+	var id = req.params['id']
+
+	//cards.length
+	for (var i = 0; i < cards.length; i++) {
+		if (cards[i].id == id) {
+			var result = cards[i]
+			//console.log(cards[i])
+
+		}
+	};
+	res.send(result[param1][param2][param3][param4])
+})
+
+cardRoutes.get('/card/get/:id/:param1/:param2/:param3', (req, res) => {
+
+	const cards = getcardData()
+	var param1 = req.params['param1']
+	var param2 = req.params['param2']
+	var param3 = req.params['param3']
+	var id = req.params['id']
+
+	//cards.length
+	for (var i = 0; i < cards.length; i++) {
+		if (cards[i].id == id) {
+			var result = cards[i]
+			//console.log(cards[i])
+
+		}
+	};
+	res.send(result[param1][param2][param3])
+})
 cardRoutes.get('/card/get/:id/:param1/:param2', (req, res) => {
 
 	const cards = getcardData()
