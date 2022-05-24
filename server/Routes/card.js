@@ -52,7 +52,7 @@ cardRoutes.get('/card/getAll', (req, res) => {
 	for (var i = 0; i < cards.length; i++) {
 		result.push(cards[i].id)
 	}
-	res.send(result)
+	res.send(JSON.parse(result))
 })
 
 // Read - get cards by id
@@ -68,7 +68,7 @@ cardRoutes.get('/card/get/:id', (req, res) => {
 
 		}
 	};
-	res.send(result)
+	res.send(JSON.parse(result))
 })
 //get card attributes
 
@@ -89,7 +89,7 @@ cardRoutes.get('/card/get/:id/:param1/:param2/:param3/:param4', (req, res) => {
 
 		}
 	};
-	res.send(result[param1][param2][param3][param4])
+	res.send(JSON.stringify(result[param1][param2][param3][param4]))
 })
 
 cardRoutes.get('/card/get/:id/:param1/:param2/:param3', (req, res) => {
@@ -108,7 +108,7 @@ cardRoutes.get('/card/get/:id/:param1/:param2/:param3', (req, res) => {
 
 		}
 	};
-	res.send(result[param1][param2][param3])
+	res.send(JSON.stringify(result[param1][param2][param3]))
 })
 cardRoutes.get('/card/get/:id/:param1/:param2', (req, res) => {
 
@@ -125,7 +125,7 @@ cardRoutes.get('/card/get/:id/:param1/:param2', (req, res) => {
 
 		}
 	};
-	res.send(result[param1][param2])
+	res.send(JSON.stringify(result[param1][param2]))
 })
 
 cardRoutes.get('/card/get/:id/:param1', (req, res) => {
@@ -143,7 +143,7 @@ cardRoutes.get('/card/get/:id/:param1', (req, res) => {
 		}
 	};
 
-	res.send(result[param1])
+	res.send(JSON.stringify((result[param1])))
 })
 // Update - using Put method
 cardRoutes.put('/card/:id', (req, res) => {

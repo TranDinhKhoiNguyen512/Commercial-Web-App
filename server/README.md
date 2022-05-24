@@ -9,22 +9,22 @@
 ## Test API
 ###### Card GetAll
 ```
-http://localhost:3000/card/getall
+http://localhost:5000/card/getall
 ```
 ###### Card GetDetail
 ```
-http://localhost:3000/card/get/{cardID}
+http://localhost:5000/card/get/{cardID}
 ```
 ###### You can get any value of the card with maximum upto 4 param (not counting cardID)
 ```
-http://localhost:3000/card/get/{cardID}/set/id
+http://localhost:5000/card/get/{cardID}/set/id
 ```
   or
 ```
-http://localhost:3000/card/get/{cardID}/images/large
+http://localhost:5000/card/get/{cardID}/images/large
 ```
   or just 
 ```
-http://localhost:3000/card/get/{cardID}/images
+http://localhost:5000/card/get/{cardID}/images
 ```
 *Swagger UI for APIs will be added later in the project*
