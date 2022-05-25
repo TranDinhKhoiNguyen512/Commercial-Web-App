@@ -1,16 +1,17 @@
 .item__list {
-    margin: 10px auto 100px auto;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+    background-color: $color-mint-0;
+    text-align: center;
+    padding-top: $pd-4;
     .container_main {
-        width: 120%;
-        height: 100%;
-        // position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-8%, 8%);
-        transform: translate(-8%, 8%);
+        // width: 120%;
+        // height: 100%;
+        // // position: absolute;
+        // top: 70%;
+        // left: 50%;
+        left: 40%;
+        
+        -webkit-transform: translate(-1%, 1%);
+        transform: translate(-1%, 1%);
         
     }
 

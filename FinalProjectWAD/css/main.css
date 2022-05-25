@@ -78,7 +78,7 @@ header .header__content .button--dark {
 
 footer {
   background-color: #24262a;
-  padding-top: 100px;
+  padding-top: 50px;
   width: 100%;
   padding-bottom: 100px;
 }
@@ -423,22 +423,16 @@ footer .bot__footer .container .logo__e img {
 }
 
 .item__list {
-  margin: 10px auto 100px auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50%;
-  height: 100%;
+  background-color: #00ffe5;
+  text-align: center;
+  padding-top: 50px;
   /* 348 / 479 */
 }
 
 .item__list .container_main {
-  width: 120%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-8%, 8%);
-  transform: translate(-8%, 8%);
+  left: 40%;
+  -webkit-transform: translate(-1%, 1%);
+  transform: translate(-1%, 1%);
 }
 
 .item__list .cover {
