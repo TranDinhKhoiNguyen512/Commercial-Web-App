@@ -17,6 +17,10 @@ http://localhost:5000/card/get/{cardID}
 ```
 ###### You can get any value of the card with maximum upto 4 param (not counting cardID)
 ```
+http://localhost:5000/card/get/{cardID}/tcgplayer/prices/holofoil/low
+```
+  or
+```
 http://localhost:5000/card/get/{cardID}/set/id
 ```
   or

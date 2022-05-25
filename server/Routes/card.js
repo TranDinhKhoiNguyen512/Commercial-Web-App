@@ -24,7 +24,7 @@ cardRoutes.get('/card', (req, res) => {
 			throw err;
 		}
 
-		res.send(JSON.parse(data));
+		res.send(JSON.stringify(data));
 	});
 });
 
@@ -52,7 +52,7 @@ cardRoutes.get('/card/getAll', (req, res) => {
 	for (var i = 0; i < cards.length; i++) {
 		result.push(cards[i].id)
 	}
-	res.send(JSON.parse(result))
+	res.send(JSON.stringify(result))
 })
 
 // Read - get cards by id
@@ -68,7 +68,7 @@ cardRoutes.get('/card/get/:id', (req, res) => {
 
 		}
 	};
-	res.send(JSON.parse(result))
+	res.send(JSON.stringify(result))
 })
 //get card attributes
 
@@ -143,7 +143,7 @@ cardRoutes.get('/card/get/:id/:param1', (req, res) => {
 		}
 	};
 
-	res.send(JSON.stringify((result[param1])))
+	res.send(JSON.stringify(result[param1]))
 })
 // Update - using Put method
 cardRoutes.put('/card/:id', (req, res) => {
