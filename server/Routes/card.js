@@ -169,4 +169,24 @@ cardRoutes.delete('/card/delete/:id', (req, res) => {
 		res.send(`cards with id ${userId} has been deleted`)
 	}, true);
 })
+
+//query - using get method
+
+cardRoutes.get('/card/query/', (req, res) => {
+	// const cards = getcardData()
+	// var id = req.params['id']
+
+	// //cards.length
+	// for (var i = 0; i < cards.length; i++) {
+	// 	if (cards[i].id == id) {
+	// 		var result = cards[i]
+	// 		//console.log(cards[i])
+
+	// 	}
+	// };
+	// res.send(JSON.stringify(result))
+	console.log(JSON.stringify(req.query))
+	res.send(req.query)
+})
+
 module.exports = cardRoutes;
