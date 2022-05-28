@@ -30,7 +30,7 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="./css/main.css" />
-  
+
 </head>
 
 <body>
@@ -191,14 +191,18 @@
   <section class="scrollbar">
     <!-- Change href and name of scroll bar -->
     <div class="sideNavigation " data-ccid="7LHqUEWTN7qA8MA2HUCgwt">
-      <a class="btn btn-primary sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#Something"
-        data-cy="same-window">
-        <span data-source="translations" data-innertext="Something">Something</span>
-      </a>
-      <a class="btn btn-primary sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#footer"
-        data-cy="same-window">
-        <span data-source="translations" data-innertext="Footer">Footer</span>
-      </a>
+      <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" data-cy="same-window"
+        data-bs-toggle="modal" data-bs-target="#search">
+        <span data-source="translations" data-innertext="Footer"><i class="fa-solid fa-magnifying-glass "
+            id="icon"></i></span>
+        <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#Something"
+          data-cy="same-window">
+          <span data-source="translations" data-innertext="Something">Something</span>
+        </a>
+        <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#footer"
+          data-cy="same-window">
+          <span data-source="translations" data-innertext="Footer">Footer</span>
+        </a>
     </div>
   </section>
 
@@ -284,6 +288,28 @@
           <div class="modal-footer">
             <button type="button" class="btn button--mint">Register</button>
             <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-4">
+                <input type="text" class="form-control" placeholder="Card Name, ID, etc">
+                <button class="btn button--mint">Search</button>
+              </div>
+              
+            </form>
           </div>
         </div>
       </div>

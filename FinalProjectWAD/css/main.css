@@ -382,7 +382,13 @@ footer .bot__footer .container .logo__e img {
   text-transform: uppercase;
 }
 
-.scrollbar .sideNavigation .btn {
+.scrollbar .sideNavigation #icon {
+  font-size: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.scrollbar .sideNavigation .sideNavigation .btn {
   margin: 1px 0 0;
   padding: 4px 25px 6px 15px;
   border-top: 0;
@@ -390,7 +396,7 @@ footer .bot__footer .container .logo__e img {
   border-left: 0;
 }
 
-.scrollbar .sideNavigation__item {
+.scrollbar .sideNavigation .sideNavigation__item {
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.3)));
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.3));
@@ -402,7 +408,7 @@ footer .bot__footer .container .logo__e img {
   transition: color 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.scrollbar .btn:hover {
+.scrollbar .sideNavigation .btn:hover {
   background-color: black;
   color: #00ffe5;
 }
@@ -413,13 +419,16 @@ footer .bot__footer .container .logo__e img {
 }
 
 .pop__up .button--mint {
-  margin-right: 10px;
+  margin: 10px;
   border: 2px solid #00ffe5;
 }
 
 .pop__up .button--dark {
   border: 2px solid #00ffe5;
-  margin-right: 10px;
+}
+
+.pop__up .modal-body {
+  white-space: 30px;
 }
 
 .item__list {
