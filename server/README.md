@@ -35,4 +35,13 @@ http://localhost:5000/card/get/{cardID}/images
 ```
 http://localhost:5000/card/query?searchstring=&set=&series=&rarity=&supertype=&subtype=&type=
 ```
+```
+searchstring : Card name or id
+set : id of the set
+series : id of the series
+rarity : rarity
+supertype : Pokemon or Trainer 
+subtype : 
+type : pokemon Type
+```
 *Swagger UI for APIs will be added later in the project*
