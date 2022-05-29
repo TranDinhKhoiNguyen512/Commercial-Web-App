@@ -173,20 +173,133 @@ cardRoutes.delete('/card/delete/:id', (req, res) => {
 //query - using get method
 
 cardRoutes.get('/card/query/', (req, res) => {
-	// const cards = getcardData()
-	// var id = req.params['id']
+	var searchstring = req.query.searchstring
+	var set = req.query.set
+	var series = req.query.series
+	var rarity = req.query.rarity
+	var supertype = req.query.supertype
+	var subtype = req.query.subtype
+	var type = req.query.type
+	var result = []
 
-	// //cards.length
-	// for (var i = 0; i < cards.length; i++) {
-	// 	if (cards[i].id == id) {
-	// 		var result = cards[i]
-	// 		//console.log(cards[i])
+	const cards = getcardData()
+	for (var i = 0; i < cards.length; i++) {
+		//Name || ID check
+		if (searchstring == "" || searchstring == undefined){
+			var nameCheck = true
+		}
+		else{
+			if (cards[i].name.toLowerCase().includes(searchstring.toLowerCase() || cards[i].id == searchstring) ) {
+				var nameCheck = true
+			}
+			else{
+				var nameCheck = false
+			}
+		}
+		
 
-	// 	}
-	// };
-	// res.send(JSON.stringify(result))
-	console.log(JSON.stringify(req.query))
-	res.send(req.query)
+		//Set Check
+		if (set == "" ||set === undefined){
+			var setCheck = true
+		}
+		else{
+			if (cards[i].set.id == set){
+				var setCheck = true
+			}
+			else{
+				var setCheck = false
+			}
+		}
+
+		//Series Check
+		if (series == ""||series === undefined){
+			var seriesCheck = true
+		}
+		else{
+			if (cards[i].set.series == series){
+				var seriesCheck = true
+			}
+			else{
+				var seriesCheck = false
+			}
+		}
+
+		//rarity check 
+		if (rarity == ""||rarity === undefined){
+			var rarityCheck = true
+		}
+		else{
+			if (cards[i].rarity == rarity){
+				var rarityCheck = true
+			}
+			else{
+				var rarityCheck = false
+			}
+		}
+
+		//supertype check
+		if (supertype == ""||supertype === undefined){
+			var supertypeCheck = true
+		}
+		else{
+			if (cards[i].supertype == supertype){
+				var supertypeCheck = true
+			}
+			else{
+				var supertypeCheck = false
+			}
+		}
+
+		//subtype check
+		if (subtype == "" ||subtype === undefined){
+			var subtypeCheck = true
+		}
+		else{
+			if (cards[i].subtypes != null){
+				if (cards[i].subtypes[0] == subtype){
+				var subtypeCheck = true
+				}
+				else{
+					var subtypeCheck = false
+				}
+			}
+			else{
+				//console.log(cards[i].id)
+			}
+			
+		}
+
+		//type check
+		if (type == "" ||type === undefined){
+			var typeCheck = true
+		}
+		else{
+			if (cards[i].types != null){
+				if (cards[i].types[0] == type){
+				var typeCheck = true
+				}
+				else{
+					var typeCheck = false
+				}
+			}
+			else{
+				//console.log(cards[i].id)
+			}
+			
+		}
+
+		// if card info check ok
+		if ( nameCheck && setCheck && seriesCheck && rarityCheck && supertypeCheck && subtypeCheck && typeCheck){
+				result.push((cards[i].name+"|"+cards[i].id))
+		}
+		else{
+
+		}
+	}
+	res.send(JSON.stringify(result))
+	console.log(searchstring,set,series,rarity,supertype,subtype,type)
+
+	//res.send(req.query)
 })
 
 module.exports = cardRoutes;

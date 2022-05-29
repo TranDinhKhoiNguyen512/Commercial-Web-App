@@ -33,6 +33,6 @@ http://localhost:5000/card/get/{cardID}/images
 ```
 ###### Query string testing
 ```
-http://localhost:5000/card/query?list_a={lmao=t%C3%A9t}&list_a=2&list_a=3&list_b[]=1&list_b[]=2&list_b[]=3
+http://localhost:5000/card/query?searchstring=&set=&series=&rarity=&supertype=&subtype=&type=
 ```
 *Swagger UI for APIs will be added later in the project*
