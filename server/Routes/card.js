@@ -189,7 +189,7 @@ cardRoutes.get('/card/query/', (req, res) => {
 			var nameCheck = true
 		}
 		else{
-			if (cards[i].name.toLowerCase().includes(searchstring.toLowerCase() || cards[i].id == searchstring) ) {
+			if (cards[i].name.toLowerCase().includes(searchstring.toLowerCase()) || cards[i].id == searchstring ) {
 				var nameCheck = true
 			}
 			else{
@@ -290,7 +290,9 @@ cardRoutes.get('/card/query/', (req, res) => {
 
 		// if card info check ok
 		if ( nameCheck && setCheck && seriesCheck && rarityCheck && supertypeCheck && subtypeCheck && typeCheck){
-				result.push((cards[i].name+"|"+cards[i].id))
+				//For debugging
+				//result.push((cards[i].name+"|"+cards[i].id))
+				result.push((cards[i]))
 		}
 		else{
 
