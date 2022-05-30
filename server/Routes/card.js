@@ -318,8 +318,10 @@ cardRoutes.get('/card/query/', (req, res) => {
 	}
 
 	data = result.slice(startIndex,endIndex)
-
-	res.send(data)
+	var response = {"total":totalPage,"page":parseInt(page_number),"data":data}
+		
+	;
+	res.send(response)
 	//console.log(page_number,totalPage,startIndex,endIndex)
 
 	//res.send(req.query)
