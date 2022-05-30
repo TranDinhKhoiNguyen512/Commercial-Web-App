@@ -181,6 +181,12 @@ cardRoutes.get('/card/query/', (req, res) => {
 	var subtype = req.query.subtype
 	var type = req.query.type
 	var result = []
+	var page_number = req.query.page
+	var per_page = 20
+
+	if (page_number == "" ||page_number === undefined){
+		page_number = 1
+	}
 
 	const cards = getcardData()
 	for (var i = 0; i < cards.length; i++) {
@@ -295,11 +301,26 @@ cardRoutes.get('/card/query/', (req, res) => {
 				result.push((cards[i]))
 		}
 		else{
-
+			// ??? Do nothing i guess
 		}
+
 	}
-	res.send(JSON.stringify(result))
-	console.log(searchstring,set,series,rarity,supertype,subtype,type)
+	var totalItem = result.length
+	var totalPage = Math.ceil(totalItem/per_page)
+	//res.send(JSON.stringify(result))
+	
+	var startIndex = (page_number - 1)*per_page
+	if( page_number == totalPage){
+		var endIndex = totalItem
+	}
+	else{
+		var endIndex = page_number*per_page
+	}
+
+	data = result.slice(startIndex,endIndex)
+
+	res.send(data)
+	//console.log(page_number,totalPage,startIndex,endIndex)
 
 	//res.send(req.query)
 })

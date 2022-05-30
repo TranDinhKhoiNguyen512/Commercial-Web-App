@@ -33,7 +33,7 @@ http://localhost:5000/card/get/{cardID}/images
 ```
 ###### Query string testing
 ```
-http://localhost:5000/card/query?searchstring=&set=&series=&rarity=&supertype=&subtype=&type=
+http://localhost:5000/card/query?searchstring=&set=&series=&rarity=&supertype=&subtype=&type=&page=
 ```
 ```
 searchstring : Card name or id
