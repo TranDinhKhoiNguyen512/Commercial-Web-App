@@ -104,22 +104,44 @@
           <h1 id="name"></h1>
         </div>
 
+        <!-- Artist Name -->
+        <div class="row">
+          <div>
+            <span class="text">Artist Name: </span>
+            <span id="artist" class="data"></span>
+          </div>
+        </div>
+        <!-- ID -->
+        <div class="row">
+          <div>
+            <span class="text">Series / Set: </span>
+            <span id="base" class="data"></span>
+          </div>
+          <div>
+            <span class="text">ID: </span>
+            <span id="id" class="data"></span>
+          </div>
+          <div>
+            <span class="text">Stage: </span>
+            <span id="stage" class="data"></span>
+          </div>
+        </div>
         <!-- Title -->
         <div class="row">
-          <p>Product Details</p>
+          <h2>Product Details</h2>
         </div>
         <!-- Card Number -->
         <div class="row">
           <div>
             <span class="text">Card Number / Rarity:</span>
-            <span id="rarity" class = "data"></span>
+            <span id="rarity" class="data"></span>
           </div>
         </div>
         <!-- Card Type / HP / Stage -->
         <div class="row">
           <div>
             <span class="text">Card Type / HP / Stage: </span>
-            <span id = "types" class = "data"></span> 
+            <span id="types" class="data"></span>
           </div>
         </div>
 
@@ -127,66 +149,121 @@
         <div class="row">
           <div>
             <span class="text">Price: </span>
-            <span id="price" class = "data"></span>
+            <span id="price" class="data"></span>
           </div>
         </div>
 
         <!-- Pokemon Power -->
         <div class="row">
           <div>
-            <span id = "power" class="text"></span>
+            <span class="text">Card Text: </span>
+            <span id="card_text" class="data"></span>
           </div>
         </div>
 
-        <!-- Card Text -->
-        <div class="row">
-          <div>
-            <span class = "text">Card Text: </span>
-            <span id = "card_text" class = "data"></span>
-          </div>
-        </div>
 
       </div>
     </div>
   </section>
 
-  
-  <!-- <div class="item_list">
-    <section class="item__list">
-      <div class="container_main">
-        <div class="cover atvImg">
+  <section class="search_page">
+    <form action="">
+      <div class="container border">
+        <div class="row first">
+          <div class="col-8 title">Card Name and Keyword Search</div>
+          <div class="col-4">
+            <label for="inputEvolvesFrom" class="form-label">Evolves From</label>
+            <input type="text" class="form-control" id="inputEvolvesFrom">
+          </div>
+        </div>
+
+        <div class="row second">
+          <div class="col-3">
+            <label for="inputCardName" class="form-label">Card Name</label>
+            <input type="text" class="form-control" id="inputCardName">
+          </div>
+          <div class="col-3">
+            <label for="inputCardText" class="form-label">Card Text</label>
+            <input type="text" class="form-control" id="inputCardText">
+          </div>
+        </div>
+
+        <div class="row third">
+          <div class="col-8 title">Energy Type</div>
+        </div>
+
+        <div class="row fourth">
+          <div class="col-3">
+            <label class="container">
+              <img src="./img/type/GRASS.png" alt="grass_energy">
+              <span>GRASS</span>
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div class="col-1">EMPTY</div>
+
+          <div class="col-3">
+            <label class="container">
+              <img src="./img/type/GRASS.png" alt="grass_energy">
+              <span>GRASS</span>
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div class="col-1">EMPTY</div>
+
+          <div class="col-3">CLASS</div>
+
+          <div class="col-1">EMPTY</div>
+
+        </div>
+
+
+      </div>
+    </form>
+  </section>
+
+  <!-- <div class="item_list"> -->
+  <section class="item__list">
+    <div class="container list">
+      <a href="https://images.pokemontcg.io/swsh9tg/TG19.png">
+        <div class="cover atvImg" id="image">
           <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/1.png"></div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/2.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/10.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/30.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/20.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/10.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/3.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base2/3.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/20.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/3.png"></div>
-        </div>
+      </a>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/2.png"></div>
       </div>
-    </section>
-  </div>  -->
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/10.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/30.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/20.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/10.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/3.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base2/3.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/20.png"></div>
+      </div>
+      <div class="cover atvImg">
+        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/3.png"></div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -407,8 +484,8 @@
     });
   </script>
   <!-- MAIN JS -->
-  <script src="./js/_getInfor.js"></script>
-  <script src="./js/_itemList.js"></script>
+  <script src="./js/getInfor.js"></script>
+  <script src="./js/itemList.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

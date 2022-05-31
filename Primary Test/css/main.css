@@ -541,6 +541,8 @@ footer .bot__footer .container .logo__e img {
 .product__text .infor {
   display: block;
   text-align: left;
+  -webkit-text-decoration: bold;
+          text-decoration: bold;
 }
 
 .product__text .infor #name {
@@ -555,6 +557,50 @@ footer .bot__footer .container .logo__e img {
 .product__text .infor .data {
   color: gray;
   font-size: 15px;
+}
+
+.search_page .first .title {
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 30px;
+}
+
+.search_page .first .form-label {
+  padding-top: 40px;
+  color: gray;
+}
+
+.search_page .second {
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+.search_page .second .form-label {
+  color: gray;
+}
+
+.search_page .third .title {
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 30px;
+}
+
+.search_page .fourth .content {
+  border-radius: 10px;
+  color: black;
+}
+
+.search_page .fourth .content:hover {
+  background-color: green;
+  border: green solid 1px;
+}
+
+.search_page .fourth .container:hover {
+  background-color: red;
+  border-color: green;
 }
 
 .button--mint {
