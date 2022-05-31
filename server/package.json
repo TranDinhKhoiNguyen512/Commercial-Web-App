@@ -1,12 +1,12 @@
 {
-  "name": "crud-operation-with-jsonfile",
+  "name": "PokeShop",
   "version": "1.0.0",
-  "description": "A tutorial project on how to create CRUD operations with JSON files",
+  "description": "A website that sell pokemon card.",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "Uma Victor",
+  "author": "CrazyMeowl",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",

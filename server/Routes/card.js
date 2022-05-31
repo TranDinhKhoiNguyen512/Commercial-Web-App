@@ -1,7 +1,8 @@
 const express = require("express")
 const cardRoutes = express.Router();
 const fs = require('fs');
-
+const swaggerUI = require('swagger-ui-express');
+const swaggerJsDoc = require('swagger-jsdoc');
 const dataPath = './Details/cards.json'
 
 // util functions 
@@ -44,6 +45,17 @@ cardRoutes.post('/card/add', (req, res) => {
 		msg: 'card data added successfully'
 	})
 })
+
+/**
+ * @swagger
+ * /cards:
+ *   get:
+ *     description: Get all card
+ *     responses:
+ *       200:
+ *         description: Success
+ * 
+ */
 
 // Read - get all cards from the json file
 cardRoutes.get('/card/getAll', (req, res) => {
