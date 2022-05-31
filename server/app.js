@@ -41,8 +41,35 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 // START CARD API
 
-// util functions 
 
+// Update - using Put method
+app.put('/card/:id', (req, res) => {
+  var existcards = getcardData()
+  fs.readFile(dataPath, 'utf8', (err, data) => {
+    const cardId = req.params['id'];
+    existcards[cardId] = req.body;
+
+    savecardData(existcards);
+    res.send(`cards with id ${cardId} has been updated`)
+  }, true);
+});
+
+// Create - use post method
+app.post('/card/add', (req, res) => {
+
+  var existcards = getcardData()
+  const newcardId = Math.floor(100000 + Math.random() * 900000)
+
+  existcards[newcardId] = req.body
+
+  console.log(existcards);
+
+  savecardData(existcards);
+  res.send({
+    success: true,
+    msg: 'card data added successfully'
+  })
+})
 
 
 /**
@@ -68,22 +95,6 @@ app.get('/card/getAll', (req, res) => {
   res.send(JSON.stringify(result))
 })
 
-// Create - use post method
-app.post('/card/add', (req, res) => {
-
-  var existcards = getcardData()
-  const newcardId = Math.floor(100000 + Math.random() * 900000)
-
-  existcards[newcardId] = req.body
-
-  console.log(existcards);
-
-  savecardData(existcards);
-  res.send({
-    success: true,
-    msg: 'card data added successfully'
-  })
-})
 
 
  /**
@@ -120,61 +131,8 @@ app.get('/card/get/:id', (req, res) => {
   };
   res.send(JSON.stringify(result))
 })
-// Update - using Put method
-app.put('/card/:id', (req, res) => {
-  var existcards = getcardData()
-  fs.readFile(dataPath, 'utf8', (err, data) => {
-    const cardId = req.params['id'];
-    existcards[cardId] = req.body;
 
-    savecardData(existcards);
-    res.send(`cards with id ${cardId} has been updated`)
-  }, true);
-});
 
- /**
-   * @swagger
-   * /card/delete/{id}:
-   *   delete:
-   *     description: Returns card with search param
-   *     tags:
-   *      - Cards
-   *     produces:
-   *      - application/json
-   *     parameters:
-   *      - in: path
-   *        name: id
-   *        type: string
-   *        description: Card's ID
-   *     responses:
-   *       200:
-   *         description: OK
-   */
-
-//delete - using delete method
-app.delete('/card/delete/:id', (req, res) => {
-  fs.readFile(dataPath, 'utf8', (err, data) => {
-    var existcards = getcardData()
-    var found = false
-    const cardId = req.params.id;
-    for (const card of existcards) {
-      if(card.id == cardId){
-        var index = existcards.indexOf(card)
-        found = true
-        console.log(cardId)
-        console.log(index)
-        existcards.splice(index, 1);
-        savecardData(existcards);    
-        res.send(`cards with id ${cardId} has been deleted`)
-      }
-
-    }
-    if(found == false){
-      res.send(`cards with id ${cardId} cant be found`)
-    }
-    
-  }, true);
-})
 
 
  /**
@@ -219,7 +177,7 @@ app.delete('/card/delete/:id', (req, res) => {
    *       200:
    *         description: OK
    */
-
+//query - using get method
 app.get('/card/query/', (req, res) => {
   var searchstring = req.query.searchstring
   var set = req.query.set
@@ -374,12 +332,56 @@ app.get('/card/query/', (req, res) => {
 
   //res.send(req.query)
 })
+ /**
+   * @swagger
+   * /card/delete/{id}:
+   *   delete:
+   *     description: Returns card with search param
+   *     tags:
+   *      - Cards
+   *     produces:
+   *      - application/json
+   *     parameters:
+   *      - in: path
+   *        name: id
+   *        type: string
+   *        description: Card's ID
+   *     responses:
+   *       200:
+   *         description: OK
+   */
 
+//delete - using delete method
+app.delete('/card/delete/:id', (req, res) => {
+  fs.readFile(dataPath, 'utf8', (err, data) => {
+    var existcards = getcardData()
+    var found = false
+    const cardId = req.params.id;
+    for (const card of existcards) {
+      if(card.id == cardId){
+        var index = existcards.indexOf(card)
+        found = true
+        console.log(cardId)
+        console.log(index)
+        existcards.splice(index, 1);
+        savecardData(existcards);    
+        res.send(`cards with id ${cardId} has been deleted`)
+      }
+
+    }
+    if(found == false){
+      res.send(`cards with id ${cardId} cant be found`)
+    }
+    
+  }, true);
+})
 // END CARD API
 
 //start server
 app.listen(5000, ()=>{
     console.log("The server is online")
-    console.log("https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/server/README.md#test-api")
+    console.log("server-side-github-link: https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/server/README.md#test-api")
+    console.log("")
+    console.log("server-side-api-UI: http://localhost:5000/api-docs/")
 
 }) 
