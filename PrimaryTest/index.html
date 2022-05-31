@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/CrazyMeowl/NetCentric-PokeProject/main/poke.ico">
+  <title>Test Website</title>
+
+  <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+  <!-- BOOTSTRAP 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- FONT GOOGLE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap"
+    rel="stylesheet" />
+
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="./css/main.css" />
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header__content" id="home">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#1">
+            <img class="logo--icon" src="./img/pokeball.png" alt="icon" />
+            <img class="logo--name" src="./img/logo.png" alt="poke" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fa fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <button class="btn button--mint" type="button" data-bs-toggle="modal" data-bs-target="#signUp">Sign
+              In</button>
+            <button class="btn button--dark" type="button" data-bs-toggle="modal"
+              data-bs-target="#register">Register</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner__content">
+      <video class="looping-video" id="vid" autoplay playsinline loop muted type="video/mp4"
+        src="./img/vid.mp4"></video>
+      <script>
+        document.getElementById('vid').play();
+      </script>
+      <!-- <img src="./img/vid.gif"> -->
+      <div class="banner__items"></div>
+    </div>
+  </section>
+
+  <!-- Product Text -->
+  <section class="container product__text">
+    <div class="row">
+      <div class="col-4 image__side">
+        <p id="image"></p>
+      </div>
+      <div class="col-8 infor">
+
+        <!-- Card Name -->
+        <div class="row">
+          <h1 id="name"></h1>
+        </div>
+
+        <!-- Title -->
+        <div class="row">
+          <p>Product Details</p>
+        </div>
+        <!-- Card Number -->
+        <div class="row">
+          <div>
+            <span class="text">Card Number / Rarity:</span>
+            <span id="rarity" class = "data"></span>
+          </div>
+        </div>
+        <!-- Card Type / HP / Stage -->
+        <div class="row">
+          <div>
+            <span class="text">Card Type / HP / Stage: </span>
+            <span id = "types" class = "data"></span> 
+          </div>
+        </div>
+
+        <!-- Prices -->
+        <div class="row">
+          <div>
+            <span class="text">Price: </span>
+            <span id="price" class = "data"></span>
+          </div>
+        </div>
+
+        <!-- Pokemon Power -->
+        <div class="row">
+          <div>
+            <span id = "power" class="text"></span>
+          </div>
+        </div>
+
+        <!-- Card Text -->
+        <div class="row">
+          <div>
+            <span class = "text">Card Text: </span>
+            <span id = "card_text" class = "data"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- <div class="item_list">
+    <section class="item__list">
+      <div class="container_main">
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/1.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/2.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/10.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/30.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/20.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/10.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/3.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base2/3.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/20.png"></div>
+        </div>
+        <div class="cover atvImg">
+          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/3.png"></div>
+        </div>
+      </div>
+    </section>
+  </div>  -->
+
+  <!-- FOOTER -->
+  <footer>
+    <section class="top__footer" id="footer">
+      <div class="container">
+        <div class="content">
+          <p>Visit Other Social Channels</p>
+        </div>
+        <div class="icon">
+          <div class="list__snw">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f" id="facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+            <a href="https://www.twitch.tv/tan_vo"><i class="fa-brands fa-twitch" id="twitch"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in" id="linkedin"></i></a>
+            <a href="https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App"><i class="fa-brands fa-github"
+                id="github"></i></a>
+            <a href="https://www.youtube.com/watch?v=sFS6gLmPX3w"><i class="fa-brands fa-youtube" id="youtube"></i></a>
+            <a href="https://discord.com/"><i class="fa-brands fa-discord" id="discord"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bot__footer">
+      <div class="container">
+        <div class="row">
+          <div class="col logo">
+            <img class="logo--name" src="./img/logo.png" alt="poke" />
+          </div>
+          <div class="col first__content">
+            <div class="title">
+              <h2>The Offcial Websites</h2>
+            </div>
+            <div class="web__link">
+              <a href="https://www.pokemon.com/us/">The Offical Pokémon Website</a><br>
+              <a href="https://pokedex.org/">Pokedex</a>
+            </div>
+          </div>
+          <div class="col contact">
+            <div class="tilte">
+              <h2>Contact</h2>
+            </div>
+            <div class="each__member">
+              <a href="https://github.com/TranDinhKhoiNguyen512">Trần Đình Khôi Nguyên</a><br>
+              <a href="https://github.com/CrazyMeowl">Trần Cao Bảo Phúc</a><br>
+              <a href="https://github.com/growsel">Võ Vương Nhật Tân</a>
+            </div>
+          </div>
+          <div class="col logo__e">
+            <img src="https://www.esrb.org/wp-content/uploads/2019/05/E.svg" alt="Logo_e">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </footer>
+
+  <!-- Side Scroll -->
+  <section class="scrollbar">
+    <!-- Change href and name of scroll bar -->
+    <div class="sideNavigation " data-ccid="7LHqUEWTN7qA8MA2HUCgwt">
+      <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" data-cy="same-window"
+        data-bs-toggle="modal" data-bs-target="#search">
+        <span data-source="translations" data-innertext="Footer"><i class="fa-solid fa-magnifying-glass "
+            id="icon"></i></span>
+        <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#Something"
+          data-cy="same-window">
+          <span data-source="translations" data-innertext="Something">Something</span>
+        </a>
+        <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#footer"
+          data-cy="same-window">
+          <span data-source="translations" data-innertext="Footer">Footer</span>
+        </a>
+    </div>
+  </section>
+
+  <!-- Pop Up -->
+  <section class="pop__up">
+    <!-- Sign Up -->
+    <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="email" id="form3Example3c" class="form-control" placeholder="Your email" />
+                </div>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="password" id="form3Example4c" class="form-control" placeholder="Password" />
+                </div>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <a href="#">Forget the password</a>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button--mint">Login</button>
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register -->
+    <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                <input type="text" id="form3Example1c" class="form-control" placeholder="user_name" />
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="email" id="form3Example3c" class="form-control" placeholder="your_email" />
+                </div>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="password" id="form3Example4c" class="form-control" placeholder="password" />
+                </div>
+              </div>
+              <div class="d-flex flex-row align-items-center mb-4">
+                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="password" id="form3Example4cd" class="form-control" placeholder="repeat your password" />
+                </div>
+              </div>
+              <div class="form-check d-flex flex-row align-items-center mb-4">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                <label class="form-check-label" for="form2Example3">
+                  I agree all statements in Terms of service
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button--mint">Register</button>
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="mx-1 mx-md-4">
+              <div class="d-flex flex-row align-items-center mb-4">
+                <input type="text" class="form-control" placeholder="Card Name, ID, etc">
+                <button class="btn button--mint">Search</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- JS BOOTSTRAP5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- OWL CAROUSEl -->
+  <script src="./js/owl.carousel.min.js"></script>
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 5,
+        },
+      },
+    });
+  </script>
+  <!-- MAIN JS -->
+  <script src="./js/_getInfor.js"></script>
+  <script src="./js/_itemList.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

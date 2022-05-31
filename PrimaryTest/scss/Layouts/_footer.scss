@@ -1,0 +1,134 @@
+footer {
+    // margin-top: 1000px;
+    @extend %section;
+    background-color: $color-black-1;
+    padding-top: 50px;
+    width: 100%;
+    padding-bottom: 100px;
+
+    .top__footer {
+        .container {
+            width: 100%;
+            display: flex;
+            font-size: $fs-1;
+            color: $color-white-0;
+
+            .content {
+                text-align: center;
+                margin: auto;
+                white-space: nowrap;
+            }
+
+            .icon {
+                font-size: $fs-1 +30;
+                width: 100%;
+                margin: 0 auto;
+
+                .list__snw {
+                    text-align: center;
+                    @include hoverA($color-mint-0, $color-white-0);
+
+                    i {
+                        color: $color-gray-0;
+                        transition: .5s;
+
+                        a {
+                            text-decoration: none;
+                            color: $color-gray-0;
+                        }
+                    }
+
+                    #facebook:hover {
+                        color: #4267b2;
+
+                    }
+
+                    #instagram:hover {
+                        color: #833AB4;
+                    }
+
+                    #twitch:hover {
+                        color: #6441a5;
+                    }
+
+                    #linkedin:hover {
+                        color: #0072b1;
+                    }
+
+                    #github:hover {
+                        color: #AD62AA;
+                    }
+
+                    #youtube:hover {
+                        color: #FF0000;
+                    }
+
+                    #discord:hover {
+                        color: #5865F2;
+                    }
+                }
+            }
+        }
+    }
+
+    .bot__footer {
+        color: $color-white-0;
+        display: flex;
+        padding-top: 50px;
+
+        .container {
+            width: 100%;
+            font-size: $fs-1;
+
+            .logo {
+                align-items: center;
+                justify-content: center;
+
+                .logo--name {
+                    width: 150px;
+                }
+            }
+
+            .first__content {
+                margin: 0;
+                white-space: nowrap;
+                text-align: left;
+                justify-content: center;
+
+                .web__link {
+                    font-size: $fs-1;
+                    display: block;
+
+                    @include hoverA($color-mint-0, $color-white-0);
+
+                    a {
+                        text-decoration: none;
+                        color: $color-gray-0;
+                    }
+                }
+            }
+
+            .contact {
+                .each__member {
+                    font-size: $fs-1;
+                    display: block;
+
+                    @include hoverA($color-mint-0, $color-white-0);
+
+                    a {
+                        text-decoration: none;
+                        color: $color-gray-0;
+                    }
+                }
+            }
+
+            .logo__e {
+                text-align: right;
+
+                img {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}

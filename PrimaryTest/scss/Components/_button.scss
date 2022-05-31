@@ -1,0 +1,12 @@
+.button--mint{
+    @include styleButton($color-mint-0,$color-black-0,$fs-1,$fw-0,$pd-0 - 3,$pd-2);
+    &:hover{
+        @include styleButton($color-white-0,$color-black-0,$fs-1,$fw-0,$pd-0 - 3,$pd-2);
+    }
+}
+.button--dark{
+    @include styleButton($color-black-0,$color-white-0,$fs-1,$fw-0,$pd-0 - 3,$pd-2);
+    &:hover{
+        @include styleButton($color-mint-0,$color-white-0,$fs-1,$fw-0,$pd-0 - 3,$pd-2);
+    }
+}
