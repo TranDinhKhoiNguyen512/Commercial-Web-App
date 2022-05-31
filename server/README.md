@@ -45,3 +45,7 @@ subtype :
 type : pokemon Type
 ```
 *Swagger UI for APIs will be added later in the project*
+###### Swagger UI
+```
+http://localhost:5000/api-docs/
+```
