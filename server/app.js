@@ -4,6 +4,7 @@ const fs = require('fs');
 const cors = require('cors')
 const swaggerUI = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
+
 const dataPath = './Details/cards.json'
 
 // create our express app
@@ -41,19 +42,6 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 // START CARD API
 
-
-// Update - using Put method
-app.put('/card/:id', (req, res) => {
-  var existcards = getcardData()
-  fs.readFile(dataPath, 'utf8', (err, data) => {
-    const cardId = req.params['id'];
-    existcards[cardId] = req.body;
-
-    savecardData(existcards);
-    res.send(`cards with id ${cardId} has been updated`)
-  }, true);
-});
-
 // Create - use post method
 app.post('/card/add', (req, res) => {
 
@@ -70,6 +58,35 @@ app.post('/card/add', (req, res) => {
     msg: 'card data added successfully'
   })
 })
+
+
+
+// Update - using Put method
+app.put('/card/:id', (req, res) => {
+  fs.readFile(dataPath, 'utf8', (err, data) => {
+    var existcards = getcardData()
+    var found = false
+    const cardId = req.params.id;
+    for (const card of existcards) {
+      if(card.id == cardId){
+        var index = existcards.indexOf(card)
+        found = true
+        console.log(cardId)
+        console.log(index)
+        existcards.splice(index, 1);
+        savecardData(existcards);    
+        res.send(`cards with id ${cardId} has been updated`)
+      }
+
+    }
+    if(found == false){
+      res.send(`cards with id ${cardId} cant be found`)
+    }
+    
+  }, true);
+});
+
+
 
 
 /**
