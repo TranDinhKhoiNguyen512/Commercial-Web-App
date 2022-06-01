@@ -1,4 +1,30 @@
-function atvImg(){
+// Constant URL
+
+async function getCardByQuery() {
+    var api_url1 = 'http://localhost:5000/card/query?type=Psychic'
+    const response = await fetch(api_url1);
+    const pageData = await response.json();
+    var data = pageData.data
+    // Create Element and add Img from json
+    var counter = 1
+    // 
+    for(let i = 0; i <data.length; i++){
+        //var str = `<div class="cover atvImg" id="atvImg__${counter}" style="transform: perspective(720px);"><div class="atvImg-container" style=""><div class="atvImg-shadow"></div><div class="atvImg-layers"><div class="atvImg-rendered-layer" data-layer="0" style="background-image: url(&quot;${data[i].images.small}&quot;);"></div></div><div class="atvImg-shine" style=""></div></div></div>`
+        var str = `<div class="cover atvImg"><div class="atvImg-layer" data-img="${data[i].images.small}"></div></div>`
+        document.getElementById('productList').insertAdjacentHTML( 'beforeend', str );
+        counter = counter + 1
+        //console.log(data)
+    }
+    
+    //document.getElementById('image').appendChild(theitem);
+    
+    //document.getElementsByClassName('atvImg-rendered-layer').style.backgroundImage = imgSrc;
+
+}
+
+
+async function atvImg(){
+	await getCardByQuery();
 	var d = document,
 		de = d.documentElement,
 		bd = d.getElementsByTagName('body')[0],
