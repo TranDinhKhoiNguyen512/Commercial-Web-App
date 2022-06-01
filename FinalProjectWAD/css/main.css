@@ -80,11 +80,16 @@ footer {
   background-color: #24262a;
   padding-top: 50px;
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+}
+
+footer .container {
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 footer .top__footer .container {
-  width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,6 +163,8 @@ footer .top__footer .container .icon .list__snw i {
   color: gray;
   -webkit-transition: .5s;
   transition: .5s;
+  margin: 0 20px;
+  color: #FFF;
 }
 
 footer .top__footer .container .icon .list__snw i a {
@@ -202,7 +209,7 @@ footer .bot__footer {
 }
 
 footer .bot__footer .container {
-  width: 100%;
+  max-width: 100%;
   font-size: 20px;
 }
 
@@ -213,6 +220,7 @@ footer .bot__footer .container .logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 footer .bot__footer .container .logo .logo--name {
@@ -341,7 +349,7 @@ footer .bot__footer .container .contact .each__member a {
 }
 
 footer .bot__footer .container .logo__e {
-  text-align: right;
+  text-align: center;
 }
 
 footer .bot__footer .container .logo__e img {
