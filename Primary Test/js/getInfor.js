@@ -34,7 +34,9 @@ async function getISS() {
         hpText = data.hp
     }
     document.getElementById('types').textContent = typesText + " / "  + hpText;
-    document.getElementById('supertype').textContent = data.supertype + " / "  + data.subtypes;
+    document.getElementById('supertype').textContent = data.supertype;
+    document.getElementById('subtype').textContent = data.subtypes;
+
     document.getElementById('base').textContent = data.set.series + " - " + data.set.id;
 
     

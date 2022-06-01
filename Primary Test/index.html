@@ -68,10 +68,10 @@
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
-            <button class="btn button--mint" type="button" data-bs-toggle="modal" data-bs-target="#signUp">Sign
+            <!-- <button class="btn button--mint" type="button" data-bs-toggle="modal" data-bs-target="#signUp">Sign
               In</button>
             <button class="btn button--dark" type="button" data-bs-toggle="modal"
-              data-bs-target="#register">Register</button>
+              data-bs-target="#register">Register</button> -->
           </div>
         </div>
       </nav>
@@ -94,6 +94,9 @@
   <!-- Product Text -->
   <section class="container product__text">
     <div class="row">
+      <div>
+
+      </div>
       <div class="col-4 image__side">
         <p id="image"></p>
       </div>
@@ -137,9 +140,17 @@
           </div>
           <!-- Card SuperType / SubType -->
           <div>
-            <span class="text">Card SuperType / Card SubType : </span>
+            <span class="text">Card SuperType : </span>
             <span id="supertype" class="data"></span>
           </div>
+
+          <!-- Card SubType -->
+          <div>
+            <span class="text">Card SubType : </span>
+            <span id="subtype" class="data"></span>
+          </div>
+
+
           <!-- Card Type / HP / Stage -->
           <div>
             <span class="text">Card Type / HP : </span>
@@ -154,18 +165,18 @@
         </div>
       </div>
       <div class="col-4 price_cart">
-        
-          <!-- Prices -->
-          <div class="price_infor">
-            <div class="price_title">
-              <span>Price: </span>
-            </div>
-            <div>
-              <span id="price" class="price_int"></span>
-            </div>
+
+        <!-- Prices -->
+        <div class="price_infor">
+          <div class="price_title">
+            <span>Price: </span>
           </div>
-        
-        
+          <div>
+            <span id="price" class="price_int"></span>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
@@ -190,172 +201,185 @@
         </div>
 
         <div class="type_card">
-          <div class="row fourth">
-
+          <div class="row">
             <!-- Grass Card -->
-            <div class="col-3 container">
-
-              <input type="checkbox" id="card-grass" name="card-grass" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-grass" name="card-grass" class="pill-control__input" value="Grass">
               <label for="card-grass" class="pill-control__label">
                 <img src="./img/type/GRASS.png" alt="grass_energy">
                 <span>Grass</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Fire Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-fire" name="card-fire" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-fire" name="card-fire" class="pill-control__input" value="Fire">
               <label for="card-fire" class="pill-control__label">
                 <img src="./img/type/FIRE.png" alt="fire_energy">
                 <span>Fire</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Water Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-water" name="card-water" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-water" name="card-water" class="pill-control__input" value="Water">
               <label for="card-water" class="pill-control__label">
-                <img src="./img/type/GRASS.png" alt="water_energy">
+                <img src="./img/type/WATER.png" alt="water_energy">
                 <span>Water</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
-          </div>
-
-          <div class="row fifth">
-
             <!-- Lighting Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-lightning" name="card-lightning" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-lightning" name="card-lightning" class="pill-control__input"
+                value="Lighting">
               <label for="card-lightning" class="pill-control__label">
                 <img src="./img/type/ELECTRIC.png" alt="lightning_energy">
                 <span>Lightning</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Psychic Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-psy" name="card-psy" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-psy" name="card-psy" class="pill-control__input" value="Psychic">
               <label for="card-psy" class="pill-control__label">
                 <img src="./img/type/PSYCHIC.png" alt="psy_energy">
                 <span>Psychic</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Fighting Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-fighting" name="card-fighting" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-fighting" name="card-fighting" class="pill-control__input"
+                value="Fighting">
               <label for="card-fighting" class="pill-control__label">
                 <img src="./img/type/FIGHTING.png" alt="fighting_energy">
                 <span>Fighting</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
-          </div>
-
-          <div class="row sixth">
-
             <!-- Darkness Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-darkness" name="card-darkness" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-darkness" name="card-darkness" class="pill-control__input"
+                value="Darkness">
               <label for="card-darkness" class="pill-control__label">
                 <img src="./img/type/DARK.png" alt="darkness_energy">
                 <span>Darkness</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Metal Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-metal" name="card-metal" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-metal" name="card-metal" class="pill-control__input" value="Metal">
               <label for="card-metal" class="pill-control__label">
                 <img src="./img/type/STEEL.png" alt="metal_energy">
                 <span>Metal</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Colorless Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-colorless" name="card-colorless" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-colorless" name="card-colorless" class="pill-control__input"
+                value="Colorless">
               <label for="card-colorless" class="pill-control__label">
                 <img src="./img/type/NORMAL.png" alt="colorless_energy">
                 <span>Colorless</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
-          </div>
-
-          <div class="row seventh">
-
             <!-- Fairy Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-fairy" name="card-fairy" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-fairy" name="card-fairy" class="pill-control__input" value="Fairy">
               <label for="card-fairy" class="pill-control__label">
                 <img src="./img/type/FAIRY.png" alt="fairy-energy">
                 <span>Fairy</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
             <!-- Dragon Card -->
-            <div class="col-3 container">
-              <input type="checkbox" id="card-dragon" name="card-dragon" class="pill-control__input">
+            <div class="col-4">
+              <input type="checkbox" id="card-dragon" name="card-dragon" class="pill-control__input" value="Dragon">
               <label for="card-dragon" class="pill-control__label">
                 <img src="./img/type/DRAGON.png" alt="dragon_energy">
                 <span>Dragon</span>
               </label>
             </div>
-
-            <div class="col-1"> </div>
-
-            <!-- Colorless Card -->
-            <div class="col-3 container"> </div>
-
-            <div class="col-1"> </div>
-
           </div>
-
         </div>
 
         <div class="button">
-          <br>
-          <div class="row">
-            <div class="col-5">
-            </div>
-            <div class="col-3"></div>
 
-            <div class="col-3">
-              <button type="button" class="btn button--mint">Search</button>
-              <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
-            </div>
+          
+
+          <div class="content buttons-right ">
+            <button type="button" class="btn button--mint">
+              Reset
+            </button>
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">
+              Search
+            </button>
           </div>
+
+
         </div>
-        <br>
     </form>
   </section>
 
   <!-- <div class="item_list"> -->
-  <section class="item__list">
+  <!-- <section class="item__list">
     <div class="container list" id="productList">
-      
+    </div>
+  </section> -->
+
+  <!-- <section class="mobile_nav_test">
+    <div class="container topnav">
+        <a href="javascript:void(0);" id="icon">Advantage Search</a>
+        
+        <div id="myLinks">
+          <a href="javascript:void(0);" id="bentrong">HELLO</a>
+          <div id="inside" style="display: none;">
+            <a href="#">INSIDE</a>
+          </div>
+          <a href="#contact">From</a>
+          <a href="#about">nowhere</a>
+        </div>
+    </div>
+  </section> -->
+
+  <section class="mobile_nav">
+    <div class="container">
+      <div class="topnav">
+        <a href="javascript:void(0);" id="icon" id="top__title">Advantage Search</a>
+
+        <!-- Sub Menu -->
+        <div id="myLinks" class="haha">
+          <a href="javascript:void(0);" id="card__type">Card Type</a>
+          <!-- Inside Card Type -->
+          <div id="cardType" class="cardType">
+            <a href="#">
+              <div class="row">
+                <div class="col-4">
+                  <div class="title">
+                    Pokémon
+                  </div>
+                  <!-- Type Card -->
+                  <div class="type_card">
+                    <!-- Basic -->
+                    <div class="type">
+                      <input type="checkbox" id="basic" name="basic" class="pill-control__input" value="Basic">
+                      <label for="basic" class="check">
+                        <p>Basic</p>
+                      </label>
+                    </div>
+                    <!-- Stage 1 -->
+                    <div class="type">
+                      <input type="checkbox" id="stage1" name="stage1" class="pill-control__input" value="Stage 1">
+                      <label for="stage1" class="check">
+                        <p>Stage 1</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">HELLO</div>
+                <div class="col-4">HELLO</div>
+              </div>
+            </a>
+          </div>
+
+          <a href="#contact">From</a>
+          <a href="#about">nowhere</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -527,10 +551,6 @@
     </div>
   </section>
 
-
-
-
-
   <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -559,7 +579,13 @@
       },
     });
   </script>
+
+  <!-- Mobile Nav -->
+  <script>
+
+  </script>
   <!-- MAIN JS -->
+  <script src="./js/mobileNav.js"></script>
   <script src="./js/getInfor.js"></script>
   <script src="./js/itemList.js"></script>
   <script src="./js/main.js"></script>

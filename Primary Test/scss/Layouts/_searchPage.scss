@@ -58,6 +58,7 @@
 
         span {
             color: $color-white-0;
+            margin-left: $mg-1;
         }
 
         .pill-control__label {
@@ -67,6 +68,7 @@
             display: block;
             cursor: pointer;
             height: 2.375em;
+            width:75%;
             padding: 0 2.5em 0 1em;
             border-radius: 1.2em;
             position: relative;
@@ -95,16 +97,15 @@
             appearance: none;
         }
 
-        // input[type="checkbox"]:not(:checked) +.pill-control__label::before {
-        //     color: $color-white-0;
-        //     background-color: rgb(41, 40, 38);
-        //     content: 'X';
-        // }
+        
 
         input[type="checkbox"]:checked+.pill-control__label::before {
             color: $color-white-0;
             background-color: orange;
             content: '✔';
         }
+    }
+    .button{
+        text-align: right;
     }
 }
