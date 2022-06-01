@@ -574,7 +574,7 @@ footer .bot__footer .container .logo__e img {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 15px;
-  width: 100%;
+  width: 80%;
   padding: 10px;
 }
 
@@ -639,6 +639,7 @@ footer .bot__footer .container .logo__e img {
 
 .search_page .type_card span {
   color: #FFF;
+  margin-left: 20px;
 }
 
 .search_page .type_card .pill-control__label {
@@ -650,6 +651,9 @@ footer .bot__footer .container .logo__e img {
   display: block;
   cursor: pointer;
   height: 2.375em;
+<<<<<<< Updated upstream
+=======
+  width: 75%;
 >>>>>>> Stashed changes
   padding: 0 2.5em 0 1em;
   border-radius: 1.2em;
