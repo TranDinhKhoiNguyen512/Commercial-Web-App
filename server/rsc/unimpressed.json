@@ -1,0 +1,28 @@
+{
+  "artist": "Crazy Meowl",
+  "supertype": "Pokemon",
+  "subtypes": "V Basic",
+  "types": "psychic",
+  "hp": "999",
+  "number": "1",
+  "rarity": "Ultra Rare Holo",
+  "name": "Espeon V",
+  "id": "new1-1",
+  "flavorText": "Not Impressed",
+  "rules": "string",
+  "set": {
+    "id": "new1",
+    "name": "New",
+    "series": "New",
+    "releaseDate": "9999/09/09"
+  },
+  "images": {
+    "small": "https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/server/rsc/unimpressed.png?raw=true",
+    "large": "https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/server/rsc/unimpressed.png?raw=true"
+  },
+  "cardmarket": {
+    "prices": {
+      "averageSellPrice": 99999.99
+    }
+  }
+}
