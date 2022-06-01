@@ -433,7 +433,7 @@ footer .bot__footer .container .logo__e img {
 }
 
 .item__list {
-  background-color: #00ffe5;
+  background-color: #FFF;
   text-align: center;
   padding-top: 50px;
   /* 348 / 479 */
@@ -650,7 +650,7 @@ footer .bot__footer .container .logo__e img {
   display: block;
   cursor: pointer;
   height: 2.375em;
-  padding: 0 0 0 0;
+  padding: 0 2.5em 0 1em;
   border-radius: 1.2em;
   position: relative;
   clear: both;
