@@ -37,6 +37,8 @@ async function getISS() {
     document.getElementById('supertype').textContent = data.supertype + " / "  + data.subtypes;
     document.getElementById('base').textContent = data.set.series + " - " + data.set.id;
 
+    
+
     if(data.supertype == "Pokemon"){
         cardText = data.flavorText;
     }
@@ -54,6 +56,12 @@ async function getISS() {
     }
     document.getElementById('price').textContent = priceText;
     document.getElementById('card_text').textContent = cardText;
+
+
+    
+
+    
+
 }
 
 getISS();
