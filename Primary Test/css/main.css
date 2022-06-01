@@ -650,7 +650,7 @@ footer .bot__footer .container .logo__e img {
   display: block;
   cursor: pointer;
   height: 2.375em;
-  padding: 0 2.5em 0 1em;
+  padding: 0 0 0 0;
   border-radius: 1.2em;
   position: relative;
   clear: both;
