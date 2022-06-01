@@ -172,9 +172,6 @@ app.post('/card/add', (req, res) => {
       if(card.id == newcard.id){
         var index = existcards.indexOf(card)
         found = true
-        //console.log(newcard.id)
-        //console.log(index)
-        //savecardData(existcards);    
         res.send(`cards with id ${newcard.id} is already in the card database`)
       }
 
@@ -190,20 +187,48 @@ app.post('/card/add', (req, res) => {
 })
 
 
-
+/**
+ * @swagger
+ * /card/add:
+ *  put:
+ *   summary: update a card
+ *   description: update information of the card
+ *   tags:
+ *    - Cards
+ *   parameters:
+ *    - in: path
+ *      name: id
+ *      required: true
+ *      description: id of the card needed to be update
+ *    - in: body
+ *      name: body
+ *      required: true
+ *      description: body of the card
+ *      schema:
+ *       $ref: '#/definitions/Card'
+ *   requestBody:
+ *    content:
+ *     application/json:
+ *      schema:
+ *       $ref: '#/definitions/Card'
+ *   responses:
+ *    200:
+ *     description: success
+ *    500:
+ *     description : error
+ */
 // Update - using Put method
 app.put('/card/:id', (req, res) => {
   fs.readFile(dataPath, 'utf8', (err, data) => {
     var existcards = getcardData()
     var found = false
     const cardId = req.params.id;
+    const newcard = req.body;
     for (const card of existcards) {
-      if(card.id == cardId){
+      if(card.id == cardId){  
         var index = existcards.indexOf(card)
         found = true
-        console.log(cardId)
-        console.log(index)
-        existcards.splice(index, 1);
+        existcards[index] = newcard
         savecardData(existcards);    
         res.send(`cards with id ${cardId} has been updated`)
       }
@@ -290,7 +315,7 @@ app.get('/card/get/:id', (req, res) => {
    * /card/query:
    *   get:
    *     summary: get an array of cards that fit the condition
-   *     description: Returns card with search param
+   *     description: Returns card with search param 
    *     tags:
    *      - Cards
    *     produces:
@@ -327,108 +352,124 @@ app.get('/card/get/:id', (req, res) => {
    *      - in: query
    *        name: page
    *        type: string
-   *        description: pagenumber for result (sometime more than 1 page of resu)
+   *        description: pagenumber for result (most of the time there will be more than 1 page of result will be returned)
+   *      - in: query
+   *        name: perpage
+   *        type: string
+   *        description: the number of item per page
    *     responses:
    *       200:
    *         description: OK
    */
 //query - using get method
 app.get('/card/query/', (req, res) => {
-  var searchstring = req.query.searchstring
-  console.log(searchstring)
-  var set = req.query.set
-  var series = req.query.series
-  var rarity = req.query.rarity
-  var supertype = req.query.supertype
-  var subtype = req.query.subtype
-  var type = req.query.type
+  var searchstringlist = req.query.searchstring
+  var setlist = req.query.set
+  var serieslist = req.query.series
+  var raritylist = req.query.rarity
+  var supertypelist = req.query.supertype
+  var subtypelist = req.query.subtype
+  var typelist = req.query.type
   var result = []
   var page_number = req.query.page
-  var per_page = 20
+  var per_page = req.query.perpage
 
   if (page_number == "" ||page_number === undefined){
     page_number = 1
+  }
+  if (per_page == "" ||per_page === undefined){
+    per_page = 12
   }
 
   const cards = getcardData()
   for (var i = 0; i < cards.length; i++) {
     //Name || ID check
-    if (searchstring == "" || searchstring == undefined){
+    
+    var nameCheck = false
+    if (searchstringlist == "" || searchstringlist == undefined){
       var nameCheck = true
     }
     else{
-      if (cards[i].name.toLowerCase().includes(searchstring.toLowerCase()) || cards[i].id == searchstring ) {
-        var nameCheck = true
+      var searchstring = searchstringlist.split(",")
+      for(item in searchstring){
+        //console.log(allstring[str])
+        if (cards[i].name.toLowerCase().includes(searchstring[item].toLowerCase()) || cards[i].id == searchstring[item] ) {
+          var nameCheck = true
+        }
       }
-      else{
-        var nameCheck = false
-      }
+        
     }
     
 
     //Set Check
-    if (set == "" ||set === undefined){
+    var setCheck = false
+    if (setlist == "" ||setlist === undefined){
       var setCheck = true
     }
     else{
-      if (cards[i].set.id == set){
-        var setCheck = true
-      }
-      else{
-        var setCheck = false
+      var set = setlist.split(",")
+      for(item in set){
+        if (cards[i].set.id.toLowerCase() == set[item].toLowerCase()){
+          var setCheck = true
+        }
       }
     }
 
     //Series Check
-    if (series == ""||series === undefined){
+    var seriesCheck = false
+    if (serieslist == ""||serieslist === undefined){
       var seriesCheck = true
     }
     else{
-      if (cards[i].set.series == series){
-        var seriesCheck = true
+      var series = serieslist.split(",")
+      for (item in series){
+        if (cards[i].set.series.toLowerCase() == series[item].toLowerCase()){
+          var seriesCheck = true
+        }
       }
-      else{
-        var seriesCheck = false
-      }
+      
     }
 
     //rarity check 
-    if (rarity == ""||rarity === undefined){
+    var rarityCheck = false
+    if (raritylist == ""||raritylist === undefined){
       var rarityCheck = true
     }
     else{
-      if (cards[i].rarity == rarity){
-        var rarityCheck = true
-      }
-      else{
-        var rarityCheck = false
+      var rarity = raritylist.split(",")
+      for(item in rarity){
+        if (cards[i].rarity.toLowerCase() == rarity[item].toLowerCase()){
+          var rarityCheck = true
+        }
       }
     }
 
     //supertype check
-    if (supertype == ""||supertype === undefined){
+    var supertypeCheck = false
+    if (supertypelist == ""||supertypelist === undefined){
       var supertypeCheck = true
     }
     else{
-      if (cards[i].supertype == supertype){
-        var supertypeCheck = true
-      }
-      else{
-        var supertypeCheck = false
+      var supertype = supertypelist.split(",")
+      for(item in supertype){
+        if (cards[i].supertype.toLowerCase() == supertype[item].toLowerCase()){
+          var supertypeCheck = true
+        }
       }
     }
 
     //subtype check
-    if (subtype == "" ||subtype === undefined){
+    var subtypeCheck = false
+    if (subtypelist == "" ||subtypelist === undefined){
       var subtypeCheck = true
     }
     else{
       if (cards[i].subtypes != null){
-        if (cards[i].subtypes[0] == subtype){
-        var subtypeCheck = true
-        }
-        else{
-          var subtypeCheck = false
+        subtypes = subtypelist.split(",")
+        for(item in subtypes){
+          if (cards[i].subtypes.toLowerCase() == subtypes[item].toLowerCase()){
+            var subtypeCheck = true
+          }
         }
       }
       else{
@@ -438,16 +479,17 @@ app.get('/card/query/', (req, res) => {
     }
 
     //type check
-    if (type == "" ||type === undefined){
+    var typeCheck = false
+    if (typelist == "" ||typelist === undefined){
       var typeCheck = true
     }
     else{
       if (cards[i].types != null){
-        if (cards[i].types[0] == type){
-        var typeCheck = true
-        }
-        else{
-          var typeCheck = false
+        var type = typelist.split(",")
+        for(item in type){
+          if (cards[i].types[0].toLowerCase() == type[item].toLowerCase()){
+            var typeCheck = true
+          }
         }
       }
       else{
