@@ -37,26 +37,148 @@ const getcardData = () => {
 
 // lmao
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+app.use('/ui', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
+// card object definition 
+/**
+ * @swagger
+ * definitions:
+ *  Card:
+ *   type: object
+ *   properties:
+ *    artist:
+ *     type: string
+ *     description: Artist of the card
+ *     example: 'Ken Sugimori'
+ *    supertype:
+ *     type: string
+ *     description: supertype of the card
+ *     example: 'Pokemon'
+ *    subtype:
+ *     type: string
+ *     description: subtype of the card
+ *     example: 'Stage 2'
+ *    number:
+ *     type: string
+ *     description: number of the card
+ *     example: '1'
+ *    rarity:
+ *     type: string
+ *     description: rarity of the card
+ *     example: 'Rare Holo'
+ *    name:
+ *     type: string
+ *     description: name of the card
+ *     example: 'Alakazam'
+ *    id:
+ *     type: string
+ *     description: id of the card
+ *     example: 'base1-1'
+ *    flavorText:
+ *     type: string
+ *     description: flavortext of the card
+ *     example: 'Its brain can outperform a supercomputer. Its intelligence quotient is said to be 5000.'
+ *    rules:
+ *     type: string
+ *     description: rules for the card (usually on Trainer supertype cards)
+ *     example: 'string'
+ *    set:
+ *     type: object
+ *     properties:
+ *      id:
+ *       type: string
+ *       description: id of the set
+ *       example: 'base1'
+ *      name:
+ *       type: string
+ *       description: name of the set
+ *       example: 'Base'
+ *      series:
+ *       type: string
+ *       description: series of the set
+ *       example: 'Base'
+ *      releaseDate:
+ *       type: string
+ *       description: release date of the set
+ *       example: '1999/01/09'
+ *    images:
+ *     type: object
+ *     properties:
+ *      small:
+ *       type: string
+ *       description: image of the card but smaller
+ *       example: 'https://images.pokemontcg.io/base1/1.png'
+ *      large:
+ *       type: string
+ *       description: image of the card 
+ *       example: 'https://images.pokemontcg.io/base1/1_hires.png'
+ *    cardmarket:
+ *     type: object
+ *     properties:
+ *      prices:
+ *       type: object
+ *       properties:
+ *        averageSellPrice:
+ *         type: number
+ *         description: price of the card
+ *         example: 21.65
+ *      
+ *       
+ * 
+ */
 
 // START CARD API
-
+/**
+ * @swagger
+ * /card/add:
+ *  post:
+ *   summary: create card
+ *   description: create new card and save it in database
+ *   tags:
+ *    - Cards
+ *   parameters:
+ *    - in: body
+ *      name: body
+ *      required: true
+ *      description: body of the card
+ *      schema:
+ *       $ref: '#/definitions/Card'
+ *   requestBody:
+ *    content:
+ *     application/json:
+ *      schema:
+ *       $ref: '#/definitions/Card'
+ *   responses:
+ *    200:
+ *     description: success
+ *    500:
+ *     description : error
+ */
 // Create - use post method
 app.post('/card/add', (req, res) => {
+  fs.readFile(dataPath, 'utf8', (err, data) => {
+    var existcards = getcardData()
+    var found = false
+    const newcard = req.body;
+    for (const card of existcards) {
+      if(card.id == newcard.id){
+        var index = existcards.indexOf(card)
+        found = true
+        //console.log(newcard.id)
+        //console.log(index)
+        //savecardData(existcards);    
+        res.send(`cards with id ${newcard.id} is already in the card database`)
+      }
 
-  var existcards = getcardData()
-  const newcardId = Math.floor(100000 + Math.random() * 900000)
-
-  existcards[newcardId] = req.body
-
-  console.log(existcards);
-
-  savecardData(existcards);
-  res.send({
-    success: true,
-    msg: 'card data added successfully'
-  })
+    }
+    if(found == false){
+      
+      existcards.push(newcard)
+      savecardData(existcards)
+      res.send(`cards with id ${newcard.id} has been added to the card database`)
+    }
+    
+  }, true);
 })
 
 
@@ -93,6 +215,7 @@ app.put('/card/:id', (req, res) => {
  * @swagger
  * /card/getAll:
  *   get:
+ *     summary: get all card ID
  *     description: Get all card ID
  *     tags:
  *      - Cards
@@ -118,6 +241,7 @@ app.get('/card/getAll', (req, res) => {
    * @swagger
    * /card/get/{id}:
    *   get:
+   *     summary: get card by ID
    *     description: Returns card with search param
    *     tags:
    *      - Cards
@@ -152,10 +276,12 @@ app.get('/card/get/:id', (req, res) => {
 
 
 
+
  /**
    * @swagger
    * /card/query:
    *   get:
+   *     summary: get an array of cards that fit the condition
    *     description: Returns card with search param
    *     tags:
    *      - Cards
@@ -190,6 +316,10 @@ app.get('/card/get/:id', (req, res) => {
    *        name: type
    *        type: string
    *        description: Pokemon's type
+   *      - in: query
+   *        name: page
+   *        type: string
+   *        description: pagenumber for result (sometime more than 1 page of resu)
    *     responses:
    *       200:
    *         description: OK
@@ -197,6 +327,7 @@ app.get('/card/get/:id', (req, res) => {
 //query - using get method
 app.get('/card/query/', (req, res) => {
   var searchstring = req.query.searchstring
+  console.log(searchstring)
   var set = req.query.set
   var series = req.query.series
   var rarity = req.query.rarity
@@ -353,6 +484,7 @@ app.get('/card/query/', (req, res) => {
    * @swagger
    * /card/delete/{id}:
    *   delete:
+   *     summary: delete card by id
    *     description: Returns card with search param
    *     tags:
    *      - Cards
@@ -399,6 +531,6 @@ app.listen(5000, ()=>{
     console.log("The server is online")
     console.log("server-side-github-link: https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/server/README.md#test-api")
     console.log("")
-    console.log("server-side-api-UI: http://localhost:5000/api-docs/")
+    console.log("server-side-api-UI: http://localhost:5000/ui/")
 
 }) 
