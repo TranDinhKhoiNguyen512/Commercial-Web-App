@@ -34,20 +34,77 @@
         }
     }
 
-    .fourth {
-        .content{
-            border-radius: 10px;
-            color: $color-black-0;
-        }
-        .content:hover{
-            background-color: green;
-            border: green solid 1px;
+    .type_card {
+        .pill-control__label::before {
+            -webkit-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            content: "";
+            display: block;
+            right: .3125em;
+            top: .3125em;
+            height: 1.75em;
+            width: 1.75em;
+            position: absolute;
+            background-color: #dcdcdc;
+            border: 2px solid #3f3f3f;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 1.5em;
+            color: #fff;
         }
 
-        .container:hover{
-            background-color: red;
-            border-color: green;
+        span {
+            color: $color-white-0;
         }
 
+        .pill-control__label {
+
+            user-select: none;
+            background-color: #373737;
+            display: block;
+            cursor: pointer;
+            height: 2.375em;
+            padding: 0 2.5em 0 1em;
+            border-radius: 1.2em;
+            position: relative;
+            clear: both;
+            z-index: 2;
+            -webkit-transition: background-color 0.25s ease;
+            -ms-transition: background-color 0.25s ease;
+            -moz-transition: background-color 0.25s ease;
+            -o-transition: background-color 0.25s ease;
+            transition: background-color 0.25s ease;
+        }
+
+        .pill-control__input {
+
+            top: 50%;
+            right: 50%;
+            height: 1px;
+            width: 1px;
+            z-index: -1;
+            background: none;
+            opacity: 0;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+        }
+
+        // input[type="checkbox"]:not(:checked) +.pill-control__label::before {
+        //     color: $color-white-0;
+        //     background-color: rgb(41, 40, 38);
+        //     content: 'X';
+        // }
+
+        input[type="checkbox"]:checked+.pill-control__label::before {
+            color: $color-white-0;
+            background-color: orange;
+            content: '✔';
+        }
     }
 }
