@@ -1,28 +1,55 @@
-.product__text{
+.product__text {
     width: 100%;
     padding: 100px;
     text-align: center;
-    .image__side{
-        
-        img{
-            width:100%;
-            height: 100%;; 
+
+    .image__side {
+
+        img {
+            width: 100%;
+            height: 100%;
+            ;
         }
     }
-    .infor{
+
+    .infor {
         display: block;
         text-align: left;
         text-decoration: bold;
-        #name{
+
+        #name {
             text-transform: uppercase;
         }
-        .text{
+
+        .text {
             color: $color-black-0;
             font-size: $fs-1;
         }
-        .data{
+
+        .data {
             color: $color-gray-0;
             font-size: $fs-0;
+        }
+    }
+
+    .price_cart{
+        display: flex;
+        .price_infor {
+            margin: auto;
+            color: $color-white-0;
+            background-color: $color-black-1;
+            align-items: center;
+            border-radius: 15px;
+            width: 100%;
+            padding: 10px;
+            .price_title{
+                font-size: $fs-1 + 5;
+                text-align: left;
+            }
+            .price_int{
+                font-weight: 700;
+                font-size: $fs-1 + 10;
+            }
         }
     }
 }

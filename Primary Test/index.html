@@ -97,7 +97,7 @@
       <div class="col-4 image__side">
         <p id="image"></p>
       </div>
-      <div class="col-8 infor">
+      <div class="col-4 infor">
 
         <!-- Card Name -->
         <div class="row">
@@ -139,17 +139,13 @@
           <div>
             <span class="text">Card SuperType / Card SubType : </span>
             <span id="supertype" class="data"></span>
-          </div>          
+          </div>
           <!-- Card Type / HP / Stage -->
           <div>
             <span class="text">Card Type / HP : </span>
             <span id="types" class="data"></span>
           </div>
-          <!-- Prices -->
-          <div>
-            <span class="text">Price: </span>
-            <span id="price" class="data"></span>
-          </div>
+
           <!-- Pokemon Power -->
           <div>
             <span class="text">Card Text: </span>
@@ -157,8 +153,21 @@
           </div>
         </div>
       </div>
+      <div class="col-4 price_cart">
+        
+          <!-- Prices -->
+          <div class="price_infor">
+            <div class="price_title">
+              <span>Price: </span>
+            </div>
+            <div>
+              <span id="price" class="price_int"></span>
+            </div>
+          </div>
+        
+        
+      </div>
     </div>
-
   </section>
 
   <section class="search_page">
@@ -167,20 +176,12 @@
 
         <div class="row first">
           <div class="col-8 title">Card Name and Keyword Search</div>
-          <div class="col-4">
-            <label for="inputEvolvesFrom" class="form-label">Evolves From</label>
-            <input type="text" class="form-control" id="inputEvolvesFrom">
-          </div>
         </div>
 
         <div class="row second">
           <div class="col-3">
-            <label for="inputCardName" class="form-label">Card Name</label>
+            <label for="inputCardName" class="form-label">Card Name / Card ID</label>
             <input type="text" class="form-control" id="inputCardName">
-          </div>
-          <div class="col-3">
-            <label for="inputCardText" class="form-label">Card Text</label>
-            <input type="text" class="form-control" id="inputCardText">
           </div>
         </div>
 
@@ -188,21 +189,21 @@
           <div class="col-8 title">Energy Type</div>
         </div>
 
-        <div class = "type_card">
+        <div class="type_card">
           <div class="row fourth">
 
             <!-- Grass Card -->
             <div class="col-3 container">
-              
+
               <input type="checkbox" id="card-grass" name="card-grass" class="pill-control__input">
               <label for="card-grass" class="pill-control__label">
                 <img src="./img/type/GRASS.png" alt="grass_energy">
                 <span>Grass</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Fire Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-fire" name="card-fire" class="pill-control__input">
@@ -211,9 +212,9 @@
                 <span>Fire</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Water Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-water" name="card-water" class="pill-control__input">
@@ -222,13 +223,13 @@
                 <span>Water</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
           </div>
-  
+
           <div class="row fifth">
-  
+
             <!-- Lighting Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-lightning" name="card-lightning" class="pill-control__input">
@@ -237,9 +238,9 @@
                 <span>Lightning</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Psychic Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-psy" name="card-psy" class="pill-control__input">
@@ -248,9 +249,9 @@
                 <span>Psychic</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Fighting Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-fighting" name="card-fighting" class="pill-control__input">
@@ -259,13 +260,13 @@
                 <span>Fighting</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
           </div>
 
           <div class="row sixth">
-  
+
             <!-- Darkness Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-darkness" name="card-darkness" class="pill-control__input">
@@ -274,9 +275,9 @@
                 <span>Darkness</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Metal Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-metal" name="card-metal" class="pill-control__input">
@@ -285,9 +286,9 @@
                 <span>Metal</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Colorless Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-colorless" name="card-colorless" class="pill-control__input">
@@ -296,13 +297,13 @@
                 <span>Colorless</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
           </div>
 
           <div class="row seventh">
-  
+
             <!-- Fairy Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-fairy" name="card-fairy" class="pill-control__input">
@@ -311,9 +312,9 @@
                 <span>Fairy</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Dragon Card -->
             <div class="col-3 container">
               <input type="checkbox" id="card-dragon" name="card-dragon" class="pill-control__input">
@@ -322,20 +323,32 @@
                 <span>Dragon</span>
               </label>
             </div>
-  
+
             <div class="col-1"> </div>
-  
+
             <!-- Colorless Card -->
             <div class="col-3 container"> </div>
-  
+
             <div class="col-1"> </div>
-  
+
           </div>
 
         </div>
 
+        <div class="button">
+          <br>
+          <div class="row">
+            <div class="col-5">
+            </div>
+            <div class="col-3"></div>
 
-      </div>
+            <div class="col-3">
+              <button type="button" class="btn button--mint">Search</button>
+              <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <br>
     </form>
   </section>
 
@@ -367,12 +380,6 @@
       </div>
       <div class="cover atvImg">
         <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base2/3.png"></div>
-      </div>
-      <div class="cover atvImg">
-        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/20.png"></div>
-      </div>
-      <div class="cover atvImg">
-        <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/3.png"></div>
       </div>
     </div>
   </section>
