@@ -189,7 +189,7 @@ app.post('/card/add', (req, res) => {
 
 /**
  * @swagger
- * /card/add:
+ * /card/{id}:
  *  put:
  *   summary: update a card
  *   description: update information of the card
