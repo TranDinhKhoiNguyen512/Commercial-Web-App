@@ -1,4 +1,4 @@
-const api_url = "http://localhost:5000/card/get/base1-1";
+const api_url = "http://localhost:5000/card/get/sm5-151";
 //sm5-151
 async function getISS() {
     const response = await fetch(api_url);
