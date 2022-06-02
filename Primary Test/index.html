@@ -182,9 +182,13 @@
   </section>
 
   <section class="search_page">
+    <!-- Search Page chứ input text và các checkbox để lấy các yêu cầu của user 
+        Có thêm Advantage Search với 2 loại Card Type và Rarity với nhiều checkbox khác
+    -->
     <form action="">
       <div class="container border">
 
+        <!-- Title -->
         <div class="row first">
           <div class="col-8 title">Card Name and Keyword Search</div>
         </div>
@@ -200,7 +204,8 @@
           <div class="col-8 title">Energy Type</div>
         </div>
 
-        <div class="type_card">
+        <!-- Energy Type -->
+        <div class="energy_type">
           <div class="row">
             <!-- Grass Card -->
             <div class="col-4">
@@ -296,11 +301,8 @@
             </div>
           </div>
         </div>
-
+        <!-- Search and Reset Button -->
         <div class="button">
-
-          
-
           <div class="content buttons-right ">
             <button type="button" class="btn button--mint">
               Reset
@@ -309,77 +311,436 @@
               Search
             </button>
           </div>
+        </div>
+        <br>
+        <!-- Mobile Nav -->
 
+        <div class="mobile_nav">
+          <div class="container">
+            <div class="topnav">
+              <!-- 
+                - Được liên kết với file mobileNav.js 
+                - Thẻ a id = "top" là thẻ bọc tất cả lại với display = none. 
+                - id ="myLinks" là thẻ bọc 2 thẻ a "Card Type" và "Rarity" 
+                - trong từ thẻ "Card Type" và "Rarity" chứa các checkbox tương ứng 
+                - LƯU Ý: ở checkbox, chỉ nên thay đổi Value và Tên của thẻ, 
+                    không được thay đổi ID hay class
+                -->
 
+              <a href="javascript:void(0);" id="top" class="title">Advantage Search</a>
+
+              <!-- Sub Menu -->
+              <div id="myLinks">
+                <a href="javascript:void(0);" id="card__type" class="title subMenu">Card Type</a>
+                <!-- Card Type -->
+                <div id="cardType" class="cardType">
+                  <a href="javascript:void(0);">
+                    <div class="row">
+                      <!-- Pokemon -->
+                      <div class="col-4">
+                        <div class="title">
+                          Pokémon
+                        </div>
+                        <!-- Type Card -->
+                        <div class="type_card">
+
+                          <!-- Basic -->
+                          <div class="type">
+                            <input type="checkbox" id="basic" name="basic" class="input__control" value="Basic">
+                            <label for="basic" class="check">
+                              <p>Basic</p>
+                            </label>
+                          </div>
+
+                          <!-- Stage 1 -->
+                          <div class="type">
+                            <input type="checkbox" id="stage1" name="stage1" class="input__control" value="Stage 1">
+                            <label for="stage1" class="check">
+                              <p>Stage 1</p>
+                            </label>
+                          </div>
+
+                          <!-- Stage 2 -->
+                          <div class="type">
+                            <input type="checkbox" id="stage2" name="stage2" value="Stage 2" class="input__control">
+                            <label for="stage2" class="check">
+                              <p>Stage 2</p>
+                            </label>
+                          </div>
+
+                          <!-- Level Up -->
+                          <div class="type">
+                            <input type="checkbox" id="levelUp" name="levelUp" value="Level Up" class="input__control">
+                            <label for="levelUp" class="check">
+                              <p>Level Up</p>
+                            </label>
+                          </div>
+
+                          <!-- EX -->
+                          <div class="type">
+                            <input type="checkbox" id="ex" name="ex" value="EX" class="input__control">
+                            <label for="ex" class="check">
+                              <p>EX</p>
+                            </label>
+                          </div>
+                          <!-- MEGA-->
+                          <div class="type">
+                            <input type="checkbox" id="mega" name="mega" value="MEGA" class="input__control">
+                            <label for="mega" class="check">
+                              <p>MEGA</p>
+                            </label>
+                          </div>
+
+                          <!-- SP -->
+                          <div class="type">
+                            <input type="checkbox" id="sp" name="sp" value="SP" class="input__control">
+                            <label for="sp" class="check">
+                              <p>SP</p>
+                            </label>
+                          </div>
+                          <!-- LEGEND -->
+                          <div class="type">
+                            <input type="checkbox" id="legend" name="legend" value="LEGEND" class="input__control">
+                            <label for="legend" class="check">
+                              <p>LEGEND</p>
+                            </label>
+                          </div>
+                          <!-- Restored -->
+                          <div class="type">
+                            <input type="checkbox" id="restored" name="restored" value="Restored"
+                              class="input__control">
+                            <label for="restored" class="check">
+                              <p>Restored</p>
+                            </label>
+                          </div>
+                          <!-- BREAK -->
+                          <div class="type">
+                            <input type="checkbox" id="break" name="break" value="BREAK" class="input__control">
+                            <label for="break" class="check">
+                              <p>BREAK</p>
+                            </label>
+                          </div>
+                          <!-- GX -->
+                          <div class="type">
+                            <input type="checkbox" id="gx" name="gx" value="GX" class="input__control">
+                            <label for="gx" class="check">
+                              <p>GX</p>
+                            </label>
+                          </div>
+                          <!-- TAG TEAM -->
+                          <div class="type">
+                            <input type="checkbox" id="tag_team" name="tag_team" value="TAG TEAM"
+                              class="input__control">
+                            <label for="tag_team" class="check">
+                              <p>TAG TEAM</p>
+                            </label>
+                          </div>
+                          <!-- V -->
+                          <div class="type">
+                            <input type="checkbox" id="v" name="v" value="V" class="input__control">
+                            <label for="v" class="check">
+                              <p>V</p>
+                            </label>
+                          </div>
+                          <!-- VMAX -->
+                          <div class="type">
+                            <input type="checkbox" id="vmax" name="vmax" value="VMAX" class="input__control">
+                            <label for="vmax" class="check">
+                              <p>VMAX</p>
+                            </label>
+                          </div>
+                          <!-- V-UNION -->
+                          <div class="type">
+                            <input type="checkbox" id="vUnion" name="vUnion" value="V-UNION" class="input__control">
+                            <label for="vUnion" class="check">
+                              <p>V-UNION</p>
+                            </label>
+                          </div>
+                          <!-- VSTAR -->
+                          <div class="type">
+                            <input type="checkbox" id="vStar" name="vStar" value="VSTAR" class="input__control">
+                            <label for="vStar" class="check">
+                              <p>VSTAR</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Trainers -->
+                      <div class="col-4">
+                        <div class="title">
+                          Trainers
+                        </div>
+                        <div class="type_card">
+
+                          <!-- Trainer-Item -->
+                          <div class="type">
+                            <input type="checkbox" id="trainerItem" name="trainerItem" value="Trainer-Item"
+                              class="input__control">
+                            <label for="trainerItem" class="check">
+                              <p>Trainer-Item</p>
+                            </label>
+                          </div>
+
+                          <!-- Pokémon Tool -->
+                          <div class="type">
+                            <input type="checkbox" id="pokemonTool" name="pokemonTool" value="Pokémon Tool"
+                              class="input__control">
+                            <label for="pokemonTool" class="check">
+                              <p>Pokémon Tool</p>
+                            </label>
+                          </div>
+
+                          <!-- Trainer-Stadium -->
+                          <div class="type">
+                            <input type="checkbox" id="trainerStadium" name="trainerStadium" value="Trainer-Stadium"
+                              class="input__control">
+                            <label for="trainerStadium" class="check">
+                              <p>Trainer-Stadium</p>
+                            </label>
+                          </div>
+
+                          <!-- Trainer-Supporter -->
+                          <div class="type">
+                            <input type="checkbox" id="trainersupporter" name="trainersupporter"
+                              value="Trainer-Supporter" class="input__control">
+                            <label for="trainersupporter" class="check">
+                              <p>Trainer-Supporter</p>
+                            </label>
+                          </div>
+
+                          <!-- Technical Machine -->
+                          <div class="type">
+                            <input type="checkbox" id="technicalMachine" name="technicalMachine"
+                              value="Technical Machine" class="input__control">
+                            <label for="technicalMachine" class="check">
+                              <p>Technical Machine</p>
+                            </label>
+                          </div>
+
+                          <!-- Rocket's Secret Machine -->
+                          <div class="type">
+                            <input type="checkbox" id="secretMachine" name="secretMachine"
+                              value="Rocket's Secret Machine" class="input__control">
+                            <label for="secretMachine" class="check">
+                              <p>Rocket's Secret Machine</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Energy -->
+                      <div class="col-4">
+                        <div class="title">
+                          Energy
+                        </div>
+                        <div class="type_card">
+                          <!-- Basic -->
+                          <div class="type">
+                            <input type="checkbox" id="basic" name="basic" value="Basic" class="input__control">
+                            <label for="basic" class="check">
+                              <p>Basic</p>
+                            </label>
+                          </div>
+
+                          <!-- Special -->
+                          <div class="type">
+                            <input type="checkbox" id="special" name="special" value="Special" class="input__control">
+                            <label for="special" class="check">
+                              <p>Special</p>
+                            </label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <a href="javascript:void(0);" id="type" class="title subMenu">Rarity</a>
+                <!-- Card Type -->
+                <div id="Type" class="cardType">
+                  <a href="javascript:void(0);">
+                    <div class="row">
+                      <!-- Rare -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rare" name="rare" value="Rare" class="input__control">
+                          <label for="rare" class="check">
+                            <p>Rare</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Common -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="common" name="common" value="Common" class="input__control">
+                          <label for="common" class="check">
+                            <p>Common</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Uncommon -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="uncommon" name="uncommon" value="Uncommon" class="input__control">
+                          <label for="uncommon" class="check">
+                            <p>Uncommon</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHolo" name="rareHolo" value="Rare Holo" class="input__control">
+                          <label for="rareHolo" class="check">
+                            <p>Rare Holo</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo EX -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHoloEX" name="rareHoloEX" value="Rare Holo EX"
+                            class="input__control">
+                          <label for="rareHoloEX" class="check">
+                            <p>Rare Holo EX</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo GX -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHoloGX" name="rareHoloGX" value="Rare Holo GX"
+                            class="input__control">
+                          <label for="rareHoloGX" class="check">
+                            <p>Rare Holo GX</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo Lv.X -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHoloLvX" name="rareHoloLvX" value="Rare Holo Lv.X"
+                            class="input__control">
+                          <label for="rareHoloLvX" class="check">
+                            <p>Rare Holo Lv.X</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Prime -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rarePrime" name="rarePrime" value="Rare Prime"
+                            class="input__control">
+                          <label for="rarePrime" class="check">
+                            <p>Rare Prime</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- LEGEND -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="legend" name="legend" value="LEGEND" class="input__control">
+                          <label for="legend" class="check">
+                            <p>LEGEND</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Ultra -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareUltra" name="rareUltra" value="Rare Ultra"
+                            class="input__control">
+                          <label for="rareUltra" class="check">
+                            <p>Rare Ultra</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare ACE -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareACE" name="rareACE" value="Rare ACE" class="input__control">
+                          <label for="rareACE" class="check">
+                            <p>Rare ACE</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare BREAK -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareBREAK" name="rareBREAK" value="Rare BREAK"
+                            class="input__control">
+                          <label for="rareBREAK" class="check">
+                            <p>Rare BREAK</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Rainbow -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareRainbow" name="rareRainbow" value="Rare Rainbow"
+                            class="input__control">
+                          <label for="rareRainbow" class="check">
+                            <p>Rare Rainbow</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Promo -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="promo" name="promo" value="Promo" class="input__control">
+                          <label for="promo" class="check">
+                            <p>Promo</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Amazing -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="amazing" name="amazing" value="Amazing" class="input__control">
+                          <label for="amazing" class="check">
+                            <p>Amazing</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Radiant Rare -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="radiantRare" name="radiantRare" value="Radiant Rare"
+                            class="input__control">
+                          <label for="radiantRare" class="check">
+                            <p>Radiant Rare</p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </form>
   </section>
 
-  <!-- <div class="item_list"> -->
-  <!-- <section class="item__list">
+  <!-- Item List -->
+  <section class="item__list">
+    <!-- Completed,  -->
     <div class="container list" id="productList">
-    </div>
-  </section> -->
-
-  <!-- <section class="mobile_nav_test">
-    <div class="container topnav">
-        <a href="javascript:void(0);" id="icon">Advantage Search</a>
-        
-        <div id="myLinks">
-          <a href="javascript:void(0);" id="bentrong">HELLO</a>
-          <div id="inside" style="display: none;">
-            <a href="#">INSIDE</a>
-          </div>
-          <a href="#contact">From</a>
-          <a href="#about">nowhere</a>
-        </div>
-    </div>
-  </section> -->
-
-  <section class="mobile_nav">
-    <div class="container">
-      <div class="topnav">
-        <a href="javascript:void(0);" id="icon" id="top__title">Advantage Search</a>
-
-        <!-- Sub Menu -->
-        <div id="myLinks" class="haha">
-          <a href="javascript:void(0);" id="card__type">Card Type</a>
-          <!-- Inside Card Type -->
-          <div id="cardType" class="cardType">
-            <a href="#">
-              <div class="row">
-                <div class="col-4">
-                  <div class="title">
-                    Pokémon
-                  </div>
-                  <!-- Type Card -->
-                  <div class="type_card">
-                    <!-- Basic -->
-                    <div class="type">
-                      <input type="checkbox" id="basic" name="basic" class="pill-control__input" value="Basic">
-                      <label for="basic" class="check">
-                        <p>Basic</p>
-                      </label>
-                    </div>
-                    <!-- Stage 1 -->
-                    <div class="type">
-                      <input type="checkbox" id="stage1" name="stage1" class="pill-control__input" value="Stage 1">
-                      <label for="stage1" class="check">
-                        <p>Stage 1</p>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">HELLO</div>
-                <div class="col-4">HELLO</div>
-              </div>
-            </a>
-          </div>
-
-          <a href="#contact">From</a>
-          <a href="#about">nowhere</a>
-        </div>
-      </div>
     </div>
   </section>
 

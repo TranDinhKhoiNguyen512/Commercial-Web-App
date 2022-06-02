@@ -16,8 +16,9 @@
             display: none;
             background-color: $color-gray-0;
 
-            .cardType {
-                display: none;
+
+            .rarity {
+
                 background-color: black;
             }
         }
@@ -29,19 +30,30 @@
             text-decoration: none;
             display: block;
         }
+
+        .title {
+            width: 100%;
+            color: red;
+            font-size: 30px;
+            border-bottom: 2px solid mintcream;
+            text-align: center;
+        }
     }
-    .type {
-        
-        .check{
+
+    .cardType {
+        display: none;
+        background-color: black;
+
+        .check {
             margin: 0 auto;
             text-align: left;
         }
+
         p {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
         }
         .check::before {
-            
             box-sizing: border-box;
             content: "";
             display: block;
@@ -56,9 +68,7 @@
             text-align: center;
             line-height: 1.5em;
             color: #fff;
-        } 
-        
-
+        }
         .check {
             user-select: none;
             background-color: #373737;
@@ -71,12 +81,9 @@
             position: relative;
             clear: both;
             z-index: 2;
-            transition: background-color 0.25s ease;
-            
+            transition: background-color 1s ease;
         }
-
-        .pill-control__input {
-
+        .input__control {
             top: 50%;
             right: 50%;
             height: 1px;
