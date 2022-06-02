@@ -34,13 +34,9 @@
         }
     }
 
-    .type_card {
+    .energy_type {
+        
         .pill-control__label::before {
-            -webkit-box-sizing: border-box;
-            -ms-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -o-box-sizing: border-box;
-            box-sizing: border-box;
             content: "";
             display: block;
             right: .3125em;
@@ -58,6 +54,7 @@
 
         span {
             color: $color-white-0;
+            margin-left: $mg-1;
         }
 
         .pill-control__label {
@@ -67,15 +64,12 @@
             display: block;
             cursor: pointer;
             height: 2.375em;
+            width: 75%;
             padding: 0 2.5em 0 1em;
             border-radius: 1.2em;
             position: relative;
             clear: both;
             z-index: 2;
-            -webkit-transition: background-color 0.25s ease;
-            -ms-transition: background-color 0.25s ease;
-            -moz-transition: background-color 0.25s ease;
-            -o-transition: background-color 0.25s ease;
             transition: background-color 0.25s ease;
         }
 
@@ -88,23 +82,18 @@
             z-index: -1;
             background: none;
             opacity: 0;
-            -webkit-appearance: none;
-            -ms-appearance: none;
-            -moz-appearance: none;
-            -o-appearance: none;
             appearance: none;
         }
 
-        // input[type="checkbox"]:not(:checked) +.pill-control__label::before {
-        //     color: $color-white-0;
-        //     background-color: rgb(41, 40, 38);
-        //     content: 'X';
-        // }
+        
 
         input[type="checkbox"]:checked+.pill-control__label::before {
             color: $color-white-0;
             background-color: orange;
             content: '✔';
         }
+    }
+    .button{
+        text-align: right;
     }
 }

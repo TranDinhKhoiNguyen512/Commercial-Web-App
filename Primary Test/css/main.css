@@ -574,7 +574,7 @@ footer .bot__footer .container .logo__e img {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 15px;
-  width: 100%;
+  width: 80%;
   padding: 10px;
 }
 
@@ -617,11 +617,7 @@ footer .bot__footer .container .logo__e img {
   font-size: 30px;
 }
 
-.search_page .type_card .pill-control__label::before {
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
+.search_page .energy_type .pill-control__label::before {
   content: "";
   display: block;
   right: .3125em;
@@ -637,11 +633,12 @@ footer .bot__footer .container .logo__e img {
   color: #fff;
 }
 
-.search_page .type_card span {
+.search_page .energy_type span {
   color: #FFF;
+  margin-left: 20px;
 }
 
-.search_page .type_card .pill-control__label {
+.search_page .energy_type .pill-control__label {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -650,6 +647,7 @@ footer .bot__footer .container .logo__e img {
   display: block;
   cursor: pointer;
   height: 2.375em;
+  width: 75%;
   padding: 0 2.5em 0 1em;
   border-radius: 1.2em;
   position: relative;
@@ -659,7 +657,7 @@ footer .bot__footer .container .logo__e img {
   transition: background-color 0.25s ease;
 }
 
-.search_page .type_card .pill-control__input {
+.search_page .energy_type .pill-control__input {
   top: 50%;
   right: 50%;
   height: 1px;
@@ -668,13 +666,127 @@ footer .bot__footer .container .logo__e img {
   background: none;
   opacity: 0;
   -webkit-appearance: none;
-  -ms-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
-.search_page .type_card input[type="checkbox"]:checked + .pill-control__label::before {
+.search_page .energy_type input[type="checkbox"]:checked + .pill-control__label::before {
+  color: #FFF;
+  background-color: orange;
+  content: '✔';
+}
+
+.search_page .button {
+  text-align: right;
+}
+
+.mobile_nav {
+  /* Style the navigation menu */
+}
+
+.mobile_nav .container {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile_nav .topnav {
+  overflow: hidden;
+  background-color: blue;
+  position: relative;
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  /* Style navigation menu links */
+}
+
+.mobile_nav .topnav #myLinks {
+  display: none;
+  background-color: gray;
+}
+
+.mobile_nav .topnav #myLinks .rarity {
+  background-color: black;
+}
+
+.mobile_nav .topnav a {
+  color: #FFF;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.mobile_nav .topnav .title {
+  width: 100%;
+  color: red;
+  font-size: 30px;
+  border-bottom: 2px solid mintcream;
+  text-align: center;
+}
+
+.mobile_nav .cardType {
+  display: none;
+  background-color: black;
+}
+
+.mobile_nav .cardType .check {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.mobile_nav .cardType p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mobile_nav .cardType .check::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  display: block;
+  right: .3125em;
+  top: .3125em;
+  height: 1.75em;
+  width: 1.75em;
+  position: absolute;
+  background-color: #dcdcdc;
+  border: 2px solid #3f3f3f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.mobile_nav .cardType .check {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #373737;
+  display: block;
+  cursor: pointer;
+  height: 2.375em;
+  padding: 0 1em 0 1em;
+  width: 75%;
+  border-radius: 1.2em;
+  position: relative;
+  clear: both;
+  z-index: 2;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+
+.mobile_nav .cardType .input__control {
+  top: 50%;
+  right: 50%;
+  height: 1px;
+  width: 1px;
+  z-index: -1;
+  background: none;
+  opacity: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.mobile_nav .cardType input[type="checkbox"]:checked + .check::before {
   color: #FFF;
   background-color: orange;
   content: '✔';
