@@ -1,7 +1,7 @@
 // Constant URL
 
-async function getCardByQuery() {
-    var api_url1 = 'http://localhost:5000/card/query?type=Psychic'
+async function getCardByQuery(url) {
+    var api_url1 = url;
     const response = await fetch(api_url1);
     const pageData = await response.json();
     var data = pageData.data
@@ -12,19 +12,13 @@ async function getCardByQuery() {
         //var str = `<div class="cover atvImg" id="atvImg__${counter}" style="transform: perspective(720px);"><div class="atvImg-container" style=""><div class="atvImg-shadow"></div><div class="atvImg-layers"><div class="atvImg-rendered-layer" data-layer="0" style="background-image: url(&quot;${data[i].images.small}&quot;);"></div></div><div class="atvImg-shine" style=""></div></div></div>`
         var str = `<div class="cover atvImg"><div class="atvImg-layer" data-img="${data[i].images.small}"></div></div>`
         document.getElementById('productList').insertAdjacentHTML( 'beforeend', str );
-        counter = counter + 1
+        counter = counter + 1	
         //console.log(data)
     }
-    
-    //document.getElementById('image').appendChild(theitem);
-    
-    //document.getElementsByClassName('atvImg-rendered-layer').style.backgroundImage = imgSrc;
-
 }
 
-
-async function atvImg(){
-	await getCardByQuery();
+async function atvImg(url){
+	await getCardByQuery(url);
 	var d = document,
 		de = d.documentElement,
 		bd = d.getElementsByTagName('body')[0],
@@ -177,4 +171,3 @@ async function atvImg(){
 
 }
 
-atvImg();

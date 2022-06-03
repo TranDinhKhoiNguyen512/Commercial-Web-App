@@ -206,7 +206,7 @@
 
         <!-- Energy Type -->
         <div class="energy_type">
-          <div class="row">
+          <div class="row ">
             <!-- Grass Card -->
             <div class="col-4">
               <input type="checkbox" id="card-grass" name="types" class="pill-control__input" value="Grass">
@@ -233,7 +233,7 @@
             </div>
             <!-- Lighting Card -->
             <div class="col-4">
-              <input type="checkbox" id="card-lightning" name="types" class="pill-control__input" value="Lighting">
+              <input type="checkbox" id="card-lightning" name="types" class="pill-control__input" value="Lightning">
               <label for="card-lightning" class="pill-control__label">
                 <img src="./img/type/ELECTRIC.png" alt="lightning_energy">
                 <span>Lightning</span>
@@ -300,10 +300,10 @@
         <!-- Search and Reset Button -->
         <div class="button">
           <div class="content buttons-right ">
-            <button type="button" class="btn button--mint">
+            <button type="reset" class="button--mint">
               Reset
             </button>
-            <button type="button" class="btn button--dark " data-bs-dismiss="modal">
+            <button type="button" class="button--dark" id="check__submit">
               Search
             </button>
           </div>
@@ -459,7 +459,7 @@
                           </div>
                         </div>
                       </div>
-                      
+
                       <!-- Trainers -->
                       <div class="col-4">
                         <div class="title">
@@ -632,8 +632,7 @@
                       <!-- Rare Prime -->
                       <div class="col-4">
                         <div class="type">
-                          <input type="checkbox" id="rarePrime" name="rarity" value="Rare Prime"
-                            class="input__control">
+                          <input type="checkbox" id="rarePrime" name="rarity" value="Rare Prime" class="input__control">
                           <label for="rarePrime" class="check">
                             <p>Rare Prime</p>
                           </label>
@@ -653,8 +652,7 @@
                       <!-- Rare Ultra -->
                       <div class="col-4">
                         <div class="type">
-                          <input type="checkbox" id="rareUltra" name="rarity" value="Rare Ultra"
-                            class="input__control">
+                          <input type="checkbox" id="rareUltra" name="rarity" value="Rare Ultra" class="input__control">
                           <label for="rareUltra" class="check">
                             <p>Rare Ultra</p>
                           </label>
@@ -674,8 +672,7 @@
                       <!-- Rare BREAK -->
                       <div class="col-4">
                         <div class="type">
-                          <input type="checkbox" id="rareBREAK" name="rarity" value="Rare BREAK"
-                            class="input__control">
+                          <input type="checkbox" id="rareBREAK" name="rarity" value="Rare BREAK" class="input__control">
                           <label for="rareBREAK" class="check">
                             <p>Rare BREAK</p>
                           </label>
@@ -737,6 +734,7 @@
   <section class="item__list">
     <!-- Completed,  -->
     <div class="container list" id="productList">
+
     </div>
   </section>
 
@@ -944,7 +942,9 @@
   <!-- MAIN JS -->
   <script src="./js/mobileNav.js"></script>
   <script src="./js/getInfor.js"></script>
+
   <script src="./js/itemList.js"></script>
+  <script src="./js/getCheckBoxValue.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
