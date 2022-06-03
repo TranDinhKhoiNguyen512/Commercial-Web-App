@@ -12,7 +12,7 @@ async function getISS(id) {
     // x.setAttribute("alt", data.name);
     var str = `<img src=${data.images.small}></img>`
     //document.getElementById('productImage').insertAdjacentHTML( 'beforeend', str );
-    document.getElementById('productImage').src = `${data.images.small}`
+    document.getElementById('productImage').src = `${data.images.large}`
 
 
 

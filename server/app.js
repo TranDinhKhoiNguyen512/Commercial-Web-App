@@ -26,7 +26,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const savecardData = (data) => {
-  const stringifyData = JSON.stringify(data)
+  const stringifyData = JSON.stringify(data, null, 4)
   fs.writeFileSync(dataPath, stringifyData)
 }
 
@@ -269,7 +269,7 @@ app.get('/card/getAll', (req, res) => {
   for (var i = 0; i < cards.length; i++) {
     result.push(cards[i].id)
   }
-  res.send(JSON.stringify(result))
+  res.send(JSON.stringify(result, null, 4))
 })
 
 
@@ -307,7 +307,7 @@ app.get('/card/get/:id', (req, res) => {
 
     }
   };
-  res.send(JSON.stringify(result))
+  res.send(JSON.stringify(result, null, 4))
 })
 
 
@@ -568,6 +568,32 @@ app.delete('/card/delete/:id', (req, res) => {
     }
     
   }, true);
+})
+
+/**
+ * @swagger
+ * /rarity/getAll:
+ *   get:
+ *     summary: get all card's rarities
+ *     description: Get all card's rarities
+ *     tags:
+ *      - Card's Attribute
+ *     responses:
+ *       200:
+ *         description: Success
+ * 
+ */
+// Read - get all rarities of all the cards from the json file
+app.get('/rarity/getAll', (req, res) => {
+  var result = []
+  const cards = getcardData()
+  for (var i = 0; i < cards.length; i++) {
+    //result.push(cards[i].id)
+    if(result.indexOf(cards[i].rarity) === -1){
+      result.push(cards[i].rarity)
+    }
+  }
+  res.send(JSON.stringify(result, null, 4))
 })
 // END CARD API
 

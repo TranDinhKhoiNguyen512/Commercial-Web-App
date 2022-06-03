@@ -102,7 +102,7 @@
 
         <!-- Title -->
         <div class="row first">
-          <div class="col-8 title">Card Name and Keyword Search</div>
+          <div class="col-8 title">Search for your wanted card here.</div>
         </div>
 
         <div class="row second">
@@ -235,13 +235,13 @@
                     không được thay đổi ID hay class
                 -->
 
-              <a href="javascript:void(0);" id="top" class="title">Advantage Search</a>
+              <a href="javascript:void(0);" id="top" class="title">Advanced Search</a>
 
               <!-- Sub Menu -->
               <div id="myLinks">
                 <a href="javascript:void(0);" id="card__type" class="title subMenu">Card Type</a>
                 <!-- Card Type -->
-                <div id="cardType" class="cardType">
+                <div id="cardType" class="subtypeDIV">
                   <a href="javascript:void(0);">
                     <div class="row">
                       <!-- Pokemon -->
@@ -361,6 +361,13 @@
                               <p>VSTAR</p>
                             </label>
                           </div>
+                          <!-- Basic -->
+                          <div class="type">
+                            <input type="checkbox" id="pokemonBasic" name="subtype" value="Basic" class="input__control">
+                            <label for="vStar" class="check">
+                              <p>VSTAR</p>
+                            </label>
+                          </div>
                         </div>
                       </div>
 
@@ -381,7 +388,7 @@
 
                           <!-- Pokémon Tool -->
                           <div class="type">
-                            <input type="checkbox" id="pokemonTool" name="subtypes" value="Pokémon Tool"
+                            <input type="checkbox" id="pokemonTool" name="subtypes" value="Pokemon Tool"
                               class="input__control">
                             <label for="pokemonTool" class="check">
                               <p>Pokémon Tool</p>
@@ -450,20 +457,9 @@
 
                 <a href="javascript:void(0);" id="type" class="title subMenu">Rarity</a>
                 <!-- Card Type -->
-                <div id="Rarity" class="Rarity">
+                <div id="Rarity" class="rarityDIV">
                   <a href="javascript:void(0);">
                     <div class="row">
-
-                      <!-- Rare -->
-                      <div class="col-4">
-                        <div class="type">
-                          <input type="checkbox" id="rare" name="rarity" value="Rare" class="input__control">
-                          <label for="rare" class="check">
-                            <p>Rare</p>
-                          </label>
-                        </div>
-                      </div>
-
                       <!-- Common -->
                       <div class="col-4">
                         <div class="type">
@@ -483,6 +479,19 @@
                           </label>
                         </div>
                       </div>
+
+                      <!-- Rare -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rare" name="rarity" value="Rare" class="input__control">
+                          <label for="rare" class="check">
+                            <p>Rare</p>
+                          </label>
+                        </div>
+                      </div>
+
+
+
 
                       <!-- Rare Holo -->
                       <div class="col-4">
@@ -519,8 +528,7 @@
                       <!-- Rare Holo Lv.X -->
                       <div class="col-4">
                         <div class="type">
-                          <input type="checkbox" id="rareHoloLvX" name="rarity" value="Rare Holo Lv.X"
-                            class="input__control">
+                          <input type="checkbox" id="rareHoloLvX" name="rarity" value="Rare Holo Lv.X" class="input__control">
                           <label for="rareHoloLvX" class="check">
                             <p>Rare Holo Lv.X</p>
                           </label>
@@ -537,15 +545,7 @@
                         </div>
                       </div>
 
-                      <!-- LEGEND -->
-                      <div class="col-4">
-                        <div class="type">
-                          <input type="checkbox" id="legend" name="rarity" value="LEGEND" class="input__control">
-                          <label for="legend" class="check">
-                            <p>LEGEND</p>
-                          </label>
-                        </div>
-                      </div>
+
 
                       <!-- Rare Ultra -->
                       <div class="col-4">
@@ -588,6 +588,159 @@
                         </div>
                       </div>
 
+                      <!-- Rare Amazing -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="amazing" name="rarity" value="Amazing Rare" class="input__control">
+                          <label for="amazing" class="check">
+                            <p>Rare Amazing</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Prism Star -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RarePrismStar" name="rarity" value="Rare Prism Star"
+                            class="input__control">
+                          <label for="RarePrismStar" class="check">
+                            <p>Rare Prism Star</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Secret -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareSecret" name="rarity" value="Rare Secret"
+                            class="input__control">
+                          <label for="RareSecret" class="check">
+                            <p>Rare Secret</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Shining -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareShining" name="rarity" value="Rare Shining"
+                            class="input__control">
+                          <label for="RareShining" class="check">
+                            <p>Rare Shining</p>
+                          </label>
+                        </div>
+                      </div>  
+
+                      <!-- Rare Shiny -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareShiny" name="rarity" value="Rare Shiny"
+                            class="input__control">
+                          <label for="RareShiny" class="check">
+                            <p>Rare Shiny</p>
+                          </label>
+                        </div>
+                      </div>  
+
+                      <!-- Rare Shiny GX-->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareShinyGX" name="rarity" value="Rare Shiny GX"
+                            class="input__control">
+                          <label for="RareShinyGX" class="check">
+                            <p>Rare Shiny GX</p>
+                          </label>
+                        </div>
+                      </div>  
+
+                      <!-- Rare Holo Star -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareHoloStar" name="rarity" value="Rare Holo Star"
+                            class="input__control">
+                          <label for="RareHoloStar" class="check">
+                            <p>Rare Holo Star</p>
+                          </label>
+                        </div>
+                      </div>          
+
+                      <!-- Rare Holo V-->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareHoloV" name="rarity" value="Rare Holo V"
+                            class="input__control">
+                          <label for="RareHoloV" class="check">
+                            <p>Rare Holo V</p>
+                          </label>
+                        </div>
+                      </div>  
+
+                      <!-- Rare Holo VMAX -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareHoloVMAX" name="rarity" value="Rare Holo VMAX"
+                            class="input__control">
+                          <label for="RareHoloVMAX" class="check">
+                            <p>Rare Holo VMAX</p>
+                          </label>
+                        </div>
+                      </div>  
+
+                      <!-- Rare Holo VSTAR -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="RareHoloVSTAR" name="rarity" value="Rare Holo VSTAR"
+                            class="input__control">
+                          <label for="RareHoloVSTAR" class="check">
+                            <p>Rare Holo VSTAR</p>
+                          </label>
+                        </div>
+                      </div> 
+
+                      <!-- Ultra Rare Holo -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="UltraRareHolo" name="rarity" value="Ultra Rare Holo"
+                            class="input__control">
+                          <label for="UltraRareHolo" class="check">
+                            <p>Ultra Rare Holo</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- V  -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="Vrarity" name="rarity" value="V"
+                            class="input__control">
+                          <label for="Vrarity" class="check">
+                            <p>V</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- VM  -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="VMrarity" name="rarity" value="VM"
+                            class="input__control">
+                          <label for="VMrarity" class="check">
+                            <p>VMax</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Classic Collection -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="ClassicCollection" name="rarity" value="Classic Collection"
+                            class="input__control">
+                          <label for="ClassicCollection" class="check">
+                            <p>Classic Collection</p>
+                          </label>
+                        </div>
+                      </div>
+
                       <!-- Promo -->
                       <div class="col-4">
                         <div class="type">
@@ -598,23 +751,22 @@
                         </div>
                       </div>
 
-                      <!-- Amazing -->
+                      <!-- LEGEND -->
                       <div class="col-4">
                         <div class="type">
-                          <input type="checkbox" id="amazing" name="rarity" value="Amazing" class="input__control">
-                          <label for="amazing" class="check">
-                            <p>Amazing</p>
+                          <input type="checkbox" id="Legend" name="rarity" value="LEGEND" class="input__control">
+                          <label for="Legend" class="check">
+                            <p>Legend</p>
                           </label>
                         </div>
                       </div>
-
-                      <!-- Radiant Rare -->
+                      
+                      <!-- null -->
                       <div class="col-4">
                         <div class="type">
-                          <input type="checkbox" id="radiantRare" name="rarity" value="Radiant Rare"
-                            class="input__control">
-                          <label for="radiantRare" class="check">
-                            <p>Radiant Rare</p>
+                          <input type="checkbox" id="NA" name="rarity" value="NA" class="input__control">
+                          <label for="NA" class="check">
+                            <p>Not Classified</p>
                           </label>
                         </div>
                       </div>
