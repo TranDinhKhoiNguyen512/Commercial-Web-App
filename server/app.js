@@ -55,13 +55,17 @@ app.use('/ui', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
  *     description: supertype of the card
  *     example: 'Pokemon'
  *    subtypes:
- *     type: string
- *     description: subtype of the card
- *     example: 'Stage 2'
+ *     type: array
+ *     item:
+ *      type: string
+ *     description: subtypes of the card
+ *     example: ['Stage 2']
  *    types:
- *     type: string
- *     description: subtype of the card
- *     example: 'psychic'
+ *     type: array
+ *     item:
+ *      type: string
+ *     description: types of the card
+ *     example: ['psychic']
  *    hp:
  *     type: string
  *     description: number of the card

@@ -1,8 +1,8 @@
 {
   "artist": "Crazy Meowl",
   "supertype": "Pokemon",
-  "subtypes": "V Basic",
-  "types": "psychic",
+  "subtypes": ["V Basic"],
+  "types": ["psychic"],
   "hp": "999",
   "number": "1",
   "rarity": "Ultra Rare Holo",
