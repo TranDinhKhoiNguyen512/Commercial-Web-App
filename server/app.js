@@ -326,21 +326,9 @@ app.get('/card/get/:id', (req, res) => {
    *        type: string
    *        description: Card's Name or Card's ID
    *      - in: query
-   *        name: series
-   *        type: string
-   *        description: Card's Series
-   *      - in: query
-   *        name: set
-   *        type: string
-   *        description: Card's Set
-   *      - in: query
    *        name: rarity
    *        type: string
    *        description: Card's rarity 
-   *      - in: query
-   *        name: supertype
-   *        type: string
-   *        description: Card's supertype (Pokemon/Trainer/Energy)
    *      - in: query
    *        name: subtype
    *        type: string
