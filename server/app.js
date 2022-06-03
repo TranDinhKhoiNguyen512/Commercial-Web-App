@@ -55,13 +55,17 @@ app.use('/ui', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
  *     description: supertype of the card
  *     example: 'Pokemon'
  *    subtypes:
- *     type: string
- *     description: subtype of the card
- *     example: 'Stage 2'
+ *     type: array
+ *     item:
+ *      type: string
+ *     description: subtypes of the card
+ *     example: ['Stage 2']
  *    types:
- *     type: string
- *     description: subtype of the card
- *     example: 'psychic'
+ *     type: array
+ *     item:
+ *      type: string
+ *     description: types of the card
+ *     example: ['psychic']
  *    hp:
  *     type: string
  *     description: number of the card
@@ -326,21 +330,9 @@ app.get('/card/get/:id', (req, res) => {
    *        type: string
    *        description: Card's Name or Card's ID
    *      - in: query
-   *        name: series
-   *        type: string
-   *        description: Card's Series
-   *      - in: query
-   *        name: set
-   *        type: string
-   *        description: Card's Set
-   *      - in: query
    *        name: rarity
    *        type: string
    *        description: Card's rarity 
-   *      - in: query
-   *        name: supertype
-   *        type: string
-   *        description: Card's supertype (Pokemon/Trainer/Energy)
    *      - in: query
    *        name: subtype
    *        type: string

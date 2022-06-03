@@ -62,19 +62,20 @@ header .header__content .navbar-nav .nav-item:hover {
   opacity: 1;
 }
 
-header .header__content button {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+header .header__content .cart__logo {
+  padding: 10px;
+  text-align: center;
 }
 
-header .header__content .button--mint {
-  margin-right: 10px;
-  border: 2px solid #00ffe5;
+header .header__content .cart__logo a {
+  text-decoration: none;
+  color: #FFF;
+  margin-right: 30px;
 }
 
-header .header__content .button--dark {
-  border: 2px solid #00ffe5;
-  margin-right: 10px;
+header .header__content .cart__logo a i {
+  color: orange;
+  font-size: 40px;
 }
 
 footer {
@@ -529,9 +530,7 @@ footer .bot__footer .container .logo__e img {
 }
 
 .product__text {
-  width: 100%;
   padding: 100px;
-  text-align: center;
 }
 
 .product__text .image__side img {
@@ -561,19 +560,16 @@ footer .bot__footer .container .logo__e img {
 }
 
 .product__text .price_cart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin: auto;
 }
 
 .product__text .price_cart .price_infor {
+  display: block;
   margin: auto;
   color: #FFF;
   background-color: #24262a;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 15px;
+  height: 140px;
   width: 80%;
   padding: 10px;
 }
@@ -586,6 +582,23 @@ footer .bot__footer .container .logo__e img {
 .product__text .price_cart .price_infor .price_int {
   font-weight: 700;
   font-size: 30px;
+  text-align: center;
+}
+
+.product__text .price_cart .button__cart {
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid orange;
+  background-color: orange;
+  border-radius: 15px;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+}
+
+.product__text .price_cart .button__cart a {
+  text-decoration: none;
+  color: #FFF;
 }
 
 .search_page .first .title {
@@ -646,9 +659,9 @@ footer .bot__footer .container .logo__e img {
   background-color: #373737;
   display: block;
   cursor: pointer;
-  height: 2.375em;
+  height: 2.7em;
   width: 75%;
-  padding: 0 2.5em 0 1em;
+  padding: 0.2em 0.1em 0.1em 0.1em;
   border-radius: 1.2em;
   position: relative;
   clear: both;
@@ -691,15 +704,15 @@ footer .bot__footer .container .logo__e img {
 
 .mobile_nav .topnav {
   overflow: hidden;
-  background-color: blue;
+  background-color: #282828;
   position: relative;
+  border-radius: 10px;
   /* Hide the links inside the navigation menu (except for logo/home) */
   /* Style navigation menu links */
 }
 
 .mobile_nav .topnav #myLinks {
   display: none;
-  background-color: gray;
 }
 
 .mobile_nav .topnav #myLinks .rarity {
@@ -715,28 +728,28 @@ footer .bot__footer .container .logo__e img {
 
 .mobile_nav .topnav .title {
   width: 100%;
-  color: red;
+  color: #FFF;
   font-size: 30px;
-  border-bottom: 2px solid mintcream;
+  border-bottom: 2px solid #424242;
   text-align: center;
 }
 
-.mobile_nav .cardType {
+.mobile_nav #cardType {
   display: none;
   background-color: black;
 }
 
-.mobile_nav .cardType .check {
+.mobile_nav #cardType .check {
   margin: 0 auto;
   text-align: left;
 }
 
-.mobile_nav .cardType p {
+.mobile_nav #cardType p {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.mobile_nav .cardType .check::before {
+.mobile_nav #cardType .check::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   content: "";
@@ -754,7 +767,7 @@ footer .bot__footer .container .logo__e img {
   color: #fff;
 }
 
-.mobile_nav .cardType .check {
+.mobile_nav #cardType .check {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -773,7 +786,7 @@ footer .bot__footer .container .logo__e img {
   transition: background-color 1s ease;
 }
 
-.mobile_nav .cardType .input__control {
+.mobile_nav #cardType .input__control {
   top: 50%;
   right: 50%;
   height: 1px;
@@ -786,7 +799,78 @@ footer .bot__footer .container .logo__e img {
           appearance: none;
 }
 
-.mobile_nav .cardType input[type="checkbox"]:checked + .check::before {
+.mobile_nav #cardType input[type="checkbox"]:checked + .check::before {
+  color: #FFF;
+  background-color: orange;
+  content: '✔';
+}
+
+.mobile_nav #Rarity {
+  display: none;
+  background-color: black;
+}
+
+.mobile_nav #Rarity .check {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.mobile_nav #Rarity p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mobile_nav #Rarity .check::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  display: block;
+  right: .3125em;
+  top: .3125em;
+  height: 1.75em;
+  width: 1.75em;
+  position: absolute;
+  background-color: #dcdcdc;
+  border: 2px solid #3f3f3f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.mobile_nav #Rarity .check {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #373737;
+  display: block;
+  cursor: pointer;
+  height: 2.375em;
+  padding: 0 1em 0 1em;
+  width: 75%;
+  border-radius: 1.2em;
+  position: relative;
+  clear: both;
+  z-index: 2;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease;
+}
+
+.mobile_nav #Rarity .input__control {
+  top: 50%;
+  right: 50%;
+  height: 1px;
+  width: 1px;
+  z-index: -1;
+  background: none;
+  opacity: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.mobile_nav #Rarity input[type="checkbox"]:checked + .check::before {
   color: #FFF;
   background-color: orange;
   content: '✔';

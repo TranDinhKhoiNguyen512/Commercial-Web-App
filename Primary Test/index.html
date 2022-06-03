@@ -68,10 +68,11 @@
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
-            <!-- <button class="btn button--mint" type="button" data-bs-toggle="modal" data-bs-target="#signUp">Sign
-              In</button>
-            <button class="btn button--dark" type="button" data-bs-toggle="modal"
-              data-bs-target="#register">Register</button> -->
+            <div class="cart__logo">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#cart__menu" title="Open your cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -94,96 +95,105 @@
   <!-- Product Text -->
   <section class="container product__text">
     <div class="row">
-      <div>
-
-      </div>
-      <div class="col-4 image__side">
-        <p id="image"></p>
-      </div>
-      <div class="col-4 infor">
-
-        <!-- Card Name -->
-        <div class="row">
-          <h1 id="name"></h1>
-        </div>
-        <div class="row">
-          <h3>Product Details</h3>
-        </div>
-        <!-- Card Infor -->
-        <div class="row">
-          <!-- Artist Name -->
-          <div>
-            <span class="text">Artist Name: </span>
-            <span id="artist" class="data"></span>
-          </div>
-
-
-          <!-- Released Date -->
-          <div>
-            <span class="text">Released Date: </span>
-            <span id="releaseDate" class="data"></span>
-          </div>
-
-          <!-- base -->
-          <div>
-            <span class="text">Series / Set: </span>
-            <span id="base" class="data"></span>
-          </div>
-          <div>
-            <span class="text">ID: </span>
-            <span id="id" class="data"></span>
-          </div>
-          <!-- Card Number -->
-          <div>
-            <span class="text">Card Number / Rarity:</span>
-            <span id="rarity" class="data"></span>
-          </div>
-          <!-- Card SuperType / SubType -->
-          <div>
-            <span class="text">Card SuperType : </span>
-            <span id="supertype" class="data"></span>
-          </div>
-
-          <!-- Card SubType -->
-          <div>
-            <span class="text">Card SubType : </span>
-            <span id="subtype" class="data"></span>
-          </div>
-
-
-          <!-- Card Type / HP / Stage -->
-          <div>
-            <span class="text">Card Type / HP : </span>
-            <span id="types" class="data"></span>
-          </div>
-
-          <!-- Pokemon Power -->
-          <div>
-            <span class="text">Card Text: </span>
-            <span id="card_text" class="data"></span>
-          </div>
+      <!-- image -->
+      <div class="col-4">
+        <div class="image__side">
+          <img id="productImage" src="./img/back.png" alt="">
         </div>
       </div>
-      <div class="col-4 price_cart">
-
-        <!-- Prices -->
-        <div class="price_infor">
-          <div class="price_title">
-            <span>Price: </span>
+      <!-- card infor -->
+      <div class="col-4">
+        <div class="infor">
+          <!-- Card Name -->
+          <div class="row">
+            <h1 id="name"></h1>
           </div>
-          <div>
-            <span id="price" class="price_int"></span>
+          <div class="row">
+            <h3>Product Details</h3>
+          </div>
+          <!-- Card Infor -->
+          <div class="row">
+            <!-- Artist Name -->
+            <div>
+              <span class="text">Artist Name: </span>
+              <span id="artist" class="data"></span>
+            </div>
+
+
+            <!-- Released Date -->
+            <div>
+              <span class="text">Released Date: </span>
+              <span id="releaseDate" class="data"></span>
+            </div>
+
+            <!-- base -->
+            <div>
+              <span class="text">Series / Set: </span>
+              <span id="base" class="data"></span>
+            </div>
+            <div>
+              <span class="text">ID: </span>
+              <span id="id" class="data"></span>
+            </div>
+            <!-- Card Number -->
+            <div>
+              <span class="text">Card Number / Rarity:</span>
+              <span id="rarity" class="data"></span>
+            </div>
+            <!-- Card SuperType / SubType -->
+            <div>
+              <span class="text">Card SuperType : </span>
+              <span id="supertype" class="data"></span>
+            </div>
+
+            <!-- Card SubType -->
+            <div>
+              <span class="text">Card SubType : </span>
+              <span id="subtype" class="data"></span>
+            </div>
+
+
+            <!-- Card Type / HP / Stage -->
+            <div>
+              <span class="text">Card Type / HP : </span>
+              <span id="types" class="data"></span>
+            </div>
+
+            <!-- Pokemon Power -->
+            <div>
+              <span class="text">Card Text: </span>
+              <span id="card_text" class="data"></span>
+            </div>
           </div>
         </div>
-
-
       </div>
-    </div>
+
+      <!-- price_cart -->
+      <div class="col-4 ">
+        <div class="price_cart">
+          <!-- Prices -->
+          <div class="price_infor">
+            <div class="price_title">
+              <p>Price: </p>
+            </div>
+            <div class="price_int">
+              <span id="price" class="price_int"></span>
+            </div>
+          </div>
+
+          <div class="button__cart">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#cart__message" title="Add to your cart">
+              <span>Add to cart</span>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+      </div>
   </section>
 
   <section class="search_page">
     <!-- Search Page chứ input text và các checkbox để lấy các yêu cầu của user 
-        Có thêm Advantage Search với 2 loại Card Type và Rarity với nhiều checkbox khác
+        Có thêm Advanced Search với 2 loại Card Type và Rarity với nhiều checkbox khác
     -->
     <form action="">
       <div class="container border">
@@ -241,7 +251,7 @@
             </div>
             <!-- Psychic Card -->
             <div class="col-4">
-              <input type="checkbox" id="card-psy" name="types" class="pill-control__input" value="Psychic">
+              <input type="checkbox" id="card-psychic" name="types" class="pill-control__input" value="Psychic">
               <label for="card-psy" class="pill-control__label">
                 <img src="./img/type/PSYCHIC.png" alt="psy_energy">
                 <span>Psychic</span>
@@ -339,14 +349,6 @@
                         </div>
                         <!-- Type Card -->
                         <div class="type_card">
-
-                          <!-- Basic -->
-                          <div class="type">
-                            <input type="checkbox" id="basic" name="subtype" class="input__control" value="Basic">
-                            <label for="basic" class="check">
-                              <p>Basic</p>
-                            </label>
-                          </div>
 
                           <!-- Stage 1 -->
                           <div class="type">
@@ -528,13 +530,7 @@
                           Energy
                         </div>
                         <div class="type_card">
-                          <!-- Basic -->
-                          <div class="type">
-                            <input type="checkbox" id="basic" name="subtypes" value="Basic" class="input__control">
-                            <label for="basic" class="check">
-                              <p>Basic</p>
-                            </label>
-                          </div>
+
 
                           <!-- Special -->
                           <div class="type">
@@ -552,7 +548,7 @@
 
                 <a href="javascript:void(0);" id="type" class="title subMenu">Rarity</a>
                 <!-- Card Type -->
-                <div id="Type" class="cardType">
+                <div id="Rarity" class="Rarity">
                   <a href="javascript:void(0);">
                     <div class="row">
 
@@ -883,27 +879,81 @@
       </div>
     </div>
 
-    <!-- Search -->
-    <div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Cart-Message -->
+    <div id="cart__message" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content ">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Search</h5>
+            <h3>Message</h3>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form class="mx-1 mx-md-4">
               <div class="d-flex flex-row align-items-center mb-4">
-                <input type="text" class="form-control" placeholder="Card Name, ID, etc">
-                <button class="btn button--mint">Search</button>
+                <div class="form-outline flex-fill mb-0" style="font-size: 20px;">
+                  <i class="fa-solid fa-circle-check" style="color: green; margin-right: 10px;"></i>
+                  <span>The product has just been added to the cart</span>
+                </div>
               </div>
-
             </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">Confirm</button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Cart-menu -->
+    <div id="cart__menu" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h3>Item List</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <p id="image"></p>
+                    </th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- JQUERY -->
@@ -935,10 +985,6 @@
     });
   </script>
 
-  <!-- Mobile Nav -->
-  <script>
-
-  </script>
   <!-- MAIN JS -->
   <script src="./js/mobileNav.js"></script>
   <script src="./js/getInfor.js"></script>
