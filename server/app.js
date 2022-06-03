@@ -437,11 +437,14 @@ app.get('/card/query/', (req, res) => {
     }
     else{
       var rarity = raritylist.split(",")
-      for(item in rarity){
-        if (cards[i].rarity.toLowerCase() == rarity[item].toLowerCase()){
-          var rarityCheck = true
+      if (cards[i].rarity != null){
+          for(item in rarity){
+          if (cards[i].rarity.toLowerCase() == rarity[item].toLowerCase()){
+            var rarityCheck = true
+          }
         }
       }
+      
     }
 
     //supertype check
@@ -452,7 +455,7 @@ app.get('/card/query/', (req, res) => {
     else{
       var supertype = supertypelist.split(",")
       for(item in supertype){
-        if (cards[i].supertype.toLowerCase() == supertype[item].toLowerCase()){
+        if (supertype[item].toLowerCase().includes(cards[i].supertype.toLowerCase())){
           var supertypeCheck = true
         }
       }
@@ -467,7 +470,7 @@ app.get('/card/query/', (req, res) => {
       if (cards[i].subtypes != null){
         subtypes = subtypelist.split(",")
         for(item in subtypes){
-          if (cards[i].subtypes.toLowerCase() == subtypes[item].toLowerCase()){
+          if (subtypes[item].toLowerCase().includes(cards[i].subtypes[0].toLowerCase())){
             var subtypeCheck = true
           }
         }
@@ -487,7 +490,7 @@ app.get('/card/query/', (req, res) => {
       if (cards[i].types != null){
         var type = typelist.split(",")
         for(item in type){
-          if (cards[i].types[0].toLowerCase() == type[item].toLowerCase()){
+          if (type[item].toLowerCase().includes(cards[i].types[0].toLowerCase())){
             var typeCheck = true
           }
         }
