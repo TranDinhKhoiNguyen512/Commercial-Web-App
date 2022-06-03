@@ -21,7 +21,7 @@ document.getElementById('card__type').onclick = function cardType() {
 }
 
 document.getElementById('type').onclick = function Rarity() {
-  var x = document.getElementById("Type");
+  var x = document.getElementById("Rarity");
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
