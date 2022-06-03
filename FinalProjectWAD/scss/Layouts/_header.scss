@@ -3,7 +3,7 @@ header {
     background-color: $color-black-3  !important;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 
     .header__content {
         .navbar-brand {
@@ -44,18 +44,20 @@ header {
             }
         }
 
-        button {
-            transition: 0.5s;
-        }
-
-        .button--mint {
-            margin-right: $mg-0;
-            border: 2px solid $color-mint-0;
-        }
-
-        .button--dark {
-            border: 2px solid $color-mint-0;
-            margin-right: $mg-0;
+        .cart__logo{
+            padding: 10px;
+            text-align: center;
+            
+            a {
+                text-decoration: none;
+                color: $color-white-0;
+                margin-right: 30px;
+                
+                i{
+                    color: orange;
+                    font-size: $fs-1 + 20;
+                }
+            }
         }
     }
 }

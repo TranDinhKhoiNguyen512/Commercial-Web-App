@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/x-icon"
     href="https://raw.githubusercontent.com/CrazyMeowl/NetCentric-PokeProject/main/poke.ico">
-  <title>PokeShop</title>
+  <title>Test Website</title>
 
   <!-- OWL CAROUSEL -->
   <link rel="stylesheet" href="./css/owl.carousel.min.css" />
@@ -53,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <a class="nav-link" href="#search">Shop</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">News</a>
@@ -68,10 +68,11 @@
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
-            <button class="btn button--mint" type="button" data-bs-toggle="modal" data-bs-target="#signUp">Sign
-              In</button>
-            <button class="btn button--dark" type="button" data-bs-toggle="modal"
-              data-bs-target="#register">Register</button>
+            <div class="cart__logo">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#cart__menu" title="Open your cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -92,43 +93,548 @@
   </section>
 
 
-  <!-- List item -->
-  <div class="item_list">
-    <section class="item__list">
-      <div class="container_main">
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/1.png"></div>
+  <section class="search_page" id = "search">
+    <!-- Search Page chứ input text và các checkbox để lấy các yêu cầu của user 
+        Có thêm Advanced Search với 2 loại Card Type và Rarity với nhiều checkbox khác
+    -->
+    <form action="">
+      <div class="container border">
+
+        <!-- Title -->
+        <div class="row first">
+          <div class="col-8 title">Card Name and Keyword Search</div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base1/2.png"></div>
+
+        <div class="row second">
+          <div class="col-3">
+            <label for="inputCardName" class="form-label">Card Name / Card ID</label>
+            <input type="text" class="form-control" id="inputCardName">
+          </div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/10.png"></div>
+
+        <div class="row third">
+          <div class="col-8 title">Energy Type</div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/30.png"></div>
+
+        <!-- Energy Type -->
+        <div class="energy_type">
+          <div class="row ">
+            <!-- Grass Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-grass" name="types" class="pill-control__input" value="Grass">
+              <label for="card-grass" class="pill-control__label">
+                <img src="./img/type/GRASS.png" alt="grass_energy">
+                <span>Grass</span>
+              </label>
+            </div>
+            <!-- Fire Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-fire" name="types" class="pill-control__input" value="Fire">
+              <label for="card-fire" class="pill-control__label">
+                <img src="./img/type/FIRE.png" alt="fire_energy">
+                <span>Fire</span>
+              </label>
+            </div>
+            <!-- Water Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-water" name="types" class="pill-control__input" value="Water">
+              <label for="card-water" class="pill-control__label">
+                <img src="./img/type/WATER.png" alt="water_energy">
+                <span>Water</span>
+              </label>
+            </div>
+            <!-- Lighting Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-lightning" name="types" class="pill-control__input" value="Lightning">
+              <label for="card-lightning" class="pill-control__label">
+                <img src="./img/type/ELECTRIC.png" alt="lightning_energy">
+                <span>Lightning</span>
+              </label>
+            </div>
+            <!-- Psychic Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-psychic" name="types" class="pill-control__input" value="Psychic">
+              <label for="card-psychic" class="pill-control__label">
+                <img src="./img/type/PSYCHIC.png" alt="psy_energy">
+                <span>Psychic</span>
+              </label>
+            </div>
+            <!-- Fighting Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-fighting" name="types" class="pill-control__input" value="Fighting">
+              <label for="card-fighting" class="pill-control__label">
+                <img src="./img/type/FIGHTING.png" alt="fighting_energy">
+                <span>Fighting</span>
+              </label>
+            </div>
+            <!-- Darkness Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-darkness" name="types" class="pill-control__input" value="Darkness">
+              <label for="card-darkness" class="pill-control__label">
+                <img src="./img/type/DARK.png" alt="darkness_energy">
+                <span>Darkness</span>
+              </label>
+            </div>
+            <!-- Metal Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-metal" name="types" class="pill-control__input" value="Metal">
+              <label for="card-metal" class="pill-control__label">
+                <img src="./img/type/STEEL.png" alt="metal_energy">
+                <span>Metal</span>
+              </label>
+            </div>
+            <!-- Colorless Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-colorless" name="types" class="pill-control__input" value="Colorless">
+              <label for="card-colorless" class="pill-control__label">
+                <img src="./img/type/NORMAL.png" alt="colorless_energy">
+                <span>Colorless</span>
+              </label>
+            </div>
+            <!-- Fairy Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-fairy" name="types" class="pill-control__input" value="Fairy">
+              <label for="card-fairy" class="pill-control__label">
+                <img src="./img/type/FAIRY.png" alt="fairy-energy">
+                <span>Fairy</span>
+              </label>
+            </div>
+            <!-- Dragon Card -->
+            <div class="col-4">
+              <input type="checkbox" id="card-dragon" name="types" class="pill-control__input" value="Dragon">
+              <label for="card-dragon" class="pill-control__label">
+                <img src="./img/type/DRAGON.png" alt="dragon_energy">
+                <span>Dragon</span>
+              </label>
+            </div>
+          </div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/20.png"></div>
+        <!-- Search and Reset Button -->
+        <div class="button">
+          <div class="content buttons-right ">
+            <button type="reset" class="button--mint">
+              Reset
+            </button>
+            <button type="button" class="button--dark" id="check__submit">
+              Search
+            </button>
+          </div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base4/10.png"></div>
+        <br>
+        <!-- Mobile Nav -->
+
+        <div class="mobile_nav">
+          <div class="container">
+            <div class="topnav">
+              <!-- 
+                - Được liên kết với file mobileNav.js 
+                - Thẻ a id = "top" là thẻ bọc tất cả lại với display = none. 
+                - id ="myLinks" là thẻ bọc 2 thẻ a "Card Type" và "Rarity" 
+                - trong từ thẻ "Card Type" và "Rarity" chứa các checkbox tương ứng 
+                - LƯU Ý: ở checkbox, chỉ nên thay đổi Value và Tên của thẻ, 
+                    không được thay đổi ID hay class
+                -->
+
+              <a href="javascript:void(0);" id="top" class="title">Advantage Search</a>
+
+              <!-- Sub Menu -->
+              <div id="myLinks">
+                <a href="javascript:void(0);" id="card__type" class="title subMenu">Card Type</a>
+                <!-- Card Type -->
+                <div id="cardType" class="cardType">
+                  <a href="javascript:void(0);">
+                    <div class="row">
+                      <!-- Pokemon -->
+                      <div class="col-4">
+                        <div class="title">
+                          Pokémon
+                        </div>
+                        <!-- Type Card -->
+                        <div class="type_card">
+
+                          <!-- Stage 1 -->
+                          <div class="type">
+                            <input type="checkbox" id="stage1" name="subtype" class="input__control" value="Stage 1">
+                            <label for="stage1" class="check">
+                              <p>Stage 1</p>
+                            </label>
+                          </div>
+
+                          <!-- Stage 2 -->
+                          <div class="type">
+                            <input type="checkbox" id="stage2" name="subtype" value="Stage 2" class="input__control">
+                            <label for="stage2" class="check">
+                              <p>Stage 2</p>
+                            </label>
+                          </div>
+
+                          <!-- Level Up -->
+                          <div class="type">
+                            <input type="checkbox" id="levelUp" name="subtype" value="Level Up" class="input__control">
+                            <label for="levelUp" class="check">
+                              <p>Level Up</p>
+                            </label>
+                          </div>
+
+                          <!-- EX -->
+                          <div class="type">
+                            <input type="checkbox" id="ex" name="subtype" value="EX" class="input__control">
+                            <label for="ex" class="check">
+                              <p>EX</p>
+                            </label>
+                          </div>
+                          <!-- MEGA-->
+                          <div class="type">
+                            <input type="checkbox" id="mega" name="subtype" value="MEGA" class="input__control">
+                            <label for="mega" class="check">
+                              <p>MEGA</p>
+                            </label>
+                          </div>
+
+                          <!-- SP -->
+                          <div class="type">
+                            <input type="checkbox" id="sp" name="subtype" value="SP" class="input__control">
+                            <label for="sp" class="check">
+                              <p>SP</p>
+                            </label>
+                          </div>
+                          <!-- LEGEND -->
+                          <div class="type">
+                            <input type="checkbox" id="legend" name="subtype" value="LEGEND" class="input__control">
+                            <label for="legend" class="check">
+                              <p>LEGEND</p>
+                            </label>
+                          </div>
+                          <!-- Restored -->
+                          <div class="type">
+                            <input type="checkbox" id="restored" name="subtype" value="Restored" class="input__control">
+                            <label for="restored" class="check">
+                              <p>Restored</p>
+                            </label>
+                          </div>
+                          <!-- BREAK -->
+                          <div class="type">
+                            <input type="checkbox" id="break" name="subtype" value="BREAK" class="input__control">
+                            <label for="break" class="check">
+                              <p>BREAK</p>
+                            </label>
+                          </div>
+                          <!-- GX -->
+                          <div class="type">
+                            <input type="checkbox" id="gx" name="subtype" value="GX" class="input__control">
+                            <label for="gx" class="check">
+                              <p>GX</p>
+                            </label>
+                          </div>
+                          <!-- TAG TEAM -->
+                          <div class="type">
+                            <input type="checkbox" id="tag_team" name="subtype" value="TAG TEAM" class="input__control">
+                            <label for="tag_team" class="check">
+                              <p>TAG TEAM</p>
+                            </label>
+                          </div>
+                          <!-- V -->
+                          <div class="type">
+                            <input type="checkbox" id="v" name="subtype" value="V" class="input__control">
+                            <label for="v" class="check">
+                              <p>V</p>
+                            </label>
+                          </div>
+                          <!-- VMAX -->
+                          <div class="type">
+                            <input type="checkbox" id="vmax" name="subtype" value="VMAX" class="input__control">
+                            <label for="vmax" class="check">
+                              <p>VMAX</p>
+                            </label>
+                          </div>
+                          <!-- V-UNION -->
+                          <div class="type">
+                            <input type="checkbox" id="vUnion" name="subtype" value="V-UNION" class="input__control">
+                            <label for="vUnion" class="check">
+                              <p>V-UNION</p>
+                            </label>
+                          </div>
+                          <!-- VSTAR -->
+                          <div class="type">
+                            <input type="checkbox" id="vStar" name="subtype" value="VSTAR" class="input__control">
+                            <label for="vStar" class="check">
+                              <p>VSTAR</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Trainers -->
+                      <div class="col-4">
+                        <div class="title">
+                          Trainers
+                        </div>
+                        <div class="type_card">
+
+                          <!-- Trainer-Item -->
+                          <div class="type">
+                            <input type="checkbox" id="trainerItem" name="subtypes" value="Item" class="input__control">
+                            <label for="trainerItem" class="check">
+                              <p>Trainer-Item</p>
+                            </label>
+                          </div>
+
+                          <!-- Pokémon Tool -->
+                          <div class="type">
+                            <input type="checkbox" id="pokemonTool" name="subtypes" value="Pokémon Tool"
+                              class="input__control">
+                            <label for="pokemonTool" class="check">
+                              <p>Pokémon Tool</p>
+                            </label>
+                          </div>
+
+                          <!-- Trainer-Stadium -->
+                          <div class="type">
+                            <input type="checkbox" id="trainerStadium" name="subtypes" value="Stadium"
+                              class="input__control">
+                            <label for="trainerStadium" class="check">
+                              <p>Trainer-Stadium</p>
+                            </label>
+                          </div>
+
+                          <!-- Trainer-Supporter -->
+                          <div class="type">
+                            <input type="checkbox" id="trainersupporter" name="subtypes" value="Supporter"
+                              class="input__control">
+                            <label for="trainersupporter" class="check">
+                              <p>Trainer-Supporter</p>
+                            </label>
+                          </div>
+
+                          <!-- Technical Machine -->
+                          <div class="type">
+                            <input type="checkbox" id="technicalMachine" name="subtypes" value="Technical Machine"
+                              class="input__control">
+                            <label for="technicalMachine" class="check">
+                              <p>Technical Machine</p>
+                            </label>
+                          </div>
+
+                          <!-- Rocket's Secret Machine -->
+                          <div class="type">
+                            <input type="checkbox" id="secretMachine" name="subtypes" value="Rocket's Secret Machine"
+                              class="input__control">
+                            <label for="secretMachine" class="check">
+                              <p>Rocket's Secret Machine</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Energy -->
+                      <div class="col-4">
+                        <div class="title">
+                          Energy
+                        </div>
+                        <div class="type_card">
+
+
+                          <!-- Special -->
+                          <div class="type">
+                            <input type="checkbox" id="special" name="subtypes" value="Special" class="input__control">
+                            <label for="special" class="check">
+                              <p>Special</p>
+                            </label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <a href="javascript:void(0);" id="type" class="title subMenu">Rarity</a>
+                <!-- Card Type -->
+                <div id="Rarity" class="Rarity">
+                  <a href="javascript:void(0);">
+                    <div class="row">
+
+                      <!-- Rare -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rare" name="rarity" value="Rare" class="input__control">
+                          <label for="rare" class="check">
+                            <p>Rare</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Common -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="common" name="rarity" value="Common" class="input__control">
+                          <label for="common" class="check">
+                            <p>Common</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Uncommon -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="uncommon" name="rarity" value="Uncommon" class="input__control">
+                          <label for="uncommon" class="check">
+                            <p>Uncommon</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHolo" name="rarity" value="Rare Holo" class="input__control">
+                          <label for="rareHolo" class="check">
+                            <p>Rare Holo</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo EX -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHoloEX" name="rarity" value="Rare Holo EX"
+                            class="input__control">
+                          <label for="rareHoloEX" class="check">
+                            <p>Rare Holo EX</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo GX -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHoloGX" name="rarity" value="Rare Holo GX"
+                            class="input__control">
+                          <label for="rareHoloGX" class="check">
+                            <p>Rare Holo GX</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Holo Lv.X -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareHoloLvX" name="rarity" value="Rare Holo Lv.X"
+                            class="input__control">
+                          <label for="rareHoloLvX" class="check">
+                            <p>Rare Holo Lv.X</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Prime -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rarePrime" name="rarity" value="Rare Prime" class="input__control">
+                          <label for="rarePrime" class="check">
+                            <p>Rare Prime</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- LEGEND -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="legend" name="rarity" value="LEGEND" class="input__control">
+                          <label for="legend" class="check">
+                            <p>LEGEND</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Ultra -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareUltra" name="rarity" value="Rare Ultra" class="input__control">
+                          <label for="rareUltra" class="check">
+                            <p>Rare Ultra</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare ACE -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareACE" name="rarity" value="Rare ACE" class="input__control">
+                          <label for="rareACE" class="check">
+                            <p>Rare ACE</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare BREAK -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareBREAK" name="rarity" value="Rare BREAK" class="input__control">
+                          <label for="rareBREAK" class="check">
+                            <p>Rare BREAK</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Rare Rainbow -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="rareRainbow" name="rarity" value="Rare Rainbow"
+                            class="input__control">
+                          <label for="rareRainbow" class="check">
+                            <p>Rare Rainbow</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Promo -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="promo" name="rarity" value="Promo" class="input__control">
+                          <label for="promo" class="check">
+                            <p>Promo</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Amazing -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="amazing" name="rarity" value="Amazing" class="input__control">
+                          <label for="amazing" class="check">
+                            <p>Amazing</p>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!-- Radiant Rare -->
+                      <div class="col-4">
+                        <div class="type">
+                          <input type="checkbox" id="radiantRare" name="rarity" value="Radiant Rare"
+                            class="input__control">
+                          <label for="radiantRare" class="check">
+                            <p>Radiant Rare</p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base3/3.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base2/3.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/20.png"></div>
-        </div>
-        <div class="cover atvImg">
-          <div class="atvImg-layer" data-img="https://images.pokemontcg.io/base6/3.png"></div>
-        </div>
-      </div>
-    </section>
-  </div>
+    </form>
+  </section>
+
+  <!-- Item List -->
+  <section class="item__list">
+    <!-- Completed,  -->
+    <div class="container list" id="productList">
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -172,7 +678,7 @@
               <h2>Contact</h2>
             </div>
             <div class="each__member">
-              <a href="https://github.com/TranDinhKhoiNguyen512">Trần Đình Khôi Nguyên - ITITIU19166</a><br>
+              <a href="https://github.com/TranDinhKhoiNguyen512">Trần Đình Khôi Nguyên</a><br>
               <a href="https://github.com/CrazyMeowl">Trần Cao Bảo Phúc</a><br>
               <a href="https://github.com/growsel">Võ Vương Nhật Tân</a>
             </div>
@@ -183,26 +689,9 @@
         </div>
       </div>
     </section>
-  </footer>
 
-  <!-- Side Scroll -->
-  <section class="scrollbar">
-    <!-- Change href and name of scroll bar -->
-    <div class="sideNavigation " data-ccid="7LHqUEWTN7qA8MA2HUCgwt">
-      <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" data-cy="same-window"
-        data-bs-toggle="modal" data-bs-target="#search">
-        <span data-source="translations" data-innertext="Footer"><i class="fa-solid fa-magnifying-glass "
-            id="icon"></i></span>
-        <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#Something"
-          data-cy="same-window">
-          <span data-source="translations" data-innertext="Something">Something</span>
-        </a>
-        <a class="btn button--mint sideNavigation__item same-window" data-ccm-m="buttonMaster" href="#footer"
-          data-cy="same-window">
-          <span data-source="translations" data-innertext="Footer">Footer</span>
-        </a>
-    </div>
-  </section>
+
+  </footer>
 
   <!-- Pop Up -->
   <section class="pop__up">
@@ -291,32 +780,82 @@
       </div>
     </div>
 
-    <!-- Search -->
-    <div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Cart-Message -->
+    <div id="cart__message" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content ">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Search</h5>
+            <h3>Message</h3>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form class="mx-1 mx-md-4">
               <div class="d-flex flex-row align-items-center mb-4">
-                <input type="text" class="form-control" placeholder="Card Name, ID, etc">
-                <button class="btn button--mint">Search</button>
+                <div class="form-outline flex-fill mb-0" style="font-size: 20px;">
+                  <i class="fa-solid fa-circle-check" style="color: green; margin-right: 10px;"></i>
+                  <span>The product has just been added to the cart</span>
+                </div>
               </div>
-              
             </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">Confirm</button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Cart-menu -->
+    <div id="cart__menu" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+          <div class="modal-header">
+            <h3>Item List</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <p id="image"></p>
+                    </th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button--dark " data-bs-dismiss="modal">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
-
-
-
-
 
   <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -346,8 +885,13 @@
       },
     });
   </script>
+
   <!-- MAIN JS -->
-  <script src="./js/_itemList.js"></script>
+  <script src="./js/mobileNav.js"></script>
+  <script src="./js/getInfor.js"></script>
+
+  <script src="./js/itemList.js"></script>
+  <script src="./js/getCheckBoxValue.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
