@@ -7,14 +7,15 @@
     /* Style the navigation menu */
     .topnav {
         overflow: hidden;
-        background-color: blue;
+        background-color: rgb(40, 40, 40);
         position: relative;
+        border-radius: 10px;
 
 
         /* Hide the links inside the navigation menu (except for logo/home) */
         #myLinks {
             display: none;
-            background-color: $color-gray-0;
+            
 
 
             .rarity {
@@ -33,9 +34,9 @@
 
         .title {
             width: 100%;
-            color: red;
+            color: $color-white-0;
             font-size: 30px;
-            border-bottom: 2px solid mintcream;
+            border-bottom: 2px solid rgb(66, 66, 66);
             text-align: center;
         }
     }

@@ -1,7 +1,8 @@
-const api_url = "http://localhost:5000/card/get/base1-1";
+
 //sm5-151
-async function getISS() {
-    const response = await fetch(api_url);
+async function getISS(id) {
+    const api_url = "http://localhost:5000/card/get/";
+    const response = await fetch(api_url + id);
     const data = await response.json();
     const myJSON = JSON.stringify(data);
     
@@ -10,7 +11,8 @@ async function getISS() {
     // console.log(data.images.small)
     // x.setAttribute("alt", data.name);
     var str = `<img src=${data.images.small}></img>`
-    document.getElementById('image').insertAdjacentHTML( 'beforeend', str );
+    //document.getElementById('productImage').insertAdjacentHTML( 'beforeend', str );
+    document.getElementById('productImage').src = `${data.images.small}`
     
 
 
@@ -66,4 +68,4 @@ async function getISS() {
 
 }
 
-getISS();
+// getISS('new1-1');

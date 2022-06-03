@@ -10,7 +10,8 @@ async function getCardByQuery() {
     // 
     for(let i = 0; i <data.length; i++){
         //var str = `<div class="cover atvImg" id="atvImg__${counter}" style="transform: perspective(720px);"><div class="atvImg-container" style=""><div class="atvImg-shadow"></div><div class="atvImg-layers"><div class="atvImg-rendered-layer" data-layer="0" style="background-image: url(&quot;${data[i].images.small}&quot;);"></div></div><div class="atvImg-shine" style=""></div></div></div>`
-        var str = `<div class="cover atvImg"><div class="atvImg-layer" data-img="${data[i].images.small}"></div></div>`
+
+		var str = `<div class="cover atvImg" onclick="getISS('${data[i].id}');"><div class="atvImg-layer" data-img="${data[i].images.small}"></div></div>`
         document.getElementById('productList').insertAdjacentHTML( 'beforeend', str );
         counter = counter + 1
         //console.log(data)
