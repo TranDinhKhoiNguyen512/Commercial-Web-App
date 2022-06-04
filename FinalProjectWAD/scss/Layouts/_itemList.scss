@@ -15,10 +15,13 @@
         font-weight: 500;
         color: white;
         span{
+            .arrow__icon{
+                display: inline-block;
+                cursor: pointer;
+            }
             a{
                 text-decoration: none;
-                color: white;
-                
+                color: white;  
             }
             i{
                 margin: 0 10px;
@@ -26,9 +29,6 @@
             
         }
     }
-
-
-
 
     .container_main {
         // width: 120%;

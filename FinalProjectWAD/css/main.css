@@ -461,6 +461,11 @@ footer .bot__footer .container .logo__e img {
   color: white;
 }
 
+.item__list .paging__button span .arrow__icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
 .item__list .paging__button span a {
   text-decoration: none;
   color: white;
