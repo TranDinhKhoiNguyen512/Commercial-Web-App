@@ -1,5 +1,7 @@
 // const { type } = require("express/lib/response");
-
+var queryString = ''
+var pageNumber = 1
+var totalPage = 0
 var getCheckBoxValue = function () {
     var arrayType = []
     var arraySubtype = []
@@ -55,17 +57,57 @@ var clearDiv = function () {
     // var newProductDiv = ` <div class="container list" id="productList"></div>`;
 }
 
-function search() {
+async function search() {
     var x = document.getElementById("myLinks");
     x.style.display = "none";
+    pageNumber = 1
     clearDiv();
-    var typeURL = getCheckBoxValue();
-    var apiMultiple = 'http://localhost:5000/card/query?' + typeURL;
+    queryString = getCheckBoxValue();
+    var apiMultiple = 'http://localhost:5000/card/query?' + queryString;
     atvImg(apiMultiple);
-    console.log(apiMultiple)
+    var api_url1 = apiMultiple;
+    var response = await fetch(api_url1);
+    var pageData = await response.json();
+    totalPage = pageData.total
+    document.querySelector( '#page__number' ).innerHTML = pageNumber + ' / ' + totalPage;
+    //console.log(apiMultiple)
 }
 
 document.getElementById('searchForm').addEventListener('submit', function(e) {
     search(document.getElementById('searchText'));
     e.preventDefault();
 }, false);
+
+async function nextPage(){
+    if(pageNumber < totalPage){
+        var x = document.getElementById("myLinks");
+        x.style.display = "none";
+        clearDiv();
+        typeURL = getCheckBoxValue();
+        pageNumber = pageNumber + 1
+        var apiMultiple = 'http://localhost:5000/card/query?' + typeURL + `&page=${pageNumber}`;
+        atvImg(apiMultiple);
+        document.querySelector( '#page__number' ).innerHTML = pageNumber + ' / ' + totalPage;
+        //console.log(apiMultiple)
+    }
+    
+}
+async function backPage(){
+    if(pageNumber > 1){
+        var x = document.getElementById("myLinks");
+        x.style.display = "none";
+        clearDiv();
+        typeURL = getCheckBoxValue();
+        pageNumber = pageNumber - 1
+        var apiMultiple = 'http://localhost:5000/card/query?' + typeURL + `&page=${pageNumber}`;
+        atvImg(apiMultiple);
+        document.querySelector( '#page__number' ).innerHTML = pageNumber + ' / ' + totalPage;
+        //console.log(apiMultiple)
+    }
+    
+}
+search()
+
+async function checkMath() {
+    
+}
