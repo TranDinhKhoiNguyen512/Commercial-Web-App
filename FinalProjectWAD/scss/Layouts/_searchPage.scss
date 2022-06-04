@@ -1,9 +1,5 @@
-.search_page {
-    
+.search_page {  
     padding: 100px;
-    
-
-
     .container.border{
         background-color: #cccccc;
         padding-bottom: 10px;
@@ -19,20 +15,18 @@
             font-size: $fs-1 + 10;
 
         }
-
-        .form-label {
-            padding-top: $pd-3;
-            color: $color-gray-0;
-        }
     }
 
     .second {
-        padding-top: $pd-3;
-        padding-left: $pd-2;
         font-size: $fs-0 + 3;
-
-        .form-label {
-            color: $color-gray-0;
+        .title {
+            text-align: left;
+            padding-top: $pd-3;
+            padding-left: $pd-2;
+            font-size: $fs-1 + 10;
+        }
+        .form-control{
+            margin-left: $pd-2;
         }
     }
 

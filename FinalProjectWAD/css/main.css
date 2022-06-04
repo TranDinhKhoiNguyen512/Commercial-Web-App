@@ -494,8 +494,9 @@ footer .bot__footer .container .logo__e img {
 
 .item__list .paging__button {
   font-size: 40px;
-  margin-top: 10px;
-  width: 230px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0 auto;
   border: solid 2px black;
   border-radius: 10px;
@@ -713,19 +714,19 @@ footer .bot__footer .container .logo__e img {
   font-size: 30px;
 }
 
-.search_page .first .form-label {
-  padding-top: 40px;
-  color: gray;
-}
-
 .search_page .second {
-  padding-top: 40px;
-  padding-left: 30px;
   font-size: 18px;
 }
 
-.search_page .second .form-label {
-  color: gray;
+.search_page .second .title {
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 30px;
+}
+
+.search_page .second .form-control {
+  margin-left: 30px;
 }
 
 .search_page .third .title {
