@@ -55,6 +55,10 @@ header .header__content .navbar-nav .nav-item .nav-link {
   margin: 0 20px;
 }
 
+header .header__content .navbar-nav .nav-item .nav-link.active {
+  color: #ff9700;
+}
+
 header .header__content .navbar-nav .nav-item:hover {
   background: -webkit-gradient(linear, left bottom, left top, from(#828282), to(transparent));
   background: linear-gradient(to top, #828282, transparent);
@@ -79,7 +83,7 @@ header .header__content .cart__logo a i {
 }
 
 footer {
-  background-color: #24262a;
+  background-color: black;
   padding-top: 50px;
   width: 100%;
   padding-bottom: 50px;
@@ -359,12 +363,51 @@ footer .bot__footer .container .logo__e img {
 }
 
 .banner {
+  position: relative;
+}
+
+.banner .banner__content {
+  background-image: url("../img/banner_1.jpg");
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
   height: 1000px;
 }
 
-.banner .banner__content video {
-  width: 100%;
-  height: 100%;
+.banner .banner__content .banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.banner .banner__items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #FFF;
+  z-index: 3;
+  text-align: center;
+}
+
+.banner .banner__items h2 {
+  font-size: 100px;
+}
+
+.banner .banner__items p {
+  font-size: 30px;
+}
+
+.banner .banner__items .custom-btn {
+  z-index: 2;
+  background-color: black;
+  width: 400px;
+  height: 100px;
+  font-size: 50px;
 }
 
 .scrollbar .sideNavigation {
@@ -1512,7 +1555,7 @@ button {
   overflow: hidden;
 }
 
-.btn-9:after {
+.btn-9:before {
   position: absolute;
   content: " ";
   z-index: -1;
@@ -1533,7 +1576,7 @@ button {
   color: #fff;
 }
 
-.btn-9:hover:after {
+.btn-9:hover:before {
   -webkit-transform: scale(2) rotate(180deg);
   transform: scale(2) rotate(180deg);
   -webkit-box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);

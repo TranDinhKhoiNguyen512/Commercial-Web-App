@@ -572,10 +572,10 @@ button {
     overflow: hidden;
 }
 
-.btn-9:after {
+.btn-9:before {
     position: absolute;
     content: " ";
-    z-index: -1;
+    z-index: -1 ;
     top: 0;
     left: 0;
     width: 100%;
@@ -594,7 +594,7 @@ button {
     color: #fff;
 }
 
-.btn-9:hover:after {
+.btn-9:hover:before {
     -webkit-transform: scale(2) rotate(180deg);
     transform: scale(2) rotate(180deg);
     box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),

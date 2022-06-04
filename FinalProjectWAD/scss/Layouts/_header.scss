@@ -1,6 +1,6 @@
 header {
     @extend %section;
-    background-color: $color-black-3  !important;
+    background-color: $color-black-3 !important;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -34,26 +34,30 @@ header {
                     text-transform: uppercase;
                     font-weight: $fw-1;
                     margin: 0 $mg-1;
+                    &.active {
+                    color:rgba(255, 151, 0, 1);
+                    }
                 }
-
+                
                 &:hover {
                     background: linear-gradient(to top, $color-fuk-0, transparent);
                     border-radius: 10px;
                     opacity: 1;
                 }
+                
             }
         }
 
-        .cart__logo{
+        .cart__logo {
             padding: 10px;
             text-align: center;
-            
+
             a {
                 text-decoration: none;
                 color: $color-white-0;
                 margin-right: 30px;
-                
-                i{
+
+                i {
                     color: orange;
                     font-size: $fs-1 + 20;
                 }
