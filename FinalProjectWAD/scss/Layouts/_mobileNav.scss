@@ -96,6 +96,7 @@
             background: none;
             opacity: 0;
             appearance: none;
+            color: white;
         }
 
         input[type="checkbox"]:checked+.check::before {

@@ -6,8 +6,8 @@ var getCheckBoxValue = function () {
     var arrayRarity = []
     var searchString = 'searchstring=' + document.getElementById('inputCardName').value;
 
-    
-/////////////////////////////
+
+    /////////////////////////////
     var typeDiv = document.querySelector('.energy_type')
     var checkboxes = typeDiv.querySelectorAll('input[type=checkbox]:checked')
 
@@ -15,11 +15,11 @@ var getCheckBoxValue = function () {
         arrayType.push(checkboxes[i].value)
     }
     var typeString = '&type='
-    for (type in arrayType){
+    for (type in arrayType) {
         typeString = typeString + arrayType[type] + ','
     }
     typeQuery = typeString.substring(0, typeString.length - 1)
-///////////////////////////
+    ///////////////////////////
     var subtypeDiv = document.querySelector('.subtypeDIV')
     var checkboxes = subtypeDiv.querySelectorAll('input[type=checkbox]:checked')
 
@@ -27,11 +27,11 @@ var getCheckBoxValue = function () {
         arraySubtype.push(checkboxes[i].value)
     }
     var subtypeString = '&subtype='
-    for (subtype in arraySubtype){
+    for (subtype in arraySubtype) {
         subtypeString = subtypeString + arraySubtype[subtype] + ','
     }
     subtypeQuery = subtypeString.substring(0, subtypeString.length - 1)
-//////////////////////////
+    //////////////////////////
     var rarityDiv = document.querySelector('.rarityDIV')
     var checkboxes = rarityDiv.querySelectorAll('input[type=checkbox]:checked')
 
@@ -39,26 +39,33 @@ var getCheckBoxValue = function () {
         arrayRarity.push(checkboxes[i].value)
     }
     var rarityString = '&rarity='
-    for (rarity in arrayRarity){
+    for (rarity in arrayRarity) {
         rarityString = rarityString + arrayRarity[rarity] + ','
     }
     rarityQuery = rarityString.substring(0, rarityString.length - 1)
-    
+
     var result = searchString + typeQuery + subtypeQuery + rarityQuery;
     //console.log(result)
     return result
 }
 
-var clearDiv = function(){
+var clearDiv = function () {
     var newProductList = document.getElementById('productList');
     newProductList.innerHTML = "";
     // var newProductDiv = ` <div class="container list" id="productList"></div>`;
 }
 
-document.getElementById('check__submit').onclick = function () {
-   clearDiv();
-   var typeURL =  getCheckBoxValue();
-   var apiMultiple = 'http://localhost:5000/card/query?'+typeURL;
-   atvImg(apiMultiple);
-   console.log(apiMultiple)
+function search() {
+    var x = document.getElementById("myLinks");
+    x.style.display = "none";
+    clearDiv();
+    var typeURL = getCheckBoxValue();
+    var apiMultiple = 'http://localhost:5000/card/query?' + typeURL;
+    atvImg(apiMultiple);
+    console.log(apiMultiple)
 }
+
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+    search(document.getElementById('searchText'));
+    e.preventDefault();
+}, false);

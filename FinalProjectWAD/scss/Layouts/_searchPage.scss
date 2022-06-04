@@ -1,6 +1,16 @@
 .search_page {
-    padding-top: 100px;
+    
+    padding: 100px;
+    
 
+
+    .container.border{
+        background-color: #cccccc;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        border: 10px solid red;
+        
+    }
     .first {
         .title {
             text-align: left;
@@ -36,7 +46,7 @@
     }
 
     .energy_type {
-        
+
         .pill-control__label::before {
             content: "";
             display: block;
@@ -86,7 +96,7 @@
             appearance: none;
         }
 
-        
+
 
         input[type="checkbox"]:checked+.pill-control__label::before {
             color: $color-white-0;
@@ -94,7 +104,13 @@
             content: '✔';
         }
     }
-    .button{
+
+    .button {
+        width: 90%;
+        // margin: 40px auto;
+        text-align: center;
+        
         text-align: right;
+
     }
 }

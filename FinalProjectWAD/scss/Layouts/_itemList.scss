@@ -2,6 +2,34 @@
     background-color: $color-white-0;
     text-align: center;
     padding-top: $pd-4;
+    padding-bottom: $pd-4;
+
+    .paging__button{
+        font-size: 40px;
+        margin-top:10px;
+        width: 245px;
+        margin: 0 auto;
+        border: solid 2px black; 
+        border-radius: 10px; 
+        background: linear-gradient(51deg, rgba(63,94,251,1) 0%, rgba(255,111,0,1) 100%);
+        font-weight: 500;
+        color: white;
+        span{
+            a{
+                text-decoration: none;
+                color: white;
+                
+            }
+            i{
+                margin: 0 10px;
+            }
+            
+        }
+    }
+
+
+
+
     .container_main {
         // width: 120%;
         // height: 100%;
