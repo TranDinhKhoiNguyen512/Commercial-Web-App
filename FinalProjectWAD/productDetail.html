@@ -53,10 +53,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <a class="nav-link" aria-current="page" href="/searchPage.html">Shop</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">News</a>
@@ -80,99 +80,102 @@
   </header>
 
   <!-- Product Text -->
-  <section class="container product__text">
-    <div class="row">
-      <!-- image -->
-      <div class="col-4">
-        <div class="image__side">
-          <img id="productImage" src="./img/back.png" alt="">
-        </div>
-      </div>
-      <!-- card infor -->
-      <div class="col-4">
-        <div class="infor">
-          <!-- Card Name -->
-          <div class="row">
-            <h1 id="name"></h1>
-          </div>
-          <div class="row">
-            <h3>Product Details</h3>
-          </div>
-          <!-- Card Infor -->
-          <div class="row">
-            <!-- Artist Name -->
-            <div>
-              <span class="text">Artist Name: </span>
-              <span id="artist" class="data"></span>
-            </div>
-
-
-            <!-- Released Date -->
-            <div>
-              <span class="text">Released Date: </span>
-              <span id="releaseDate" class="data"></span>
-            </div>
-
-            <!-- base -->
-            <div>
-              <span class="text">Series / Set: </span>
-              <span id="base" class="data"></span>
-            </div>
-            <div>
-              <span class="text">ID: </span>
-              <span id="id" class="data"></span>
-            </div>
-            <!-- Card Number -->
-            <div>
-              <span class="text">Card Number / Rarity:</span>
-              <span id="rarity" class="data"></span>
-            </div>
-            <!-- Card SuperType / SubType -->
-            <div>
-              <span class="text">Card SuperType : </span>
-              <span id="supertype" class="data"></span>
-            </div>
-
-            <!-- Card SubType -->
-            <div>
-              <span class="text">Card SubType : </span>
-              <span id="subtype" class="data"></span>
-            </div>
-
-
-            <!-- Card Type / HP / Stage -->
-            <div>
-              <span class="text">Card Type / HP : </span>
-              <span id="types" class="data"></span>
-            </div>
-
-            <!-- Pokemon Power -->
-            <div>
-              <span class="text">Card Text: </span>
-              <span id="card_text" class="data"></span>
-            </div>
+  <section class="product"
+    style="background-image: url('./img/container_bg.png');background-color: rgb(49, 35, 45); ">
+    <div class="container product__main">
+      <div class="row product__text">
+        <!-- image -->
+        <div class="col-4 ">
+          <div class="image__side">
+            <img id="productImage" src="./img/back.png" alt="">
           </div>
         </div>
-      </div>
-
-      <!-- price_cart -->
-      <div class="col-4 ">
-        <div class="price_cart">
-          <!-- Prices -->
-          <div class="price_infor">
-            <div class="price_title">
-              <p>Price: </p>
+        <!-- card infor -->
+        <div class="col-4">
+          <div class="infor">
+            <!-- Card Name -->
+            <div class="row">
+              <h1 id="name"></h1>
             </div>
-            <div class="price_int">
-              <span id="price" class="price_int"></span>
+            <div class="row">
+              <h3>Product Details</h3>
+            </div>
+            <!-- Card Infor -->
+            <div class="row">
+              <!-- Artist Name -->
+              <div>
+                <span class="text">Artist Name: </span>
+                <span id="artist" class="data"></span>
+              </div>
+
+
+              <!-- Released Date -->
+              <div>
+                <span class="text">Released Date: </span>
+                <span id="releaseDate" class="data"></span>
+              </div>
+
+              <!-- base -->
+              <div>
+                <span class="text">Series / Set: </span>
+                <span id="base" class="data"></span>
+              </div>
+              <div>
+                <span class="text">ID: </span>
+                <span id="id" class="data"></span>
+              </div>
+              <!-- Card Number -->
+              <div>
+                <span class="text">Card Number / Rarity:</span>
+                <span id="rarity" class="data"></span>
+              </div>
+              <!-- Card SuperType / SubType -->
+              <div>
+                <span class="text">Card SuperType : </span>
+                <span id="supertype" class="data"></span>
+              </div>
+
+              <!-- Card SubType -->
+              <div>
+                <span class="text">Card SubType : </span>
+                <span id="subtype" class="data"></span>
+              </div>
+
+
+              <!-- Card Type / HP / Stage -->
+              <div>
+                <span class="text">Card Type / HP : </span>
+                <span id="types" class="data"></span>
+              </div>
+
+              <!-- Pokemon Power -->
+              <div>
+                <span class="text">Card Text: </span>
+                <span id="card_text" class="data"></span>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="button__cart">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#cart__message" title="Add to your cart">
-              <span>Add to cart</span>
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
+        <!-- price_cart -->
+        <div class="col-4 ">
+          <div class="price_cart">
+            <!-- Prices -->
+            <div class="price_infor">
+              <div class="price_title">
+                <p>Price: </p>
+              </div>
+              <div class="price_int">
+                <span id="price" class="price_int"></span>
+              </div>
+            </div>
+
+            <div class="button__cart">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#cart__message" title="Add to your cart">
+                <span>Add to cart</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -430,7 +433,7 @@
   </script>
 
   <!-- MAIN JS -->
-  
+
   <script src="./js/getInfor.js"></script>
   <script src="./js/main.js"></script>
   <script>
