@@ -121,19 +121,19 @@
                         </tr>
                     </thead>
                     <!-- Table Body - Data -->
-                    <tbody class="data">
+                    <tbody class="data" id="cart__list">
                         <tr>
                             <td class="image" id="image">
                                 <p>
                                     IMAGE
                                 </p>
                             </td>
-                            <td class="product__name">
+                            <td class="product__name" id="product__name">
                                 <p>
                                     Product Name
                                 </p>
                             </td>
-                            <td class="amount">
+                            <td class="amount" id="amount" >
                                 <input type="number" size="4" name="updates[]" min="1"  value="1"
                                     class="tc item-quantity" style ="text-align: center;">
                             </td>
@@ -142,7 +142,7 @@
                                     $100
                                 </p>
                             </td>
-                            <td class="delete__button">
+                            <td class="delete__button" id="delete__button">
                                 <button type="button" class="custom-btn btn-13">Delete</button>
                             </td>
                         </tr>
@@ -376,9 +376,12 @@
     <!-- MAIN JS -->
 
     <script src="./js/getInfor.js"></script>
+    <script src="./js/cart.js"></script>
     <script src="./js/main.js"></script>
     <script>
         getParam();
+        initCart();
+        loadCart();
     </script>
 </body>
 

@@ -8,16 +8,25 @@ async function getCardByQuery(url) {
     // Create Element and add Img from json
     var counter = 1
     // 
-    for(let i = 0; i <data.length; i++){
-        //var str = `<div class="cover atvImg" id="atvImg__${counter}" style="transform: perspective(720px);"><div class="atvImg-container" style=""><div class="atvImg-shadow"></div><div class="atvImg-layers"><div class="atvImg-rendered-layer" data-layer="0" style="background-image: url(&quot;${data[i].images.small}&quot;);"></div></div><div class="atvImg-shine" style=""></div></div></div>`
+	var pagingbutton = document.getElementById("paging__button");
+	if (data.length >= 1){
+		for(let i = 0; i <data.length; i++){
+	
+			var str = `<div class="cover atvImg" onclick="location.href = '/productDetail.html?card=${data[i].id}';" ><div class="atvImg-layer" data-img="${data[i].images.small}"><a href="/productDetail.html"></a></div></div>`
+			document.getElementById('productList').insertAdjacentHTML( 'beforeend', str );
+			counter = counter + 1
+			pagingbutton.style.display = "block";
 
-		// onclick="getISS('${data[i].id}');"
-		//onclick="location.href = 'https://www.youtube.com/';"
-		var str = `<div class="cover atvImg" onclick="location.href = '/productDetail.html?card=${data[i].id}';" ><div class="atvImg-layer" data-img="${data[i].images.small}"><a href="/productDetail.html"></a></div></div>`
-        document.getElementById('productList').insertAdjacentHTML( 'beforeend', str );
-        counter = counter + 1	
-        //console.log(data)
-    }
+		}
+	}
+	//###STYLE###
+	else{
+		var str=`<h1>No Item Found</h1>`
+		document.getElementById('productList').insertAdjacentHTML( 'beforeend', str );
+		console.log('Hmm')
+		pagingbutton.style.display = "none";
+	}
+    
 }
 
 async function atvImg(url){

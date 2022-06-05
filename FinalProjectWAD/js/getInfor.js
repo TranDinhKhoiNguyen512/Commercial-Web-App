@@ -62,11 +62,18 @@ async function getISS(id) {
     document.getElementById('card_text').textContent = cardText;
 }
 
-async function getParam() {
+function getParam() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const card = urlParams.get('card');
-    getISS(card);
+    return card
+    //getISS(card);
+}
+async function loadCardDetail(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const card = urlParams.get('card');
+    getISS(card)
 }
 // empty string
 // ?product=shirt&color=blue&newuser&size=m
