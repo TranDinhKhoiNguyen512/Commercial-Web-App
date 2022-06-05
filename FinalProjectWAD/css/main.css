@@ -985,6 +985,55 @@ footer .bot__footer .container .logo__e img {
   content: '✔';
 }
 
+.cart__detail {
+  padding: 120px 0;
+}
+
+.cart__detail .cart__main {
+  background-color: #cccccc;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+.cart__detail .cart__main .title {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart__detail .cart__main .cart__menu {
+  margin: 10px;
+}
+
+.cart__detail .cart__main .cart__menu td {
+  border: 1px solid black;
+}
+
+.cart__detail .cart__main .cart__menu th {
+  border: 1px solid black;
+}
+
+.cart__detail .cart__main .cart__menu p {
+  text-align: center;
+  margin: 25px auto;
+}
+
+.cart__detail .cart__main .cart__menu .data .delete__button {
+  width: 20px;
+  text-align: center;
+}
+
+.cart__detail .cart__main .cart__menu .total {
+  text-align: right;
+}
+
+.cart__detail .cart__main .payment {
+  margin: 0 auto;
+  color: red;
+  text-align: right;
+}
+
 .button--mint {
   background-color: #00ffe5;
   color: black;
