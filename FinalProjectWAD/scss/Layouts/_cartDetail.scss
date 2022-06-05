@@ -34,6 +34,14 @@
                     width: 20px;
                     text-align: center;
                 }
+                .amount{
+                    text-align: center;
+                    .item-quantity{
+                        width:70px;
+                        
+                        margin: 25px auto;
+                    }
+                }
             }
 
             .total {

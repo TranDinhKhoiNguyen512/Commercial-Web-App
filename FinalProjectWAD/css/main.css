@@ -689,6 +689,7 @@ footer .bot__footer .container .logo__e img {
   width: 80%;
   padding: 10px;
   margin: 30px auto;
+  cursor: pointer;
 }
 
 .product .product__main .product__text .price_cart .button__cart a {
@@ -1022,6 +1023,15 @@ footer .bot__footer .container .logo__e img {
 .cart__detail .cart__main .cart__menu .data .delete__button {
   width: 20px;
   text-align: center;
+}
+
+.cart__detail .cart__main .cart__menu .data .amount {
+  text-align: center;
+}
+
+.cart__detail .cart__main .cart__menu .data .amount .item-quantity {
+  width: 70px;
+  margin: 25px auto;
 }
 
 .cart__detail .cart__main .cart__menu .total {
