@@ -102,6 +102,7 @@ async function loadCart() {
                             <p>
                                 Each: $${eachCardPrice}
                             </p>
+                            <hr>
                             <p>
                                 Total: $${totalCardPrice}
                             </p>
