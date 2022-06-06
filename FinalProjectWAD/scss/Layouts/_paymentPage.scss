@@ -5,7 +5,7 @@
     padding: 25px;
     border-radius: 10px;
     margin-top: auto;
-    width: 50%;
+    width: 80%;
         form{
             font-size: 20px;
             .full__name{
@@ -25,6 +25,14 @@
         }
         
     }
-    
+    @media screen and (max-width:767.99px){
+        padding: 120px 5px;
+        .payment__main{
+            width: 80%;
+            .address{
+                margin-top: $mg-1;
+            }
+        }
+    }
 
 }

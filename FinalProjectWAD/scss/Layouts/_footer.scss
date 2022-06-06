@@ -135,4 +135,42 @@ footer {
             }
         }
     }
+    @media screen and (max-width:1200px){
+        .top__footer{
+            .container{
+                flex-direction: column;
+                .content{
+                    margin-bottom: $mg-1;
+                }
+            }
+        }
+        .bot__footer{
+            .container{
+                .logo,.first__content,.contact{
+                    margin:$mg-2 0;
+                }
+                .contact{
+                    .each__member, .tilte{
+                        text-align: center;
+                    }
+                }
+                .first__content{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1030px) {
+        .top__footer{
+            .container{
+                .icon{
+                    .list__snw{
+                         i{
+                             font-size:40px;
+                         }
+                    }
+                }
+            }
+        }
+    }
 }

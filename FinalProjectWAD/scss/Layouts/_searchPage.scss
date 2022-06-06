@@ -1,32 +1,27 @@
-.search_page {  
-    padding: 100px;
-    .container.border{
+.search_page {
+    padding: 120px;
+    .container.border {
         background-color: #cccccc;
         padding-bottom: 10px;
         border-radius: 10px;
         border: 10px solid red;
-        
     }
     .first {
         .title {
-            text-align: left;
-            padding-top: $pd-3;
-            padding-left: $pd-2;
+            margin: $mg-2 0;
             font-size: $fs-1 + 10;
-
         }
     }
 
     .second {
         font-size: $fs-0 + 3;
         .title {
-            text-align: left;
-            padding-top: $pd-3;
-            padding-left: $pd-2;
-            font-size: $fs-1 + 10;
+            text-align: center;
+            font-size: $fs-1 + 5;
+            margin-bottom: $mg-2;
         }
-        .form-control{
-            margin-left: $pd-2;
+        .form-control {
+            width: 50%;
         }
     }
 
@@ -35,17 +30,16 @@
             text-align: left;
             padding-top: $pd-3;
             padding-left: $pd-2;
-            font-size: $fs-1 + 10;
+            font-size: $fs-1 + 5;
         }
     }
 
     .energy_type {
-
         .pill-control__label::before {
             content: "";
             display: block;
-            right: .3125em;
-            top: .3125em;
+            right: 0.3125em;
+            top: 0.3125em;
             height: 1.75em;
             width: 1.75em;
             position: absolute;
@@ -63,7 +57,6 @@
         }
 
         .pill-control__label {
-
             user-select: none;
             background-color: #373737;
             display: block;
@@ -76,10 +69,10 @@
             clear: both;
             z-index: 2;
             transition: background-color 0.25s ease;
+            margin: 0 auto;
         }
 
         .pill-control__input {
-
             top: 50%;
             right: 50%;
             height: 1px;
@@ -90,21 +83,60 @@
             appearance: none;
         }
 
-
-
-        input[type="checkbox"]:checked+.pill-control__label::before {
+        input[type="checkbox"]:checked + .pill-control__label::before {
             color: $color-white-0;
             background-color: orange;
-            content: '✔';
+            content: "✔";
         }
     }
 
     .button {
-        width: 90%;
-        // margin: 40px auto;
         text-align: center;
-        
-        text-align: right;
-
+        margin-top: $mg-2;
+    }
+    @media screen and (max-width: 1200px) {
+        .first {
+            justify-content: center;
+            .title {
+                text-align: center;
+                padding: 20px 0;
+            }
+        }
+        .second {
+            justify-content: center;
+            text-align: center;
+            .form-control {
+                margin: 0 auto;
+            }
+        }
+    }
+    @media screen and (max-width: 767.99px) {
+        padding: 120px 30px;
+        .second {
+            .title {
+                font-size: 20px;
+            }
+        }
+        .first {
+            .title {
+                font-size: 25px;
+            }
+        }
+        .third {
+            .title {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+        .energy_type {
+            .pill-control__label {
+                margin: 0 auto;
+            }
+        }
+        .button {
+            text-align: center;
+            width: 100%;
+            margin-top: $mg-2;
+        }
     }
 }

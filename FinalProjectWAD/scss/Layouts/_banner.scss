@@ -2,9 +2,10 @@
     position: relative;
     .banner__content {
         background-image: url("../img/banner_1.jpg");
-        background-repeat: none;
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         height: 1000px;
         .banner__overlay {
             position: absolute;
@@ -16,6 +17,7 @@
         }
     }
     .banner__items {
+        max-width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -35,6 +37,31 @@
             width: 400px;
             height: 100px;
             font-size: 50px;
+        }
+    }
+    @media screen and (max-width:1200px ) {
+        .banner__items{
+            h2{
+                font-size: 60px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    @media screen and (max-width:575.99px) {
+        .banner__items{
+            .custom-btn{
+                font-size: 20px;
+                width: 180px;
+                height: 80px;
+            }
+            h2{
+                font-size: 40px;
+            }
+            p{
+                font-size: 15px;
+            }
         }
     }
 }

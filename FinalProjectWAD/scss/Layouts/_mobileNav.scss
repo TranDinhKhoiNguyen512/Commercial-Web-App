@@ -3,27 +3,19 @@
         width: 100%;
         text-align: center;
     }
-
     /* Style the navigation menu */
     .topnav {
         overflow: hidden;
         background-color: rgb(40, 40, 40);
         position: relative;
         border-radius: 10px;
-
-
         /* Hide the links inside the navigation menu (except for logo/home) */
         #myLinks {
             display: none;
-            
-
-
             .rarity {
-
                 background-color: black;
             }
         }
-
         /* Style navigation menu links */
         a {
             color: $color-white-0;
@@ -31,7 +23,6 @@
             text-decoration: none;
             display: block;
         }
-
         .title {
             width: 100%;
             color: $color-white-0;
@@ -59,8 +50,8 @@
             box-sizing: border-box;
             content: "";
             display: block;
-            right: .3125em;
-            top: .3125em;
+            right: 0.3125em;
+            top: 0.3125em;
             height: 1.75em;
             width: 1.75em;
             position: absolute;
@@ -99,10 +90,10 @@
             color: white;
         }
 
-        input[type="checkbox"]:checked+.check::before {
+        input[type="checkbox"]:checked + .check::before {
             color: $color-white-0;
             background-color: orange;
-            content: '✔';
+            content: "✔";
         }
     }
 
@@ -124,8 +115,8 @@
             box-sizing: border-box;
             content: "";
             display: block;
-            right: .3125em;
-            top: .3125em;
+            right: 0.3125em;
+            top: 0.3125em;
             height: 1.75em;
             width: 1.75em;
             position: absolute;
@@ -163,10 +154,27 @@
             appearance: none;
         }
 
-        input[type="checkbox"]:checked+.check::before {
+        input[type="checkbox"]:checked + .check::before {
             color: $color-white-0;
             background-color: orange;
-            content: '✔';
+            content: "✔";
+        }
+    }
+    @media screen and (max-width:575.99px) {
+        .subtypeDIV{
+            .subtype__Customize{
+                margin: $mg-2 0;
+            }
+        }
+        #cardType{
+            .check{
+                width: 100%;
+            }
+        }
+        #Rarity {
+            .check{
+                width: 100%;
+            }
         }
     }
 }

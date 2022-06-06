@@ -6,81 +6,62 @@
         padding-bottom: 10px;
         border-radius: 10px;
         margin-top: auto;
-
         .title {
             margin: 0 auto;
             margin-top: 20px;
             text-align: center;
         }
-
         .cart__menu {
             margin: 10px;
-
             td {
                 border: 1px solid $color-black-0;
-
             }
-
             th {
                 border: 1px solid $color-black-0;
             }
-
             img {
                 padding: 20px auto;
                 width: 55%;
                 height: 100%;
                 text-align: center;
-
             }
 
             p {
                 text-align: center;
                 margin: 25px auto;
             }
-
             .data {
                 .product__name {
                     p {
                         font-size: 20px;
                     }
                 }
-
                 .price {
-
                     font-size: 20px;
-                    
                 }
-
                 .delete__button {
                     width: 20px;
                     text-align: center;
                     vertical-align: middle;
-
                     i {
                         font-size: 30px;
                         cursor: pointer;
                     }
                 }
-
                 .amount {
                     text-align: center;
-
                     .item-quantity {
                         width: 70px;
 
                         margin: 25px auto;
                     }
                 }
-
             }
-
             .total {
                 text-align: right;
                 font-size: 25px;
-
                 #totalCost {
                     font-weight: 700;
-
                 }
             }
         }
@@ -91,6 +72,37 @@
 
             a {
                 text-decoration: none;
+            }
+        }
+    }
+    @media screen and (max-width: 575.99px) {
+        .cart__main {
+            .cart__menu {
+                .cart__hidden{
+                    display: none;
+                }
+                .data {
+                    .image{
+                        display: none;
+                    }
+                    .product__name {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                    .price {
+                        font-size: 14px;
+                    }
+                    .delete__button {
+                        i {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .total {
+                    text-align: right;
+                    font-size: 14px;
+                }
             }
         }
     }

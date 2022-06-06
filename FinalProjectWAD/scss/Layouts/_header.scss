@@ -35,16 +35,15 @@ header {
                     font-weight: $fw-1;
                     margin: 0 $mg-1;
                     &.active {
-                    color:rgba(255, 151, 0, 1);
+                        color: rgba(255, 151, 0, 1);
                     }
                 }
-                
+
                 &:hover {
                     background: linear-gradient(to top, $color-fuk-0, transparent);
                     border-radius: 10px;
                     opacity: 1;
                 }
-                
             }
         }
 
@@ -64,4 +63,47 @@ header {
             }
         }
     }
+    @media screen and (max-width: 991.99px) {
+        background-color: $color-black-0 !important;
+        .navbar-toggler {
+            &:focus {
+                box-shadow: none;
+            }
+            .navbar-toggler-icon {
+                color: white;
+                i{
+                    line-height: 30px;
+                }
+            }
+        }
+        .navbar-collapse {
+            text-align: center;
+            background-color: $color-black-0;
+        }
+        .header__content{
+            .cart__logo{
+                a{
+                    margin:0;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                
+            }
+        }
+    }
+    @media screen and (max-width: 767.99px){
+        .header__content{
+            .navbar-brand{
+                margin-left: $mg-2;
+                .logo--icon{
+                    width: 40px;
+                 }
+                 .logo--name{
+                     width: 100px;
+                 }
+            }
+        }
+    }
+    
 }
