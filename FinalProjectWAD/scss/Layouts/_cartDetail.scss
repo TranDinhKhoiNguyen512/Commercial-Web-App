@@ -18,10 +18,18 @@
 
             td {
                 border: 1px solid $color-black-0;
+                
             }
 
             th {
                 border: 1px solid $color-black-0;
+            }
+
+            img {
+                width: 55%;
+                height: 100%;
+                text-align: center;
+                
             }
 
             p {
@@ -34,11 +42,13 @@
                     width: 20px;
                     text-align: center;
                 }
-                .amount{
+
+                .amount {
                     text-align: center;
-                    .item-quantity{
-                        width:70px;
-                        
+
+                    .item-quantity {
+                        width: 70px;
+
                         margin: 25px auto;
                     }
                 }
@@ -51,7 +61,7 @@
 
         .payment {
             margin: 0 auto;
-            
+
             text-align: right;
         }
     }

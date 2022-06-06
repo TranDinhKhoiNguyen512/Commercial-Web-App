@@ -1015,6 +1015,12 @@ footer .bot__footer .container .logo__e img {
   border: 1px solid black;
 }
 
+.cart__detail .cart__main .cart__menu img {
+  width: 55%;
+  height: 100%;
+  text-align: center;
+}
+
 .cart__detail .cart__main .cart__menu p {
   text-align: center;
   margin: 25px auto;
