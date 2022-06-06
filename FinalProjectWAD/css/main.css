@@ -1029,6 +1029,12 @@ footer .bot__footer .container .logo__e img {
 .cart__detail .cart__main .cart__menu .data .delete__button {
   width: 20px;
   text-align: center;
+  vertical-align: middle;
+}
+
+.cart__detail .cart__main .cart__menu .data .delete__button i {
+  font-size: 50px;
+  cursor: pointer;
 }
 
 .cart__detail .cart__main .cart__menu .data .amount {
@@ -1042,6 +1048,11 @@ footer .bot__footer .container .logo__e img {
 
 .cart__detail .cart__main .cart__menu .total {
   text-align: right;
+  font-size: 25px;
+}
+
+.cart__detail .cart__main .cart__menu .total #totalCost {
+  font-weight: 700;
 }
 
 .cart__detail .cart__main .payment {

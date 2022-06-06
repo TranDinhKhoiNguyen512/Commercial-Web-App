@@ -66,10 +66,10 @@
                               </li>
                         </ul>
                         <div class="cart__logo">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#cart__menu" title="Open your cart">
-                                <i class="fa-solid fa-cart-shopping"></i>
+                            <a href="/cartDetail.html" title="Open your cart">
+                              <i class="fa-solid fa-cart-shopping"></i>
                             </a>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </nav>
@@ -191,7 +191,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <a href="./index.html" class="btn button--dark">Return Home Page</a>
+                        <a href="./index.html" class="btn button--dark" onclick = "clearCart()">Return Home Page</a>
                     </div>
                 </div>
             </div>
@@ -235,7 +235,6 @@
     <script src="./js/cart.js"></script>
     <script src="./js/main.js"></script>
     <script>
-        getParam();
         initCart();
         loadCart();
     </script>

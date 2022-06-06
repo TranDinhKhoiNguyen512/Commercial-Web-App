@@ -38,9 +38,15 @@
             }
 
             .data {
+                
                 .delete__button {
                     width: 20px;
                     text-align: center;
+                    vertical-align: middle;
+                    i{
+                        font-size: 50px;
+                        cursor: pointer;
+                    }
                 }
 
                 .amount {
@@ -52,10 +58,16 @@
                         margin: 25px auto;
                     }
                 }
+                
             }
 
             .total {
                 text-align: right;
+                font-size: 25px;
+                #totalCost{
+                    font-weight: 700;
+
+                }
             }
         }
 
