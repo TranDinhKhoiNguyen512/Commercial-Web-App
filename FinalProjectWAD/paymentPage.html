@@ -76,68 +76,37 @@
         </div>
     </header>
 
-    <!-- cart Detail -->
-    <section class="cart__detail"
+    <section class="paymentForm"
         style="background-image: url('./img/container_bg.png');background-color: rgb(49, 35, 45); ">
-        <div class="container cart__main">
-            <div class="row cart__title">
-                <div class="title">
-                    <h3>CART</h3>
+        <div class="container payment__main">
+            <form>
+                <div class="col-12 title">
+                    <h1>Payment Information</h1>
                 </div>
-            </div>
-            <div class="row cart__menu">
-                <table class="table">
-                    <!-- Table Header -->
-                    <thead>
-                        <tr>
-                            <th class="col-2">
-                                <p>
-                                    Product
-                                </p>
-                            </th>
-                            <th class="col-2">
-                                <p>
-                                    Name
-                                </p>
-                            </th>
-                            <th class="col-2">
-                                <p>
-                                    Amount
-                                </p>
-                            </th>
-                            <th class="col-2">
-                                <p>
-                                    Price
-                                </p>
-                            </th>
-                            <th class="col-2">
-                                <p>
-                                    Delete
-                                </p>
-                            </th>
-                        </tr>
-                    </thead>
-                    <!-- Table Body - Data -->
-                    <tbody class="data" id="cart__list">
-                        <!-- For Item Loading -->
+                <hr>
+                <div class="col-12 full__name">
+                    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="col-12 email">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input class="form-control" id="email">
+                </div>
+                <div class="row phone__address">
+                    <div class="col-6 phone">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input  class="form-control" id="phone">
+                    </div>
+                    <div class="col-6 address">
+                        <label for="address" class="form-label">Address</label>
+                        <input = class="form-control" id="address">
+                    </div>
+                </div>
+                <div class="col-12 payment__button">
+                    <a data-bs-toggle="modal" data-bs-target="#cart__confirm" class="btn button--mint">Confirm</a>
 
-                    </tbody>
-                    <!-- Table Footer -->
-                    <tfoot class="total">
-                        <tr>
-                            <td colspan="4">Total: </td>
-                            <td colspan="1" id="totalCost">$0</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <!-- Payment Button -->
-            <div class="row payment">
-                <div class="col-12">
-                    <button type="button" class="btn button--mint payment__button">Payment</button>
-                    <button type="button" class="btn button--dark" onclick="updateCart()">Update</button>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
@@ -202,98 +171,9 @@
 
     <!-- Pop Up -->
     <section class="pop__up">
-        <!-- Sign Up -->
-        <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="mx-1 mx-md-4">
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="email" id="form3Example3c" class="form-control"
-                                        placeholder="Your email" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="password" id="form3Example4c" class="form-control"
-                                        placeholder="Password" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <a href="#">Forget the password</a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn button--mint">Login</button>
-                        <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Register -->
-        <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="mx-1 mx-md-4">
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                <input type="text" id="form3Example1c" class="form-control" placeholder="user_name" />
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="email" id="form3Example3c" class="form-control"
-                                        placeholder="your_email" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="password" id="form3Example4c" class="form-control"
-                                        placeholder="password" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="password" id="form3Example4cd" class="form-control"
-                                        placeholder="repeat your password" />
-                                </div>
-                            </div>
-                            <div class="form-check d-flex flex-row align-items-center mb-4">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                <label class="form-check-label" for="form2Example3">
-                                    I agree all statements in Terms of service
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn button--mint">Register</button>
-                        <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Cart-Message -->
-        <div id="cart__message" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="cart__confirm" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content ">
                     <div class="modal-header">
@@ -303,15 +183,15 @@
                     <div class="modal-body">
                         <form class="mx-1 mx-md-4">
                             <div class="d-flex flex-row align-items-center mb-4">
-                                <div class="form-outline flex-fill mb-0" style="font-size: 20px;">
-                                    <i class="fa-solid fa-circle-check" style="color: green; margin-right: 10px;"></i>
-                                    <span>The product has just been added to the cart</span>
+                                <div class="form-outline flex-fill mb-0" style="font-size: 20px; padding-top:20px;">
+                                    <img src="./img/god-of-wealth.png" alt="" style="width:64px;height:64px">
+                                    <span>Thank you for buying our products</span>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn button--dark " data-bs-dismiss="modal">Confirm</button>
+                        <a href="./index.html" class="btn button--dark">Return Home Page</a>
                     </div>
                 </div>
             </div>

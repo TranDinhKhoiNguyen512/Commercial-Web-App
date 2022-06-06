@@ -1,0 +1,29 @@
+.paymentForm {
+    padding: 120px 0;
+    .payment__main {
+        background-color: #cccccc;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: auto;
+    width: 50%;
+        form{
+            font-size: 20px;
+            .full__name{
+                padding-top: 15px;
+            }
+            .email{
+                padding-top: 15px;
+            }
+            .phone__address{
+                padding-top: 15px;
+            }
+        }
+        .payment__button{
+            margin-top: 30px;
+            text-align: right;
+            padding-right: 30px;
+        }
+    }
+    
+
+}

@@ -61,8 +61,10 @@
 
         .payment {
             margin: 0 auto;
-
             text-align: right;
+            a{
+                text-decoration: none;
+            }
         }
     }
 }

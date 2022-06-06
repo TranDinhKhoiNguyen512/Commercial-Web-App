@@ -1049,6 +1049,44 @@ footer .bot__footer .container .logo__e img {
   text-align: right;
 }
 
+.cart__detail .cart__main .payment a {
+  text-decoration: none;
+}
+
+.paymentForm {
+  padding: 120px 0;
+}
+
+.paymentForm .payment__main {
+  background-color: #cccccc;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: auto;
+  width: 50%;
+}
+
+.paymentForm .payment__main form {
+  font-size: 20px;
+}
+
+.paymentForm .payment__main form .full__name {
+  padding-top: 15px;
+}
+
+.paymentForm .payment__main form .email {
+  padding-top: 15px;
+}
+
+.paymentForm .payment__main form .phone__address {
+  padding-top: 15px;
+}
+
+.paymentForm .payment__main .payment__button {
+  margin-top: 30px;
+  text-align: right;
+  padding-right: 30px;
+}
+
 .button--mint {
   background-color: #00ffe5;
   color: black;
