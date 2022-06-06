@@ -1,5 +1,6 @@
-//localstorage.names = JSON.stringify(names);
-//var storedNames = JSON.parse(localStorage.names);
+//localStorage.setItem("cart", JSON.stringify(theCart))
+
+//theCart = JSON.parse(localStorage.getItem("cart"))
 function initCart(){
     //only init if not exist
     if( localStorage.getItem("cart") === null){
@@ -57,6 +58,7 @@ function deleteProduct(cardID){
         }
 
     }
+    loadCart()
 }
 
 function cartCounter(){
@@ -64,35 +66,58 @@ function cartCounter(){
     console.log(theCart.length)
     return theCart.length
 }
-
-function loadCart(){
+var clearCartDiv = function () {
+    var newProductList = document.getElementById('cart__list');
+    newProductList.innerHTML = "";
+    // var newProductDiv = ` <div class="container list" id="productList"></div>`;
+}
+async function loadCart(){
+    clearCartDiv()
+    const api_url = "http://localhost:5000/card/get/";
     theCart = JSON.parse(localStorage.getItem("cart"))
+    totalCost = 0
+    //productDetailURL = 'http://127.0.0.1:5501/productDetail.html?card='
     for(item in theCart){
+        var response = await fetch(api_url + theCart[item]);
+        var data = await response.json();
+        amount =  parseInt(localStorage.getItem(theCart[item]))
+        eachCardPrice = data.cardmarket.prices.averageSellPrice
+        totalCardPrice = parseFloat((amount * eachCardPrice).toFixed(2))
+        totalCost += totalCardPrice
         var itemstr = `<tr>
-                        <td class="image" id="image">
-                            <p>
-                                IMAGE
-                            </p>
+                        <td class="image" id="image" style="text-align: center">
+                            <img src="${data.images.small}" alt=${data.name}>
                         </td>
                         <td class="product__name" id="product__name">
-                            <p>
-                                ${theCart[item]}
-                            </p>
+                            <p><a href="http://127.0.0.1:5501/productDetail.html?card=${theCart[item]}" ><h6>${theCart[item]}: ${data.name}<h6></a></p>  
                         </td>
                         <td class="amount" id="amount" >
-                            <input type="number" size="4" name="updates[]" min="1"  value="1"
-                                class="tc item-quantity" style ="text-align: center;">
+                            <input type="number" size="4" min="1" id="${theCart[item]}" value="${localStorage.getItem(theCart[item])}" class="tc item-quantity" style ="text-align: center;" >
                         </td>
                         <td class="price">
                             <p>
-                                $100
+                                Each: $${eachCardPrice}
+                            </p>
+                            <p>
+                                Total: $${totalCardPrice}
                             </p>
                         </td>
                         <td class="delete__button" id="delete__button">
-                            <button type="button" class="custom-btn btn-13">Delete</button>
+                            <button type="button" class="custom-btn btn-13" onclick="deleteProduct('${theCart[item]}')">Delete</button>
                         </td>
                     </tr>`
         document.getElementById('cart__list').insertAdjacentHTML( 'beforeend', itemstr );
     }
-    
+    costEle = document.getElementById('totalCost')
+    costEle.innerHTML = '$'+totalCost.toFixed(2)
+}
+function updateCart(){
+    theCart = JSON.parse(localStorage.getItem("cart"))
+    for(item in theCart){
+        cardAmount = document.getElementById(theCart[item]).value
+        console.log(cardAmount)
+        localStorage.setItem(theCart[item],cardAmount)
+
+    }
+    loadCart()
 }

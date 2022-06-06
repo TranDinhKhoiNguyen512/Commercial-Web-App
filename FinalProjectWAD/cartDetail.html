@@ -122,13 +122,13 @@
                     </thead>
                     <!-- Table Body - Data -->
                     <tbody class="data" id="cart__list">
-                        
+                        <!-- For Item Loading -->
                     </tbody>
                     <!-- Table Footer -->
                     <tfoot class="total">
                         <tr>
                             <td colspan="4">Total: </td>
-                            <td colspan="1">NUMBER</td>
+                            <td colspan="1" id="totalCost">$0</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -137,7 +137,7 @@
             <div class="row payment">
                 <div class="col-12">
                     <button type="button" class="btn button--mint payment__button">Payment</button>
-                    <button type="button" class="btn button--dark">Update</button>
+                    <button type="button" class="btn button--dark" onclick="updateCart()">Update</button>
                 </div>
             </div>
         </div>
