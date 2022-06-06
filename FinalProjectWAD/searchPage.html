@@ -896,96 +896,6 @@
 
     <!-- Pop Up -->
     <section class="pop__up">
-        <!-- Sign Up -->
-        <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="mx-1 mx-md-4">
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="email" id="form3Example3c" class="form-control"
-                                        placeholder="Your email" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="password" id="form3Example4c" class="form-control"
-                                        placeholder="Password" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <a href="#">Forget the password</a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn button--mint">Login</button>
-                        <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Register -->
-        <div class="modal fade" id="register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Register</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="mx-1 mx-md-4">
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                <input type="text" id="form3Example1c" class="form-control" placeholder="user_name" />
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="email" id="form3Example3c" class="form-control"
-                                        placeholder="your_email" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="password" id="form3Example4c" class="form-control"
-                                        placeholder="password" />
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
-                                    <input type="password" id="form3Example4cd" class="form-control"
-                                        placeholder="repeat your password" />
-                                </div>
-                            </div>
-                            <div class="form-check d-flex flex-row align-items-center mb-4">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                <label class="form-check-label" for="form2Example3">
-                                    I agree all statements in Terms of service
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn button--mint">Register</button>
-                        <button type="button" class="btn button--dark " data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Cart-Message -->
         <div id="cart__message" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -1010,57 +920,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Cart-menu -->
-        <div id="cart__menu" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content ">
-                    <div class="modal-header">
-                        <h3>Item List</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <p id="image"></p>
-                                        </th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td colspan="2">Larry the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn button--dark " data-bs-dismiss="modal">Confirm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
     <!-- JQUERY -->
@@ -1098,7 +957,6 @@
     <script src="./js/cart.js"></script>
     <script src="./js/itemList.js"></script>
     <script src="./js/getCheckBoxValue.js"></script>
-    <script src="./js/main.js"></script>
     <script>
         initCart();
     </script>

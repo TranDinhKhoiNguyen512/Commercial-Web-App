@@ -115,6 +115,7 @@ footer {
                 .each__member {
                     font-size: $fs-1;
                     display: block;
+                    margin-top: 20px;
 
                     @include hoverA($color-mint-0, $color-white-0);
 

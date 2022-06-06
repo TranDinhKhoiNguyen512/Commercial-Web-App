@@ -301,6 +301,7 @@ footer .bot__footer .container .first__content .web__link a {
 footer .bot__footer .container .contact .each__member {
   font-size: 20px;
   display: block;
+  margin-top: 20px;
 }
 
 footer .bot__footer .container .contact .each__member a {
@@ -1016,6 +1017,7 @@ footer .bot__footer .container .logo__e img {
 }
 
 .cart__detail .cart__main .cart__menu img {
+  padding: 20px auto;
   width: 55%;
   height: 100%;
   text-align: center;
@@ -1026,6 +1028,14 @@ footer .bot__footer .container .logo__e img {
   margin: 25px auto;
 }
 
+.cart__detail .cart__main .cart__menu .data .product__name p {
+  font-size: 20px;
+}
+
+.cart__detail .cart__main .cart__menu .data .price {
+  font-size: 20px;
+}
+
 .cart__detail .cart__main .cart__menu .data .delete__button {
   width: 20px;
   text-align: center;
@@ -1033,7 +1043,7 @@ footer .bot__footer .container .logo__e img {
 }
 
 .cart__detail .cart__main .cart__menu .data .delete__button i {
-  font-size: 50px;
+  font-size: 30px;
   cursor: pointer;
 }
 

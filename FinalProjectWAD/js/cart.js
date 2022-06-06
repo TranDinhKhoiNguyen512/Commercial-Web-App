@@ -89,7 +89,11 @@ async function loadCart() {
                             <img src="${data.images.small}" alt=${data.name}>
                         </td>
                         <td class="product__name" id="product__name" style = " text-align: center;">
-                            <p><a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"style="text-decoration: none; color: black;" href="http://127.0.0.1:5501/productDetail.html?card=${theCart[item]}" ><h6>${theCart[item]}: ${data.name}<h6></a></p>  
+                            <p>
+                                <a onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"style="text-decoration: none; color: black;" href="http://127.0.0.1:5501/productDetail.html?card=${theCart[item]}" >
+                                    <p>${data.name}: ${theCart[item]} <p>
+                                </a>
+                            </p>  
                         </td>
                         <td class="amount" id="amount" >
                             <input type="number" size="4" min="1" id="${theCart[item]}" value="${localStorage.getItem(theCart[item])}" class="tc item-quantity" style ="text-align: center;" >
