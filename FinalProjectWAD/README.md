@@ -1,6 +1,30 @@
 # POKEMON SHOP
 ## Chapter 1:  INTRODUCTION
 
+### **My Teams**
+
+Trần Đình Khôi Nguyên - Front-end
+Võ Vương Nhật Tân - Front-end
+Trần Cao Bảo Phúc - Back-end
+
+### **Our Topic**
+
+Commercial Web Application - Pokemon Shop
+
+### **Task Allocation**
+
+Trần Đình Khôi Nguyên:
+- Main responsibility for Responsive.
+- Link data and user interface
+
+Võ Vương Nhật Tân:
+- Do the majority of the user interface.
+- Link data and user interface
+
+Trần Cao Bảo Phúc:
+- Responsible for website data.
+- Ideas for the project
+
 ### **Motivation**
 
 The motivation for my team to do this project is to know more professional knowledge and experience working as a team in the same project.
@@ -15,7 +39,8 @@ We did not have experience in implementing and managing a project, did not know 
 
 The scope of the project is that users can search for Pokemon cards, see the information of the cards and can order and buy cards.
 
-## Literature Review
+
+## Chapter 2: Literature Review
 
 ### **Similiar Application**
 
@@ -29,7 +54,7 @@ Most of our project is based on the official homepage of [Pokemon ](https://www.
     - Visual Studio Code with extensions.
     - Python Web Crawler
 
-# System Design
+## Chapter 3: System Design
 
 ### **System Requirement Specification**
 
@@ -61,4 +86,43 @@ In the **_Nav Bar_**, users can select the section they want such as Shop to go 
 
 ###### Review Cart
 
-![Use Case Diagram - Review Cart](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Review%20Card.png?raw=true)
+![Use Case Diagram - Review Cart](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Add%20to%20cart.png?raw=true)
+
+##### _Class Diagram_
+
+![Database Diagram](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram.png?raw=true)
+
+## Chapter 4: System Implementation
+
+## Chapter 5: Conclusion and Discussion
+### **List of accomplised work**
+
+#### - Back-End:
+There is full data about the card's information from name, id, price, etc.
+#### - Front-End:
+Can display data from the back-end in many different formats.
+
+Apply animation to elements in the website.
+
+Apply Responsive to the website.
+
+### **Strength And Weakness**
+
+#### - Strength:
+- Has an easy-to-see user interface.
+- There is complete data about all types of cards available on the market
+
+#### - Weakness:
+- The code is not optimized.
+- Lack of Designer, so the website is not beautiful.
+- There is no login or registration for users.
+
+### **Future Work**
+- We will add registration and login features for users.
+- Redesign the website to be more beautiful.
+
+## Chapter 6: References.
+
+- [NodeJS](https://nodejs.org/en/docs/).
+- [Pokemon Official](https://www.pokemon.com/us/)
+- [Boostrap 5](https://getbootstrap.com/)
