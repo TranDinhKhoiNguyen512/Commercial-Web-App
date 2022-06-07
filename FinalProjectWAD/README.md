@@ -47,3 +47,18 @@ We spent more than 2 weeks analyzing the system that needs the data, the necessa
 
 To make the website more lively, we have applied animation to the buttons that users can use.
 In the **_Nav Bar_**, users can select the section they want such as Shop to go to the card search page, News to read the latest information about the card market and About Us to contact us.
+
+### **System Design Specification**
+##### _Use Cases Diagram_
+
+###### Search Card
+
+![Use Case Diagram - Search Card](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Search%20Card.png?raw=true)
+
+###### Review Card
+
+![Use Case Diagram - Review Card](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Review%20Card.png?raw=true)
+
+###### Review Cart
+
+![Use Case Diagram - Review Cart](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Review%20Card.png?raw=true)
