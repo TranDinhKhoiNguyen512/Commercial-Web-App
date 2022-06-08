@@ -78,19 +78,19 @@ In the **_Nav Bar_**, users can select the section they want such as Shop to go 
 
 ###### Search Card
 
-![Use Case Diagram - Search Card](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Search%20Card.png?raw=true)
+![Use Case Diagram - Search Card](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/github/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Search%20Card.png?raw=true)
 
 ###### Review Card
 
-![Use Case Diagram - Review Card](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Review%20Card.png?raw=true)
+![Use Case Diagram - Review Card](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/github/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Review%20Card.png?raw=true)
 
 ###### Review Cart
 
-![Use Case Diagram - Review Cart](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Add%20to%20cart.png?raw=true)
+![Use Case Diagram - Review Cart](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/github/Class%20Diagram%20-%20Project%20Web-Use%20Case%20Diagram%20-%20Add%20to%20cart.png?raw=true)
 
 ##### _Class Diagram_
 
-![Database Diagram](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/Class%20Diagram.png?raw=true)
+![Database Diagram](https://github.com/TranDinhKhoiNguyen512/Commercial-Web-App/blob/main/FinalProjectWAD/img/github/Class%20Diagram.png?raw=true)
 
 ## Chapter 4: System Implementation
 
